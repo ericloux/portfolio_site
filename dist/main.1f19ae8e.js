@@ -195,7 +195,7 @@ exports.projects = projects;
 
 function projects() {
   var content = "";
-  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <p>\n        <a href=\"#\" id=\"alu\">1. A Simulated ALU</a>: Converts a decimal to boolean, then uses only NAND to perform a variet of functions.\n    </p>\n    ";
+  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <p>\n        <a href=\"#\" id=\"alu\">1. Simulated ALU</a>: Converts a decimal to boolean, then uses only NAND to perform a variety of functions.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"conway\">2. Conway's Game</a>: Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"tetris\">3. Alexey's Game</a>: Everyone needs to code this once, but its real name is trademarked by The Tetris Company.\n    </p>\n\n    <p>\n        <a href=\"www.google.com\" id=\"gratuity\">4. Gratuity Acuity</a>: My capstone project for Savvy Coders, which allows delivery drivers to track their tips \n        by amount, date, and location.\n    </p>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog.js":[function(require,module,exports) {
@@ -291,7 +291,7 @@ function contact() {
   content += "\n    <h3>\n        Reach out!\n    </h3>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
-},{}],"content/blog/alu.js":[function(require,module,exports) {
+},{}],"content/projects/alu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -555,6 +555,971 @@ function alu() {
     }
   }
 }
+},{}],"content/projects/tetris.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.tetris = tetris;
+
+function tetris() {
+  var content = "";
+  content += "\n    <br><br>\n    <div id=\"board\">\n        <canvas width=\"350\" height=\"440\"></canvas>\n    </div>\n\n    <br>\n\n    <p>\n        This game is named after its creator, Alexey Pajitnov, instead of giving it its more well-known, trademarked name. I've been playing \n        this game for as long as I can remember, so implementing it in JavaScript was almost a necessity for me.\n    </p>\n    \n    <p>\n        In true gamer fashion, the controls use the letter keys rather than the arrow keys. A description of each key follows:\n    </p>\n\n    <table>\n        <tr>\n            <td>A</td>\n            <td>Move Left</td>\n        </tr>\n        <tr>\n            <td>D</td>\n            <td>Move Right</td>\n        </tr>\n        <tr>\n            <td>S</td>\n            <td>Soft Down</td>\n        </tr>\n        <tr>\n            <td>Space</td>\n            <td>Hard Down</td>\n        </tr>\n        <tr>\n            <td>K</td>\n            <td>Counter-clockwise</td>\n        </tr>\n        <tr>\n            <td>L</td>\n            <td>Clockwise</td>\n        </tr>\n    </table>\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+  var canvas = document.querySelector("#board canvas");
+  var ctx = canvas.getContext("2d");
+  var w = canvas.width,
+      h = canvas.height; // start positions in pixels for drawing squares
+
+  var tileStartX = 22;
+  var tileStartY = 22; // distance between start and end of tile
+
+  var tileWidth = 18; // distance between starts of tiles
+
+  var tileSpan = 20; // total columns and rows
+
+  var tileColumns = 10;
+  var tileRows = 20; // pieces already on the board
+
+  var gameBoard = new Array(tileColumns);
+
+  for (var i = 0; i < tileColumns; i++) {
+    gameBoard[i] = new Array(tileRows);
+  } // array for current piece
+
+
+  var pieceMask = new Array(4); // string identifier of current piece
+
+  var pieceType;
+  var nextPieceType = "I"; // current piece's position on board
+
+  var pieceX = 3;
+  var pieceY = -2; // listens for keypress events
+
+  document.addEventListener("keydown", keyDownHandler, false); // variables for input
+
+  var leftPressed = false;
+  var rightPressed = false;
+  var downPressed = false;
+  var upPressed = false;
+  var clockwisePressed = false;
+  var counterclockwisePressed = false;
+  var spacePressed = false; // variables for when next piece will move
+
+  var dropInterval = 120;
+  var currentInterval = 0; // variables for scoring
+
+  var linesCleared = 0;
+  var score = 0;
+  var level = 1;
+  var gameOver = false;
+  var globalHueModifier = Math.floor(Math.random() * 360);
+  var globalSaturation = Math.floor(Math.random() * 75) + 25;
+  var globalLightness = Math.floor(Math.random() * 30) + 40;
+  var iHue = 0;
+  var jHue = 50;
+  var lHue = 100;
+  var oHue = 150;
+  var sHue = 200;
+  var tHue = 250;
+  var zHue = 300; // initialize pieceMask as 4x4 grid
+
+  for (var _i = 0; _i < 4; _i++) {
+    pieceMask[_i] = new Array(4);
+
+    for (var j = 0; j < 4; j++) {
+      pieceMask[_i][j] = {
+        color: "#FFFFFF",
+        filled: false
+      };
+    }
+  }
+
+  function createHSL(pieceType) {
+    var output = "hsl(";
+    var myHue = globalHueModifier;
+
+    switch (pieceType) {
+      case "I":
+        myHue += iHue;
+        break;
+
+      case "J":
+        myHue += jHue;
+        break;
+
+      case "L":
+        myHue += lHue;
+        break;
+
+      case "O":
+        myHue += oHue;
+        break;
+
+      case "S":
+        myHue += sHue;
+        break;
+
+      case "T":
+        myHue += tHue;
+        break;
+
+      case "Z":
+        myHue += zHue;
+        break;
+
+      default:
+        myHue = Math.floor(Math.random() * 360);
+        break;
+    }
+
+    myHue %= 360;
+    output += myHue;
+    output += "," + globalSaturation + "%," + globalLightness + "%)";
+    return output;
+  } // returns a string in hex given RGB
+
+
+  function createRGB(red, green, blue) {
+    red = red.toString(16);
+    if (red == 0) red = "00";
+    green = green.toString(16);
+    if (green == 0) green = "00";
+    blue = blue.toString(16);
+    if (blue == 0) blue = "00";
+    return "#".concat(red).concat(green).concat(blue);
+  } // colors a piece a given color
+
+
+  function colorPiece(newColor) {
+    for (var _i2 = 0; _i2 < 4; _i2++) {
+      for (var _j = 0; _j < 4; _j++) {
+        pieceMask[_i2][_j].color = newColor;
+      }
+    }
+  } // initialize gameBoard as tileRows x tileColumns grid
+
+
+  function initializeBoard() {
+    for (var _i3 = 0; _i3 < tileColumns; _i3++) {
+      for (var _j2 = 0; _j2 < tileRows; _j2++) {
+        var myColor = createHSL("A");
+        gameBoard[_i3][_j2] = {
+          color: myColor,
+          filled: false
+        };
+      }
+    }
+  }
+
+  function newPiece() {
+    pieceX = 3;
+    pieceY = -2;
+    randomPiece();
+  } // turns pieceMask to O shape
+
+
+  function pieceO() {
+    pieceMask[0][0].filled = false;
+    pieceMask[0][1].filled = false;
+    pieceMask[0][2].filled = false;
+    pieceMask[0][3].filled = false;
+    pieceMask[1][0].filled = false;
+    pieceMask[1][1].filled = false;
+    pieceMask[1][2].filled = false;
+    pieceMask[1][3].filled = false;
+    pieceMask[2][0].filled = false;
+    pieceMask[2][1].filled = false;
+    pieceMask[2][2].filled = true;
+    pieceMask[2][3].filled = true;
+    pieceMask[3][0].filled = false;
+    pieceMask[3][1].filled = false;
+    pieceMask[3][2].filled = true;
+    pieceMask[3][3].filled = true;
+    colorPiece(createHSL("O"));
+  } // turns pieceMask to J shape
+
+
+  function pieceJ() {
+    pieceMask[0][0].filled = false;
+    pieceMask[0][1].filled = false;
+    pieceMask[0][2].filled = false;
+    pieceMask[0][3].filled = false;
+    pieceMask[1][0].filled = false;
+    pieceMask[1][1].filled = false;
+    pieceMask[1][2].filled = true;
+    pieceMask[1][3].filled = false;
+    pieceMask[2][0].filled = false;
+    pieceMask[2][1].filled = false;
+    pieceMask[2][2].filled = true;
+    pieceMask[2][3].filled = false;
+    pieceMask[3][0].filled = false;
+    pieceMask[3][1].filled = false;
+    pieceMask[3][2].filled = true;
+    pieceMask[3][3].filled = true;
+    colorPiece(createHSL("J"));
+  } // turns pieceMask to L shape
+
+
+  function pieceL() {
+    pieceMask[0][0].filled = false;
+    pieceMask[0][1].filled = false;
+    pieceMask[0][2].filled = false;
+    pieceMask[0][3].filled = false;
+    pieceMask[1][0].filled = false;
+    pieceMask[1][1].filled = false;
+    pieceMask[1][2].filled = true;
+    pieceMask[1][3].filled = true;
+    pieceMask[2][0].filled = false;
+    pieceMask[2][1].filled = false;
+    pieceMask[2][2].filled = true;
+    pieceMask[2][3].filled = false;
+    pieceMask[3][0].filled = false;
+    pieceMask[3][1].filled = false;
+    pieceMask[3][2].filled = true;
+    pieceMask[3][3].filled = false;
+    colorPiece(createHSL("L"));
+  } // turns pieceMask to I shape
+
+
+  function pieceI() {
+    pieceMask[0][0].filled = false;
+    pieceMask[0][1].filled = false;
+    pieceMask[0][2].filled = true;
+    pieceMask[0][3].filled = false;
+    pieceMask[1][0].filled = false;
+    pieceMask[1][1].filled = false;
+    pieceMask[1][2].filled = true;
+    pieceMask[1][3].filled = false;
+    pieceMask[2][0].filled = false;
+    pieceMask[2][1].filled = false;
+    pieceMask[2][2].filled = true;
+    pieceMask[2][3].filled = false;
+    pieceMask[3][0].filled = false;
+    pieceMask[3][1].filled = false;
+    pieceMask[3][2].filled = true;
+    pieceMask[3][3].filled = false;
+    colorPiece(createHSL("I"));
+  } // turns pieceMask to S shape
+
+
+  function pieceS() {
+    pieceMask[0][0].filled = false;
+    pieceMask[0][1].filled = false;
+    pieceMask[0][2].filled = false;
+    pieceMask[0][3].filled = false;
+    pieceMask[1][0].filled = false;
+    pieceMask[1][1].filled = false;
+    pieceMask[1][2].filled = false;
+    pieceMask[1][3].filled = true;
+    pieceMask[2][0].filled = false;
+    pieceMask[2][1].filled = false;
+    pieceMask[2][2].filled = true;
+    pieceMask[2][3].filled = true;
+    pieceMask[3][0].filled = false;
+    pieceMask[3][1].filled = false;
+    pieceMask[3][2].filled = true;
+    pieceMask[3][3].filled = false;
+    colorPiece(createHSL("S"));
+  } // turns pieceMask to Z shape
+
+
+  function pieceZ() {
+    pieceMask[0][0].filled = false;
+    pieceMask[0][1].filled = false;
+    pieceMask[0][2].filled = false;
+    pieceMask[0][3].filled = false;
+    pieceMask[1][0].filled = false;
+    pieceMask[1][1].filled = false;
+    pieceMask[1][2].filled = true;
+    pieceMask[1][3].filled = false;
+    pieceMask[2][0].filled = false;
+    pieceMask[2][1].filled = false;
+    pieceMask[2][2].filled = true;
+    pieceMask[2][3].filled = true;
+    pieceMask[3][0].filled = false;
+    pieceMask[3][1].filled = false;
+    pieceMask[3][2].filled = false;
+    pieceMask[3][3].filled = true;
+    colorPiece(createHSL("Z"));
+  } // turns pieceMask to T shape
+
+
+  function pieceT() {
+    pieceMask[0][0].filled = false;
+    pieceMask[0][1].filled = false;
+    pieceMask[0][2].filled = false;
+    pieceMask[0][3].filled = false;
+    pieceMask[1][0].filled = false;
+    pieceMask[1][1].filled = false;
+    pieceMask[1][2].filled = true;
+    pieceMask[1][3].filled = false;
+    pieceMask[2][0].filled = false;
+    pieceMask[2][1].filled = false;
+    pieceMask[2][2].filled = true;
+    pieceMask[2][3].filled = true;
+    pieceMask[3][0].filled = false;
+    pieceMask[3][1].filled = false;
+    pieceMask[3][2].filled = true;
+    pieceMask[3][3].filled = false;
+    colorPiece(createHSL("T"));
+  } // chooses a new piece and calls appropriate piece()
+
+
+  function randomPiece() {
+    var pieceSelection = Math.floor(Math.random() * 7);
+
+    switch (nextPieceType) {
+      case "I":
+        pieceI();
+        pieceType = "I";
+        break;
+
+      case "J":
+        pieceJ();
+        pieceType = "J";
+        break;
+
+      case "L":
+        pieceL();
+        pieceType = "L";
+        break;
+
+      case "O":
+        pieceO();
+        pieceType = "O";
+        break;
+
+      case "S":
+        pieceS();
+        pieceType = "S";
+        break;
+
+      case "T":
+        pieceT();
+        pieceType = "T";
+        break;
+
+      case "Z":
+        pieceZ();
+        pieceType = "Z";
+        break;
+    }
+
+    var pieceX = 3;
+    var pieceY = -2;
+
+    switch (pieceSelection) {
+      case 0:
+        nextPieceType = "I";
+        break;
+
+      case 1:
+        nextPieceType = "J";
+        break;
+
+      case 2:
+        nextPieceType = "L";
+        break;
+
+      case 3:
+        nextPieceType = "O";
+        break;
+
+      case 4:
+        nextPieceType = "S";
+        break;
+
+      case 5:
+        nextPieceType = "T";
+        break;
+
+      case 6:
+        nextPieceType = "Z";
+        break;
+    }
+  } // rotates piece counterclockwise
+
+
+  function rotatePieceCounterclockwise() {
+    switch (pieceType) {
+      case "O":
+        return;
+
+      case "I":
+        if (pieceMask[2][0].filled === true) {
+          pieceMask[2][0].filled = false;
+          pieceMask[2][1].filled = false;
+          pieceMask[2][3].filled = false;
+          pieceMask[0][2].filled = true;
+          pieceMask[1][2].filled = true;
+          pieceMask[3][2].filled = true;
+        } else {
+          pieceMask[2][0].filled = true;
+          pieceMask[2][1].filled = true;
+          pieceMask[2][3].filled = true;
+          pieceMask[0][2].filled = false;
+          pieceMask[1][2].filled = false;
+          pieceMask[3][2].filled = false;
+        }
+
+        if (moveOpen(0, 0) == false) {
+          rotatePieceCounterclockwise();
+        }
+
+        return;
+
+      default:
+        break;
+    }
+
+    var tempMask = new Array(4);
+
+    for (var _i4 = 0; _i4 < 4; _i4++) {
+      tempMask[_i4] = new Array(4);
+
+      for (var _j3 = 0; _j3 < 4; _j3++) {
+        tempMask[_i4][_j3] = {
+          color: "#FFFFFF",
+          filled: false
+        };
+      }
+    }
+
+    tempMask[1][1] = pieceMask[3][1];
+    tempMask[1][2] = pieceMask[2][1];
+    tempMask[1][3] = pieceMask[1][1];
+    tempMask[2][1] = pieceMask[3][2];
+    tempMask[2][2] = pieceMask[2][2];
+    tempMask[2][3] = pieceMask[1][2];
+    tempMask[3][1] = pieceMask[3][3];
+    tempMask[3][2] = pieceMask[2][3];
+    tempMask[3][3] = pieceMask[1][3];
+    pieceMask = tempMask;
+
+    if (moveOpen(0, 0) == false) {
+      rotatePieceClockwise();
+    }
+  } // rotates piece clockwise
+
+
+  function rotatePieceClockwise() {
+    switch (pieceType) {
+      case "O":
+        return;
+
+      case "I":
+        rotatePieceCounterclockwise();
+        return;
+
+      default:
+        break;
+    }
+
+    var tempMask = new Array(4);
+
+    for (var _i5 = 0; _i5 < 4; _i5++) {
+      tempMask[_i5] = new Array(4);
+
+      for (var _j4 = 0; _j4 < 4; _j4++) {
+        tempMask[_i5][_j4] = {
+          color: "#FFFFFF",
+          filled: false
+        };
+      }
+    }
+
+    tempMask[1][1] = pieceMask[1][3];
+    tempMask[1][2] = pieceMask[2][3];
+    tempMask[1][3] = pieceMask[3][3];
+    tempMask[2][1] = pieceMask[1][2];
+    tempMask[2][2] = pieceMask[2][2];
+    tempMask[2][3] = pieceMask[3][2];
+    tempMask[3][1] = pieceMask[1][1];
+    tempMask[3][2] = pieceMask[2][1];
+    tempMask[3][3] = pieceMask[3][1];
+    pieceMask = tempMask;
+
+    if (moveOpen(0, 0) == false) {
+      rotatePieceCounterclockwise();
+    }
+  } // sets input variable to true on press
+
+
+  function keyDownHandler(e) {
+    switch (e.key) {
+      case "d":
+        rightPressed = true;
+        break;
+
+      case "a":
+        leftPressed = true;
+        break;
+
+      case "w":
+        upPressed = true;
+        break;
+
+      case "s":
+        downPressed = true;
+        break;
+
+      case "l":
+        clockwisePressed = true;
+        break;
+
+      case "k":
+        counterclockwisePressed = true;
+        break;
+
+      case " ":
+        spacePressed = true;
+        break;
+
+      default:
+        break;
+    }
+  } // returns input variables to false
+
+
+  function resetKeys() {
+    leftPressed = false;
+    rightPressed = false;
+    upPressed = false;
+    downPressed = false;
+    spacePressed = false;
+    clockwisePressed = false;
+    counterclockwisePressed = false;
+  } // detects whether (x,y) is an open square
+
+
+  function squareOpen(x, y) {
+    if (x < 0) return false;
+    if (x > tileRows) return false;
+    if (y > tileColumns) return false;
+    return !gameBoard[x][y].filled;
+  } // detects whether current piece can move by (x,y)
+
+
+  function moveOpen(x, y) {
+    for (var _i6 = 0; _i6 < 4; _i6++) {
+      for (var _j5 = 0; _j5 < 4; _j5++) {
+        if (pieceMask[_i6][_j5].filled == true) {
+          if (pieceX + _i6 + x < 0 || pieceX + _i6 + x >= tileColumns) {
+            return false;
+          }
+
+          if (pieceY + _j5 + y >= tileRows) {
+            return false;
+          }
+
+          if (pieceY + _j5 + y >= 0 && gameBoard[pieceX + _i6 + x][pieceY + _j5 + y].filled == true) {
+            return false;
+          }
+        }
+      }
+    }
+
+    return true;
+  } // tries to move piece left
+
+
+  function movePieceLeft() {
+    if (moveOpen(-1, 0)) {
+      pieceX--;
+    }
+  } // tries to move piece right
+
+
+  function movePieceRight() {
+    if (moveOpen(1, 0)) {
+      pieceX++;
+    }
+  } // tries to move piece down
+
+
+  function movePieceDown() {
+    if (moveOpen(0, 1)) {
+      pieceY++;
+    } else {
+      for (var _i7 = 0; _i7 < 4; _i7++) {
+        for (var _j6 = 0; _j6 < 4; _j6++) {
+          if (pieceMask[_i7][_j6].filled) {
+            gameBoard[pieceX + _i7][pieceY + _j6].filled = true;
+            gameBoard[pieceX + _i7][pieceY + _j6].color = pieceMask[_i7][_j6].color;
+          }
+        }
+      }
+
+      checkRows();
+      newPiece();
+
+      if (moveOpen(0, 0) == false) {
+        gameOver = true;
+      }
+    }
+  } // checks if any lines were cleared
+
+
+  function checkRows() {
+    var lines = 0;
+
+    for (var y = 0; y < tileRows; y++) {
+      var rowClear = true;
+
+      for (var x = 0; x < tileColumns; x++) {
+        if (gameBoard[x][y].filled == false) {
+          rowClear = false;
+        }
+      }
+
+      if (rowClear == true) {
+        lines++;
+        score += lines * 100;
+
+        for (var _x = 0; _x < tileColumns; _x++) {
+          gameBoard[_x][y].filled = false;
+        }
+
+        for (var _i8 = y; _i8 > 0; _i8--) {
+          for (var _x2 = 0; _x2 < tileColumns; _x2++) {
+            gameBoard[_x2][_i8].filled = gameBoard[_x2][_i8 - 1].filled;
+            gameBoard[_x2][_i8].color = gameBoard[_x2][_i8 - 1].color;
+          }
+        }
+
+        for (var _x3 = 0; _x3 < tileColumns; _x3++) {
+          gameBoard[_x3][0].filled = false;
+        }
+      }
+    }
+
+    linesCleared += lines;
+
+    if (linesCleared / 10 >= level) {
+      level++;
+      dropInterval = dropInterval * 3 / 4;
+      globalHueModifier = Math.floor(Math.random() * 360);
+      globalSaturation = Math.floor(Math.random() * 75) + 25;
+      globalLightness = Math.floor(Math.random() * 30) + 40;
+    }
+  } // draws current board
+
+
+  function drawBoard() {
+    ctx.fillStyle = "#444444";
+    ctx.fillRect(0, 0, w, h);
+    var xStart;
+    var yStart;
+
+    for (var x = 0; x < tileColumns; x++) {
+      for (var y = 0; y < tileRows; y++) {
+        xStart = x * tileSpan + tileStartX;
+        yStart = y * tileSpan + tileStartY;
+
+        if (gameBoard[x][y].filled === true) {
+          ctx.fillStyle = gameBoard[x][y].color;
+        } else {
+          ctx.fillStyle = "#000000";
+        }
+
+        ctx.fillRect(xStart, yStart, tileWidth, tileWidth);
+      }
+    }
+  } // draws current piece
+
+
+  function drawPiece() {
+    for (var _i9 = 0; _i9 < 4; _i9++) {
+      for (var _j7 = 0; _j7 < 4; _j7++) {
+        var xStart = (pieceX + _i9) * tileSpan + tileStartX;
+        var yStart = (pieceY + _j7) * tileSpan + tileStartY;
+
+        if (pieceMask[_i9][_j7].filled === true) {
+          ctx.fillStyle = pieceMask[_i9][_j7].color;
+          ctx.fillRect(xStart, yStart, tileWidth, tileWidth);
+        }
+      }
+    }
+
+    ctx.fillStyle = "#444444";
+    ctx.fillRect(0, 0, w, tileStartY);
+  }
+
+  function drawNextPiece() {
+    switch (nextPieceType) {
+      case "I":
+        ctx.fillStyle = createHSL("I");
+        ctx.fillRect(245, 75, tileWidth, tileWidth);
+        ctx.fillRect(265, 75, tileWidth, tileWidth);
+        ctx.fillRect(285, 75, tileWidth, tileWidth);
+        ctx.fillRect(305, 75, tileWidth, tileWidth);
+        break;
+
+      case "J":
+        ctx.fillStyle = createHSL("J");
+        ctx.fillRect(255, 65, tileWidth, tileWidth);
+        ctx.fillRect(275, 65, tileWidth, tileWidth);
+        ctx.fillRect(295, 65, tileWidth, tileWidth);
+        ctx.fillRect(295, 85, tileWidth, tileWidth);
+        break;
+
+      case "L":
+        ctx.fillStyle = createHSL("L");
+        ctx.fillRect(255, 65, tileWidth, tileWidth);
+        ctx.fillRect(275, 65, tileWidth, tileWidth);
+        ctx.fillRect(295, 65, tileWidth, tileWidth);
+        ctx.fillRect(255, 85, tileWidth, tileWidth);
+        break;
+
+      case "O":
+        ctx.fillStyle = createHSL("O");
+        ctx.fillRect(265, 65, tileWidth, tileWidth);
+        ctx.fillRect(265, 85, tileWidth, tileWidth);
+        ctx.fillRect(285, 65, tileWidth, tileWidth);
+        ctx.fillRect(285, 85, tileWidth, tileWidth);
+        break;
+
+      case "S":
+        ctx.fillStyle = createHSL("S");
+        ctx.fillRect(255, 85, tileWidth, tileWidth);
+        ctx.fillRect(275, 85, tileWidth, tileWidth);
+        ctx.fillRect(275, 65, tileWidth, tileWidth);
+        ctx.fillRect(295, 65, tileWidth, tileWidth);
+        break;
+
+      case "T":
+        ctx.fillStyle = createHSL("T");
+        ctx.fillRect(255, 65, tileWidth, tileWidth);
+        ctx.fillRect(275, 65, tileWidth, tileWidth);
+        ctx.fillRect(295, 65, tileWidth, tileWidth);
+        ctx.fillRect(275, 85, tileWidth, tileWidth);
+        break;
+
+      case "Z":
+        ctx.fillStyle = createHSL("Z");
+        ctx.fillRect(255, 65, tileWidth, tileWidth);
+        ctx.fillRect(275, 65, tileWidth, tileWidth);
+        ctx.fillRect(275, 85, tileWidth, tileWidth);
+        ctx.fillRect(295, 85, tileWidth, tileWidth);
+        break;
+    }
+  }
+
+  function drawHUD() {
+    ctx.strokeStyle = "black";
+    ctx.font = "20px Courier";
+    ctx.textAlign = "center";
+    ctx.strokeText("NEXT", 285, 40);
+    ctx.strokeText("SCORE", 285, 140);
+    ctx.strokeText(score, 285, 160);
+    ctx.strokeText("LEVEL", 285, 200);
+    ctx.strokeText(level, 285, 220);
+    ctx.strokeText("LINES", 285, 260);
+    ctx.strokeText(linesCleared, 285, 280);
+    ctx.fillStyle = "black";
+    ctx.fillRect(240, 50, 90, 70);
+    drawNextPiece();
+  }
+
+  function drawGameOver() {
+    ctx.fillStyle = "black";
+    ctx.strokeStyle = "#444444";
+    ctx.fillRect(81, 91, 188, 80);
+    ctx.strokeRect(81, 91, 188, 80);
+    ctx.strokeStyle = "#444444";
+    ctx.font = "20px Courier";
+    ctx.textAlign = "center";
+    ctx.strokeText("GAME OVER", 175, 116);
+    ctx.strokeText("Space to retry", 175, 156);
+  } // main game loop
+
+
+  function loop(t) {
+    requestAnimationFrame(loop);
+
+    if (gameOver == false) {
+      drawBoard();
+      drawPiece();
+      drawHUD();
+      if (clockwisePressed) rotatePieceClockwise();
+      if (counterclockwisePressed) rotatePieceCounterclockwise();
+
+      if (spacePressed) {
+        while (moveOpen(0, 1)) {
+          movePieceDown();
+        }
+
+        movePieceDown();
+      }
+
+      if (leftPressed) movePieceLeft();
+      if (rightPressed) movePieceRight();
+
+      if (currentInterval >= dropInterval || downPressed) {
+        movePieceDown();
+        currentInterval = 0;
+      }
+
+      currentInterval++;
+    } else {
+      drawBoard();
+      drawPiece();
+      drawHUD();
+      drawGameOver();
+
+      if (spacePressed) {
+        gameOver = false;
+        initializeBoard();
+        newPiece();
+        level = 1;
+        linesCleared = 0;
+        score = 0;
+        dropInterval = 120;
+        currentInterval = 0;
+      }
+    }
+
+    resetKeys();
+  }
+
+  randomPiece();
+  randomPiece();
+  initializeBoard();
+  requestAnimationFrame(loop);
+}
+},{}],"content/projects/conway.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.conway = conway;
+
+function conway() {
+  var content = "";
+  content += "\n    <br>\n    <div id=\"board\">\n        <canvas width=\"500\" height=\"500\"></canvas>\n    </div>\n\n    <p>\n        Conway's Game of Life was a project that I wanted to create early for a few reasons. First, I had discovered the canvas element \n        and wanted to build something with it. Since the Game of Life has simple rules, it seemed like an ideal candidate.\n    </p>\n\n    <p>\n        For the uninitiated, the Game of life is a simulation that's run on a grid. Each element in the grid can either be populated or \n        unpopulated. In the above, the populated squares are yellow, with the unpopulated being gray.\n    </p>\n\n    <p>\n        Each iteration, every square in the grid is checked. Depending on how many orthogonically adjacent squares are also populated, the \n        square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more \n        or less do not. Likewise, any non-living cell with exactly three living neighbors will be \"born\" and become populated.\n    </p>\n\n    <p>\n        Although these rules are simple, they can create a variety of shapes. Some end up static, some form repetitive patterns, and some \n        explode and retract as if they're organic.\n    </p>\n\n    <p>\n        The original plan was to take mouse input to turn cells either on or off, but that wasn't implemented. However, a random configuration \n        of cells is set as alive each time the function is loaded, which allows a variety of initial states.\n    </p>\n\n    <br><br>\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+  var canvas = document.querySelector("#board canvas");
+  var ctx = canvas.getContext("2d");
+  var w = canvas.width,
+      h = canvas.height; // board width in tiles
+
+  var tileSpan = 100;
+  var tileMargin = 5;
+  var gameBoard = new Array(tileSpan);
+  var computeBoard = new Array(tileSpan);
+  var running = true;
+  var cyclesBeforeUpdate = 6;
+  var currentCycles = 0;
+  var mousePressed = false;
+
+  for (var x = 0; x < tileSpan; x++) {
+    gameBoard[x] = new Array(tileSpan);
+    computeBoard[x] = new Array(tileSpan);
+
+    for (var y = 0; y < tileSpan; y++) {
+      gameBoard[x][y] = false;
+      computeBoard[x][y] = false;
+      if (Math.random() < .05) gameBoard[x][y] = true;
+    }
+  }
+
+  function drawBoard() {
+    ctx.strokeStyle = "black";
+
+    for (var _x = 0; _x < tileSpan; _x++) {
+      for (var _y = 0; _y < tileSpan; _y++) {
+        if (gameBoard[_x][_y] == false) {
+          ctx.fillStyle = "#444";
+        } else {
+          ctx.fillStyle = "#FD0";
+        }
+
+        var xStart = _x * tileMargin;
+        var yStart = _y * tileMargin;
+        ctx.fillRect(xStart, yStart, tileMargin, tileMargin);
+      }
+    }
+  }
+
+  function updateBoard() {
+    for (var _x2 = 0; _x2 < tileSpan; _x2++) {
+      for (var _y2 = 0; _y2 < tileSpan; _y2++) {
+        var touching = 0;
+
+        if (_x2 > 0) {
+          if (_y2 > 0) {
+            if (gameBoard[_x2 - 1][_y2 - 1] == true) touching++;
+          }
+
+          if (gameBoard[_x2 - 1][_y2] == true) touching++;
+
+          if (_y2 < tileSpan - 1) {
+            if (gameBoard[_x2 - 1][_y2 + 1] == true) touching++;
+          }
+        }
+
+        if (_y2 > 0) {
+          if (gameBoard[_x2][_y2 - 1] == true) touching++;
+        }
+
+        if (_y2 < tileSpan - 1) {
+          if (gameBoard[_x2][_y2 + 1] == true) touching++;
+        }
+
+        if (_x2 < tileSpan - 1) {
+          if (_y2 > 0) {
+            if (gameBoard[_x2 + 1][_y2 - 1] == true) touching++;
+          }
+
+          if (gameBoard[_x2 + 1][_y2] == true) touching++;
+
+          if (_y2 < tileSpan - 1) {
+            if (gameBoard[_x2 + 1][_y2 + 1] == true) touching++;
+          }
+        }
+
+        computeBoard[_x2][_y2] = false;
+
+        if (gameBoard[_x2][_y2] == true) {
+          if (touching == 2 || touching == 3) {
+            computeBoard[_x2][_y2] = true;
+          }
+        }
+
+        if (gameBoard[_x2][_y2] == false && touching == 3) {
+          computeBoard[_x2][_y2] = true;
+        }
+      }
+    }
+
+    for (var _x3 = 0; _x3 < tileSpan; _x3++) {
+      for (var _y3 = 0; _y3 < tileSpan; _y3++) {
+        gameBoard[_x3][_y3] = computeBoard[_x3][_y3];
+      }
+    }
+  }
+
+  function loop(evt) {
+    requestAnimationFrame(loop);
+    drawBoard();
+
+    if (running) {
+      if (currentCycles >= cyclesBeforeUpdate) {
+        updateBoard();
+        currentCycles = 0;
+      }
+
+      currentCycles++;
+    } else {
+      if (mousePressed == true) {}
+    }
+  }
+
+  loop();
+}
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -582,7 +1547,11 @@ var _decisions = require("./content/blog/decisions.js");
 
 var _contact = require("./content/contact.js");
 
-var _alu = require("./content/blog/alu.js");
+var _alu = require("./content/projects/alu.js");
+
+var _tetris = require("./content/projects/tetris.js");
+
+var _conway = require("./content/projects/conway.js");
 
 console.log("dependency");
 var state = {
@@ -607,6 +1576,14 @@ function render(state) {
       switch (state.subpage) {
         case "alu":
           (0, _alu.alu)();
+          break;
+
+        case "tetris":
+          (0, _tetris.tetris)();
+          break;
+
+        case "conway":
+          (0, _conway.conway)();
           break;
 
         default:
@@ -650,32 +1627,24 @@ function render(state) {
       break;
   }
 
-  if (state.page != "home") {
-    document.getElementById("link-home").addEventListener("click", function () {
-      window.event.preventDefault();
-      state.page = "home";
-      state.subpage = "none";
-      render(state);
-    });
-  }
-
-  if (state.page != "bio") {
-    document.getElementById("link-bio").addEventListener("click", function () {
-      window.event.preventDefault();
-      state.page = "bio";
-      state.subpage = "none";
-      render(state);
-    });
-  }
-
-  if (state.page != "projects") {
-    document.getElementById("link-projects").addEventListener("click", function () {
-      window.event.preventDefault();
-      state.page = "projects";
-      state.subpage = "none";
-      render(state);
-    });
-  }
+  document.getElementById("link-home").addEventListener("click", function () {
+    window.event.preventDefault();
+    state.page = "home";
+    state.subpage = "none";
+    render(state);
+  });
+  document.getElementById("link-bio").addEventListener("click", function () {
+    window.event.preventDefault();
+    state.page = "bio";
+    state.subpage = "none";
+    render(state);
+  });
+  document.getElementById("link-projects").addEventListener("click", function () {
+    window.event.preventDefault();
+    state.page = "projects";
+    state.subpage = "none";
+    render(state);
+  });
 
   if (state.page == "projects" && state.subpage == "none") {
     document.getElementById("alu").addEventListener("click", function () {
@@ -684,16 +1653,26 @@ function render(state) {
       state.subpage = "alu";
       render(state);
     });
-  }
-
-  if (state.page != "blog") {
-    document.getElementById("link-blog").addEventListener("click", function () {
+    document.getElementById("tetris").addEventListener("click", function () {
       window.event.preventDefault();
-      state.page = "blog";
-      state.subpage = "none";
+      state.page = "projects";
+      state.subpage = "tetris";
+      render(state);
+    });
+    document.getElementById("conway").addEventListener("click", function () {
+      window.event.preventDefault();
+      state.page = "projects";
+      state.subpage = "conway";
       render(state);
     });
   }
+
+  document.getElementById("link-blog").addEventListener("click", function () {
+    window.event.preventDefault();
+    state.page = "blog";
+    state.subpage = "none";
+    render(state);
+  });
 
   if (state.page == "blog" && state.subpage == "none") {
     document.getElementById("abstraction").addEventListener("click", function () {
@@ -728,28 +1707,18 @@ function render(state) {
     });
   }
 
-  document.getElementById("link-blog").addEventListener("click", function () {
+  document.getElementById("link-contact").addEventListener("click", function () {
     window.event.preventDefault();
-    state.page = "blog";
+    state.page = "contact";
     state.subpage = "none";
     render(state);
   });
-
-  if (state.page != "contact") {
-    document.getElementById("link-contact").addEventListener("click", function () {
-      window.event.preventDefault();
-      state.page = "contact";
-      state.subpage = "none";
-      render(state);
-    });
-  }
-
   (0, _template.putFooter)();
 }
 
 ;
 render(state);
-},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/blog/alu.js":"content/blog/alu.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/projects/alu.js":"content/projects/alu.js","./content/projects/tetris.js":"content/projects/tetris.js","./content/projects/conway.js":"content/projects/conway.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -777,7 +1746,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33097" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43399" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

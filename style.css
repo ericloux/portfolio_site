@@ -77,6 +77,12 @@ footer {
     padding: 10px 0px;
 }
 
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+}
+
 #outside-footer {
     width: 100%;
 }
