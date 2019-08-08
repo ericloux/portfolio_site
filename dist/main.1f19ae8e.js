@@ -129,14 +129,13 @@ exports.putFooter = putFooter;
 // draws the page template in div with ID template
 function addTemplate() {
   var templateDiv = document.getElementById("template");
-  templateDiv.innerHTML = "\n    <header>\n        <b>Eric Loux's Portfolio Site</b>\n    </header>\n    <div class=\"grid-master\">\n        <nav class=\"grid-side\">\n            Here is the nav.\n        </nav>\n\n        <div class=\"content\">\n            Here is the content.\n        </div>\n\n        <div class=\"grid-side\">\n            Here is blank space.\n        </div>\n    </div>\n    <footer>\n        Copyright 2019 Eric Loux\n    </footer>";
+  templateDiv.innerHTML = "\n    <header>\n        <b>Eric Loux's Portfolio Site</b>\n    </header>\n    <div class=\"grid-master\">\n        <nav class=\"grid-side\">\n            Here is the nav.\n        </nav>\n\n        <div class=\"content\">\n            Here is the content.\n        </div>\n\n        <div class=\"grid-side\">\n            <img src=\"/assets/headshot.JPG\"/>\n        </div>\n    </div>\n    <footer>\n        Copyright 2019 Eric Loux\n    </footer>";
 } // Puts footer at the bottom of the page or below content (whichever is lower)
 
 
 function putFooter() {
   var footAndHeadHeight = document.getElementsByTagName("footer")[0].offsetHeight + document.getElementsByTagName("header")[0].offsetHeight;
   var contentHeight = document.getElementsByClassName("content")[0].offsetHeight;
-  console.log(footAndHeadHeight + contentHeight + " " + window.innerHeight);
 
   if (footAndHeadHeight + contentHeight < window.innerHeight) {
     document.getElementsByClassName("grid-master")[0].style.height = window.innerHeight - footAndHeadHeight + "px";
@@ -565,7 +564,7 @@ exports.tetris = tetris;
 
 function tetris() {
   var content = "";
-  content += "\n    <br><br>\n    <div id=\"board\">\n        <canvas width=\"350\" height=\"440\"></canvas>\n    </div>\n\n    <br>\n\n    <p>\n        This game is named after its creator, Alexey Pajitnov, instead of giving it its more well-known, trademarked name. I've been playing \n        this game for as long as I can remember, so implementing it in JavaScript was almost a necessity for me.\n    </p>\n    \n    <p>\n        In true gamer fashion, the controls use the letter keys rather than the arrow keys. A description of each key follows:\n    </p>\n\n    <table>\n        <tr>\n            <td>A</td>\n            <td>Move Left</td>\n        </tr>\n        <tr>\n            <td>D</td>\n            <td>Move Right</td>\n        </tr>\n        <tr>\n            <td>S</td>\n            <td>Soft Down</td>\n        </tr>\n        <tr>\n            <td>Space</td>\n            <td>Hard Down</td>\n        </tr>\n        <tr>\n            <td>K</td>\n            <td>Counter-clockwise</td>\n        </tr>\n        <tr>\n            <td>L</td>\n            <td>Clockwise</td>\n        </tr>\n    </table>\n    ";
+  content += "\n    <br><br>\n    <div id=\"board\">\n        <canvas width=\"350\" height=\"440\"></canvas>\n    </div>\n\n    <br>\n\n    <p>\n        This game is named after its creator, Alexey Pajitnov, instead of giving it its more well-known, trademarked name. I've been playing \n        this game for as long as I can remember, so implementing it in JavaScript was almost a necessity for me.\n    </p>\n    \n    <p>\n        In true gamer fashion, the controls use the letter keys rather than the arrow keys. A description of each key follows:\n    </p>\n\n    <table>\n        <tr>\n            <td>A</td>\n            <td>Move Left</td>\n        </tr>\n        <tr>\n            <td>D</td>\n            <td>Move Right</td>\n        </tr>\n        <tr>\n            <td>S</td>\n            <td>Soft Down</td>\n        </tr>\n        <tr>\n            <td>Space</td>\n            <td>Hard Down</td>\n        </tr>\n        <tr>\n            <td>K</td>\n            <td>Counter-clockwise</td>\n        </tr>\n        <tr>\n            <td>L</td>\n            <td>Clockwise</td>\n        </tr>\n    </table>\n\n    <br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
   var canvas = document.querySelector("#board canvas");
   var ctx = canvas.getContext("2d");
@@ -1553,7 +1552,6 @@ var _tetris = require("./content/projects/tetris.js");
 
 var _conway = require("./content/projects/conway.js");
 
-console.log("dependency");
 var state = {
   page: "home",
   subpage: "none"
@@ -1746,7 +1744,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43399" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39987" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -15,7 +15,7 @@ function addTemplate() {
         </div>
 
         <div class="grid-side">
-            Here is blank space.
+            <img src="/assets/headshot.JPG"/>
         </div>
     </div>
     <footer>
@@ -27,8 +27,6 @@ function addTemplate() {
 function putFooter() {
     let footAndHeadHeight = document.getElementsByTagName("footer")[0].offsetHeight + document.getElementsByTagName("header")[0].offsetHeight;
     let contentHeight = document.getElementsByClassName("content")[0].offsetHeight;
-
-    console.log((footAndHeadHeight + contentHeight) + " " + window.innerHeight);
 
     if (footAndHeadHeight + contentHeight < window.innerHeight) { 
         document.getElementsByClassName("grid-master")[0].style.height = (window.innerHeight - footAndHeadHeight) + "px";

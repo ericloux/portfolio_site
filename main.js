@@ -14,8 +14,6 @@ import {alu} from "./content/projects/alu.js";
 import {tetris} from "./content/projects/tetris.js";
 import {conway} from "./content/projects/conway.js";
 
-console.log("dependency");
-
 let state = {
     page: "home",
     subpage: "none"

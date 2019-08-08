@@ -44,6 +44,8 @@ function tetris() {
             <td>Clockwise</td>
         </tr>
     </table>
+
+    <br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;
