@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-//    "build": "npm parcel build index.html"
+    "build": "npm parcel build index.html"
   }
 }
