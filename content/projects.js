@@ -19,7 +19,7 @@ function projects() {
     </p>
 
     <p>
-        <a href="www.google.com" id="gratuity">4. Gratuity Acuity</a>: My capstone project for Savvy Coders, which allows delivery drivers to track their tips 
+        <a href="//www.gratuityacuity.com" id="gratuity">4. Gratuity Acuity</a>: My capstone project for Savvy Coders, which allows delivery drivers to track their tips 
         by amount, date, and location.
     </p>
     `;

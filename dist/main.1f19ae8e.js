@@ -194,7 +194,7 @@ exports.projects = projects;
 
 function projects() {
   var content = "";
-  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <p>\n        <a href=\"#\" id=\"alu\">1. Simulated ALU</a>: Converts a decimal to boolean, then uses only NAND to perform a variety of functions.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"conway\">2. Conway's Game</a>: Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"tetris\">3. Alexey's Game</a>: Everyone needs to code this once, but its real name is trademarked by The Tetris Company.\n    </p>\n\n    <p>\n        <a href=\"www.google.com\" id=\"gratuity\">4. Gratuity Acuity</a>: My capstone project for Savvy Coders, which allows delivery drivers to track their tips \n        by amount, date, and location.\n    </p>\n    ";
+  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <p>\n        <a href=\"#\" id=\"alu\">1. Simulated ALU</a>: Converts a decimal to boolean, then uses only NAND to perform a variety of functions.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"conway\">2. Conway's Game</a>: Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"tetris\">3. Alexey's Game</a>: Everyone needs to code this once, but its real name is trademarked by The Tetris Company.\n    </p>\n\n    <p>\n        <a href=\"//www.gratuityacuity.com\" id=\"gratuity\">4. Gratuity Acuity</a>: My capstone project for Savvy Coders, which allows delivery drivers to track their tips \n        by amount, date, and location.\n    </p>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog.js":[function(require,module,exports) {
@@ -1744,7 +1744,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39987" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45543" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
