@@ -13,6 +13,8 @@ import {contact} from "./content/contact.js";
 import {alu} from "./content/projects/alu.js";
 import {tetris} from "./content/projects/tetris.js";
 import {conway} from "./content/projects/conway.js";
+import { gratuity } from "./content/blog/gratuity.js";
+import {tablemaker} from "./content/projects/tablemaker.js";
 
 let state = {
     page: "home",
@@ -45,6 +47,14 @@ function render(state) {
 
         case "conway":
             conway();
+            break;
+
+        case "gratuity":
+            gratuity();
+            break;
+
+        case "tablemaker":
+            tablemaker();
             break;
 
         default:
@@ -87,7 +97,7 @@ function render(state) {
     }
 
     document.getElementById("link-home").addEventListener("click", function() {
-        window.event.preventDefault();
+        event.preventDefault();
         state.page = "home";
         state.subpage = "none";
         render(state);
@@ -95,14 +105,14 @@ function render(state) {
 
 
     document.getElementById("link-bio").addEventListener("click", function() {
-        window.event.preventDefault();
+        event.preventDefault();
         state.page = "bio";
         state.subpage = "none";
         render(state);
     });
 
     document.getElementById("link-projects").addEventListener("click", function() {
-        window.event.preventDefault();
+        event.preventDefault();
         state.page = "projects";
         state.subpage = "none";
         render(state);
@@ -110,29 +120,43 @@ function render(state) {
 
     if (state.page == "projects" && state.subpage == "none") {
         document.getElementById("alu").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "projects";
             state.subpage = "alu";
             render(state);
         });
 
         document.getElementById("tetris").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "projects";
             state.subpage = "tetris";
             render(state);
         });
 
         document.getElementById("conway").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "projects";
             state.subpage = "conway";
+            render(state);
+        });tablemaker
+
+        document.getElementById("tablemaker").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "projects";
+            state.subpage = "tablemaker";
+            render(state);
+        });
+
+        document.getElementById("gratuity-writeup").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "projects";
+            state.subpage = "gratuity";
             render(state);
         });
     }
 
     document.getElementById("link-blog").addEventListener("click", function() {
-        window.event.preventDefault();
+        event.preventDefault();
         state.page = "blog";
         state.subpage = "none";
         render(state);
@@ -140,35 +164,35 @@ function render(state) {
 
     if (state.page == "blog" && state.subpage == "none") {
         document.getElementById("abstraction").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "blog";
             state.subpage = "abstraction";
             render(state);
         });
 
         document.getElementById("elementary").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "blog";
             state.subpage = "elementary";
             render(state);
         });
 
         document.getElementById("boolean").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "blog";
             state.subpage = "boolean";
             render(state);
         });
 
         document.getElementById("representing").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "blog";
             state.subpage = "representing";
             render(state);
         });
 
         document.getElementById("decisions").addEventListener("click", function() {
-            window.event.preventDefault();
+            event.preventDefault();
             state.page = "blog";
             state.subpage = "decisions";
             render(state);
@@ -176,7 +200,7 @@ function render(state) {
     }
     
     document.getElementById("link-contact").addEventListener("click", function() {
-        window.event.preventDefault();
+        event.preventDefault();
         state.page = "contact";
         state.subpage = "none";
         render(state);

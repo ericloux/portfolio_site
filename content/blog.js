@@ -15,25 +15,20 @@ function blog() {
         How Do Computers Work - A Series
     </h3>
 
-    <p>
-        <a href="#" id="abstraction">1. Abstraction and Computer Science</a>: An overview of what a computer is, from the bottom to the top.
-    </p>
+    <span class="center-content"><button class="link" id="abstraction">1. Abstraction and Computer Science</button></span>
+    <p class="link-info">An overview of what a computer is, from the bottom to the top.</p><br>
+    
+    <span class="center-content"><button class="link" id="elementary">2. Elementary Logic Gates</button></span>
+    <p class="link-info">How can we get electricity to perform logical functions?</p><br>
 
-    <p>
-        <a href="#" id="elementary">2. Elementary Logic Gates</a>: How can we get electricity to perform logical functions?
-    </p>
+    <span class="center-content"><button class="link" id="boolean">3. Boolean Functions</button></span>
+    <p class="link-info">Doing more advanced tasks once we've built a logic gate.</p><br>
 
-    <p>
-        <a href="#" id="boolean">3. Boolean Functions</a>: Doing more advanced tasks once we've built a logic gate.
-    </p>
-
-    <p>
-        <a href="#" id="representing">4. Representing Binary Logic</a>: Notes on notation.
-    </p>
-
-    <p>
-        <a href="#" id="decisions">5. Decisions and Addition</a>: At this point, we can start to do some useful things with logic gates!
-    </p>
+    <span class="center-content"><button class="link" id="representing">4. Representing Binary Logic</button></span>
+    <p class="link-info">Notes on notation.</p><br>
+    
+    <span class="center-content"><button class="link" id="decisions">5. Decisions and Addition</button></span>
+    <p class="link-info">At this point, we can start to do some useful things with logic gates!</p><br>
 
     `;
 

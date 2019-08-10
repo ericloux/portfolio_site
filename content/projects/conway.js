@@ -18,8 +18,8 @@ function conway() {
     </p>
 
     <p>
-        Each iteration, every square in the grid is checked. Depending on how many orthogonically adjacent squares are also populated, the 
-        square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more 
+        Each iteration, every square in the grid is checked. Depending on how many orthogonically or diagonally adjacent squares are also populated, 
+        the square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more 
         or less do not. Likewise, any non-living cell with exactly three living neighbors will be "born" and become populated.
     </p>
 

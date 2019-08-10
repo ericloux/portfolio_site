@@ -15,7 +15,7 @@ function addTemplate() {
         </div>
 
         <div class="grid-side">
-            <img src="/assets/headshot.JPG"/>
+            <!-- <img src="../assets/headshot.JPG"/> -->
         </div>
     </div>
     <footer>
@@ -29,7 +29,7 @@ function putFooter() {
     let contentHeight = document.getElementsByClassName("content")[0].offsetHeight;
 
     if (footAndHeadHeight + contentHeight < window.innerHeight) { 
-        document.getElementsByClassName("grid-master")[0].style.height = (window.innerHeight - footAndHeadHeight) + "px";
+        document.getElementsByClassName("grid-master")[0].style.height = (window.innerHeight - footAndHeadHeight + 40) + "px";
     }
 }
 

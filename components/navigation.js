@@ -2,11 +2,11 @@ function addNavigation(state) {
     let nav = document.getElementsByTagName("nav")[0];
     nav.innerHTML = "<br>";
 
-    nav.innerHTML += `<a href="#" id="link-home">HOME</a><br>`;
-    nav.innerHTML += `<a href="#" id="link-bio">BIO</a><br>`;
-    nav.innerHTML += `<a href="#" id="link-projects">PROJECTS</a><br>`;
-    nav.innerHTML += `<a href="#" id="link-blog">BLOG</a><br>`;
-    nav.innerHTML += `<a href="#" id="link-contact">CONTACT</a><br>`;
+    nav.innerHTML += `<input type="button" class="nav-button" id="link-home" value="HOME"><br>`;
+    nav.innerHTML += `<input type="button" class="nav-button" id="link-bio" value="BIO"><br>`;
+    nav.innerHTML += `<input type="button" class="nav-button" id="link-projects" value="PROJECTS"><br>`;
+    nav.innerHTML += `<input type="button" class="nav-button" id="link-blog" value="BLOG"><br>`;
+    nav.innerHTML += `<input type="button" class="nav-button" id="link-contact" value="CONTACT"><br>`;
 }
 
 export {addNavigation};

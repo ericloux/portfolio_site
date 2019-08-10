@@ -1,3 +1,6 @@
+* {
+    font-size:105%;
+}
 
 html, body {
     background-color: black;
@@ -14,12 +17,50 @@ h3 {
     text-align: center;
 }
 
+#convertButton {
+    width: 120px;
+}
+
+#tabText {
+    height: 100px;
+}
+
+#tableText {
+    height: 300px;
+}
+
 nav {
     display: flex;
     flex-direction: column;
     flex-wrap: none;
     justify-content: flex-start;
     align-items: center;
+}
+
+a {
+    color: blue;
+}
+
+.table-maker {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.link-info {
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+
+.link {
+    background-color: white;
+    color: blue;
+    margin: 0 auto;
 }
 
 #template {
@@ -104,7 +145,7 @@ canvas {
 }
 
 .content {
-    padding: 5px 10px;
+    padding: 5px 50px;
     background-color: slategray;
     height:100%;
 }
@@ -165,6 +206,12 @@ canvas {
     height: auto;
     background-color: white;
     text-align: center;
+}
+
+.nav-button {
+    width: 180px;
+    height: 36px;
+    background-color: slategray;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

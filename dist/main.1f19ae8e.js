@@ -129,7 +129,7 @@ exports.putFooter = putFooter;
 // draws the page template in div with ID template
 function addTemplate() {
   var templateDiv = document.getElementById("template");
-  templateDiv.innerHTML = "\n    <header>\n        <b>Eric Loux's Portfolio Site</b>\n    </header>\n    <div class=\"grid-master\">\n        <nav class=\"grid-side\">\n            Here is the nav.\n        </nav>\n\n        <div class=\"content\">\n            Here is the content.\n        </div>\n\n        <div class=\"grid-side\">\n            <img src=\"/assets/headshot.JPG\"/>\n        </div>\n    </div>\n    <footer>\n        Copyright 2019 Eric Loux\n    </footer>";
+  templateDiv.innerHTML = "\n    <header>\n        <b>Eric Loux's Portfolio Site</b>\n    </header>\n    <div class=\"grid-master\">\n        <nav class=\"grid-side\">\n            Here is the nav.\n        </nav>\n\n        <div class=\"content\">\n            Here is the content.\n        </div>\n\n        <div class=\"grid-side\">\n            <!-- <img src=\"../assets/headshot.JPG\"/> -->\n        </div>\n    </div>\n    <footer>\n        Copyright 2019 Eric Loux\n    </footer>";
 } // Puts footer at the bottom of the page or below content (whichever is lower)
 
 
@@ -138,7 +138,7 @@ function putFooter() {
   var contentHeight = document.getElementsByClassName("content")[0].offsetHeight;
 
   if (footAndHeadHeight + contentHeight < window.innerHeight) {
-    document.getElementsByClassName("grid-master")[0].style.height = window.innerHeight - footAndHeadHeight + "px";
+    document.getElementsByClassName("grid-master")[0].style.height = window.innerHeight - footAndHeadHeight + 40 + "px";
   }
 }
 },{}],"components/navigation.js":[function(require,module,exports) {
@@ -152,11 +152,11 @@ exports.addNavigation = addNavigation;
 function addNavigation(state) {
   var nav = document.getElementsByTagName("nav")[0];
   nav.innerHTML = "<br>";
-  nav.innerHTML += "<a href=\"#\" id=\"link-home\">HOME</a><br>";
-  nav.innerHTML += "<a href=\"#\" id=\"link-bio\">BIO</a><br>";
-  nav.innerHTML += "<a href=\"#\" id=\"link-projects\">PROJECTS</a><br>";
-  nav.innerHTML += "<a href=\"#\" id=\"link-blog\">BLOG</a><br>";
-  nav.innerHTML += "<a href=\"#\" id=\"link-contact\">CONTACT</a><br>";
+  nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-home\" value=\"HOME\"><br>";
+  nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-bio\" value=\"BIO\"><br>";
+  nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-projects\" value=\"PROJECTS\"><br>";
+  nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-blog\" value=\"BLOG\"><br>";
+  nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-contact\" value=\"CONTACT\"><br>";
 }
 },{}],"content/home.js":[function(require,module,exports) {
 "use strict";
@@ -181,7 +181,7 @@ exports.bio = bio;
 
 function bio() {
   var content = "";
-  content += "\n    <h3>\n        About Eric Loux\n    </h3>\n    ";
+  content += "\n    <h3>\n        About Eric Loux\n    </h3>\n\n    <p>\n        When I was young, I was introduced to computers through my brother's Nintendo and the computer in my dad's basement. I remember being \n        five or so and having to ask my family to help navigate MS-DOS to get me to the games. As I got older I got more and more involved with \n        computers, finally taking my first programming class when I was 15. I had no idea what I was doing that first semester but decided to come \n        back for the next, where it finally clicked for me, and from that point on I was hooked. After high school I went to Baker University, a small \n        private college twenty minutes from my parent's Kansas home. Unfortunately due to my scholarships running out after four years, I took a \n        few years to step back and figure out my life. Eventually finding myself operating a state-of-the-art inkjet glass decorating machine, I \n        started to get involved with learning Excel and VBA, creating tools to track maintenance and consumption metrics. Eventually getting a chance \n        to move to Nashville to work at a construction and mining equipment company, I jumped on the opportunity and have been living in Tennessee \n        since December of 2017. In 2019, I joined the Savvy Coders boot camp, where I added JavaScript, HTML, and CSS to my skillset. From here I'm \n        currently working on returning to school and finishing my degree at Middle Tennessee State University.\n    </p>\n\n    <p>\n        As a person, I love creating, which is hopefully evident from the programming projects I have here. In addition to that, I've also had a \n        string quartet premiere in Ireland, won a film festival in the \"Best Video with Original Music\" category, skydived 20 times, and built a raft \n        from soda bottles (and floated across a pond on it!), among other adventures.\n    </p>\n\n    <br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/projects.js":[function(require,module,exports) {
@@ -194,7 +194,7 @@ exports.projects = projects;
 
 function projects() {
   var content = "";
-  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <p>\n        <a href=\"#\" id=\"alu\">1. Simulated ALU</a>: Converts a decimal to boolean, then uses only NAND to perform a variety of functions.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"conway\">2. Conway's Game</a>: Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"tetris\">3. Alexey's Game</a>: Everyone needs to code this once, but its real name is trademarked by The Tetris Company.\n    </p>\n\n    <p>\n        <a href=\"//www.gratuityacuity.com\" id=\"gratuity\">4. Gratuity Acuity</a>: My capstone project for Savvy Coders, which allows delivery drivers to track their tips \n        by amount, date, and location.\n    </p>\n    ";
+  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <a id =\"gratuity-writeup\">here</a>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Horray for practicality!</p><br>    \n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog.js":[function(require,module,exports) {
@@ -207,7 +207,7 @@ exports.blog = blog;
 
 function blog() {
   var content = "";
-  content += "\n    <h3>\n        Blog Articles\n    </h3>\n\n    <p>\n        I love to learn, and writing about what I learn lets me both lets me internally organize that knowledge and put it back \n        into the world. To that end, here are some of my assorted writings on various subjects.\n    </p>\n\n    <h3>\n        How Do Computers Work - A Series\n    </h3>\n\n    <p>\n        <a href=\"#\" id=\"abstraction\">1. Abstraction and Computer Science</a>: An overview of what a computer is, from the bottom to the top.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"elementary\">2. Elementary Logic Gates</a>: How can we get electricity to perform logical functions?\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"boolean\">3. Boolean Functions</a>: Doing more advanced tasks once we've built a logic gate.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"representing\">4. Representing Binary Logic</a>: Notes on notation.\n    </p>\n\n    <p>\n        <a href=\"#\" id=\"decisions\">5. Decisions and Addition</a>: At this point, we can start to do some useful things with logic gates!\n    </p>\n\n    ";
+  content += "\n    <h3>\n        Blog Articles\n    </h3>\n\n    <p>\n        I love to learn, and writing about what I learn lets me both lets me internally organize that knowledge and put it back \n        into the world. To that end, here are some of my assorted writings on various subjects.\n    </p>\n\n    <h3>\n        How Do Computers Work - A Series\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"abstraction\">1. Abstraction and Computer Science</button></span>\n    <p class=\"link-info\">An overview of what a computer is, from the bottom to the top.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"elementary\">2. Elementary Logic Gates</button></span>\n    <p class=\"link-info\">How can we get electricity to perform logical functions?</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"boolean\">3. Boolean Functions</button></span>\n    <p class=\"link-info\">Doing more advanced tasks once we've built a logic gate.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"representing\">4. Representing Binary Logic</button></span>\n    <p class=\"link-info\">Notes on notation.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"decisions\">5. Decisions and Addition</button></span>\n    <p class=\"link-info\">At this point, we can start to do some useful things with logic gates!</p><br>\n\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog/abstraction.js":[function(require,module,exports) {
@@ -287,7 +287,7 @@ exports.contact = contact;
 
 function contact() {
   var content = "";
-  content += "\n    <h3>\n        Reach out!\n    </h3>\n    ";
+  content += "\n    <h3>\n        Reach out!\n    </h3>\n\n    Until I implement my contact form, the best way to contact me is by email. Here's instructions: <br><br>\n\n    [first] = eric<br>\n    [middle] = charles<br>\n    [last] = loux<br>\n    [dot] = . (a period)<br>\n    [domain] = gmail.com<br><br>\n\n    My email is [first][dot][middle][dot][loux]@[domain]\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/projects/alu.js":[function(require,module,exports) {
@@ -1398,7 +1398,7 @@ exports.conway = conway;
 
 function conway() {
   var content = "";
-  content += "\n    <br>\n    <div id=\"board\">\n        <canvas width=\"500\" height=\"500\"></canvas>\n    </div>\n\n    <p>\n        Conway's Game of Life was a project that I wanted to create early for a few reasons. First, I had discovered the canvas element \n        and wanted to build something with it. Since the Game of Life has simple rules, it seemed like an ideal candidate.\n    </p>\n\n    <p>\n        For the uninitiated, the Game of life is a simulation that's run on a grid. Each element in the grid can either be populated or \n        unpopulated. In the above, the populated squares are yellow, with the unpopulated being gray.\n    </p>\n\n    <p>\n        Each iteration, every square in the grid is checked. Depending on how many orthogonically adjacent squares are also populated, the \n        square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more \n        or less do not. Likewise, any non-living cell with exactly three living neighbors will be \"born\" and become populated.\n    </p>\n\n    <p>\n        Although these rules are simple, they can create a variety of shapes. Some end up static, some form repetitive patterns, and some \n        explode and retract as if they're organic.\n    </p>\n\n    <p>\n        The original plan was to take mouse input to turn cells either on or off, but that wasn't implemented. However, a random configuration \n        of cells is set as alive each time the function is loaded, which allows a variety of initial states.\n    </p>\n\n    <br><br>\n    ";
+  content += "\n    <br>\n    <div id=\"board\">\n        <canvas width=\"500\" height=\"500\"></canvas>\n    </div>\n\n    <p>\n        Conway's Game of Life was a project that I wanted to create early for a few reasons. First, I had discovered the canvas element \n        and wanted to build something with it. Since the Game of Life has simple rules, it seemed like an ideal candidate.\n    </p>\n\n    <p>\n        For the uninitiated, the Game of life is a simulation that's run on a grid. Each element in the grid can either be populated or \n        unpopulated. In the above, the populated squares are yellow, with the unpopulated being gray.\n    </p>\n\n    <p>\n        Each iteration, every square in the grid is checked. Depending on how many orthogonically or diagonally adjacent squares are also populated, \n        the square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more \n        or less do not. Likewise, any non-living cell with exactly three living neighbors will be \"born\" and become populated.\n    </p>\n\n    <p>\n        Although these rules are simple, they can create a variety of shapes. Some end up static, some form repetitive patterns, and some \n        explode and retract as if they're organic.\n    </p>\n\n    <p>\n        The original plan was to take mouse input to turn cells either on or off, but that wasn't implemented. However, a random configuration \n        of cells is set as alive each time the function is loaded, which allows a variety of initial states.\n    </p>\n\n    <br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
   var canvas = document.querySelector("#board canvas");
   var ctx = canvas.getContext("2d");
@@ -1519,6 +1519,80 @@ function conway() {
 
   loop();
 }
+},{}],"content/blog/gratuity.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.gratuity = gratuity;
+
+function gratuity() {
+  var content = "";
+  content += "\n    <h3>\n        About Eric Loux\n    </h3>\n\n    <p>\n        As a former pizza delivery driver, one of the things that I would often do is keep a list of all the tips I made in a single night. \n        This was ostenibly for tax records, but the truth is that I just liked to see the data and compare where I was getting the best tips \n        during the night. Naturally, most of those receipts just ended up discarded on my floorboard at the end of my shift, but after \n        thinking about what I wanted my capstone project for Savvy Coders to entail, I remembered my tip lists and thought that I could turn \n        them into a nice project through the addition of some other features.\n    </p>\n\n    <p>\n        Although the list was the primary function, I got so carried away that it was actually the last thing that I implemented. I decided \n        that I was going to use a map API to be able to track the tip information geographically as well. After searching through a couple \n        of options, I settled on the Google Maps API. Knowing that learning the API was going to take some work, I focused primarily on \n        the map functionality. I'm glad that I did, too, because some of the quirks of using markers meant that it ended up being easier to \n        store the list of tips as an array of Google Maps markers, rather than an array of other objects that encapsulated those markers.\n    </p>\n\n    <p>\n        In addition to the map, the app also has full CRUD functionality on the list. The user can add a tip record by clicking on the \"Add \n        Tip\" button. Tips can be read, updated, and deleted in the tip list that is accessed at the bottom of the screen. Because I love \n        the canvas element so much, I also decided to draw a quartile graph, as well as the sum and average. The date range for calculation \n        can also be modified\n    </p>\n\n    <p>\n        Although the project as is meets the requirements that I wanted, there are a few improvements that I want to make. First, the quartile \n        graph doesn't work correctly when there are less than four tips entered. Second, it would make sense to duplicate the date selection \n        dialogue to be included on the list of tips, as well as potentially in its own popup window. Lastly, the entire site was designed \n        on a computer, rather than a mobile device. Because of that, the GUI isn't optimized to be displayed on a phone screen. But of course, \n        what programmer ever feels like there aren't improvements that can be made to their application?\n    </p>\n\n    <p>\n        You can visit Gratuity Acuity here: <form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">Gratuity Acuity</button></form>\n    </p>\n    \n    <br><br>\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+}
+},{}],"content/projects/tablemaker.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.tablemaker = tablemaker;
+
+function tablemaker() {
+  var content = "";
+  content += "\n\t<div class=\"table-maker\">\n\tInput: <textarea type=\"text\" id=\"tabText\" width=\"600px\" height=\"300\"></textarea><br>\n\t<div class=\"center-content\"><input type=\"checkbox\" id=\"header\">Contains Header</div>\n\t<div class=\"center-content\"><input type=\"button\" id=\"convertButton\" width=\"100px\" value=\"Convert\"></div><br>\n\tOutput:<textarea type=\"text\" id=\"tableText\" spellcheck=\"false\"></textarea>\n\t<div id=\"tableSpace\"></div></div>\n\n\t";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+  document.getElementById("convertButton").addEventListener("click", function () {
+    var textToParse = document.getElementById("tabText").value;
+    var parsedText = "<table>";
+    var headerLine = false;
+
+    if (document.getElementById("header").checked) {
+      headerLine = true;
+      parsedText += "\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>";
+    } else {
+      parsedText += "\r\n\t<tr>\r\n\t\t<td>";
+    }
+
+    for (var i = 0; i < textToParse.length; i++) {
+      switch (textToParse.charCodeAt(i)) {
+        case 9:
+          while (textToParse.charCodeAt(i) == 9) {
+            i++;
+          }
+
+          i--;
+
+          if (headerLine == true) {
+            parsedText += "</th>\r\n\t\t\t<th>";
+          } else {
+            parsedText += "</td>\r\n\t\t<td>";
+          }
+
+          break;
+
+        case 10:
+          if (headerLine == true) {
+            parsedText += "</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tr>\r\n\t\t<td>";
+            headerLine = false;
+          } else {
+            parsedText += "</tr>\r\n\t<tr>\r\n\t\t<td>";
+          }
+
+          break;
+
+        default:
+          parsedText += textToParse[i];
+      }
+    }
+
+    parsedText += "</td>\r\n\t</tr>\r\n</table>";
+    document.getElementById("tableText").value = parsedText;
+    document.getElementById("tableSpace").innerHTML = parsedText;
+  });
+}
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -1552,6 +1626,10 @@ var _tetris = require("./content/projects/tetris.js");
 
 var _conway = require("./content/projects/conway.js");
 
+var _gratuity = require("./content/blog/gratuity.js");
+
+var _tablemaker = require("./content/projects/tablemaker.js");
+
 var state = {
   page: "home",
   subpage: "none"
@@ -1582,6 +1660,14 @@ function render(state) {
 
         case "conway":
           (0, _conway.conway)();
+          break;
+
+        case "gratuity":
+          (0, _gratuity.gratuity)();
+          break;
+
+        case "tablemaker":
+          (0, _tablemaker.tablemaker)();
           break;
 
         default:
@@ -1626,19 +1712,19 @@ function render(state) {
   }
 
   document.getElementById("link-home").addEventListener("click", function () {
-    window.event.preventDefault();
+    event.preventDefault();
     state.page = "home";
     state.subpage = "none";
     render(state);
   });
   document.getElementById("link-bio").addEventListener("click", function () {
-    window.event.preventDefault();
+    event.preventDefault();
     state.page = "bio";
     state.subpage = "none";
     render(state);
   });
   document.getElementById("link-projects").addEventListener("click", function () {
-    window.event.preventDefault();
+    event.preventDefault();
     state.page = "projects";
     state.subpage = "none";
     render(state);
@@ -1646,27 +1732,40 @@ function render(state) {
 
   if (state.page == "projects" && state.subpage == "none") {
     document.getElementById("alu").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "projects";
       state.subpage = "alu";
       render(state);
     });
     document.getElementById("tetris").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "projects";
       state.subpage = "tetris";
       render(state);
     });
     document.getElementById("conway").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "projects";
       state.subpage = "conway";
+      render(state);
+    });
+    _tablemaker.tablemaker;
+    document.getElementById("tablemaker").addEventListener("click", function () {
+      event.preventDefault();
+      state.page = "projects";
+      state.subpage = "tablemaker";
+      render(state);
+    });
+    document.getElementById("gratuity-writeup").addEventListener("click", function () {
+      event.preventDefault();
+      state.page = "projects";
+      state.subpage = "gratuity";
       render(state);
     });
   }
 
   document.getElementById("link-blog").addEventListener("click", function () {
-    window.event.preventDefault();
+    event.preventDefault();
     state.page = "blog";
     state.subpage = "none";
     render(state);
@@ -1674,31 +1773,31 @@ function render(state) {
 
   if (state.page == "blog" && state.subpage == "none") {
     document.getElementById("abstraction").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "blog";
       state.subpage = "abstraction";
       render(state);
     });
     document.getElementById("elementary").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "blog";
       state.subpage = "elementary";
       render(state);
     });
     document.getElementById("boolean").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "blog";
       state.subpage = "boolean";
       render(state);
     });
     document.getElementById("representing").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "blog";
       state.subpage = "representing";
       render(state);
     });
     document.getElementById("decisions").addEventListener("click", function () {
-      window.event.preventDefault();
+      event.preventDefault();
       state.page = "blog";
       state.subpage = "decisions";
       render(state);
@@ -1706,7 +1805,7 @@ function render(state) {
   }
 
   document.getElementById("link-contact").addEventListener("click", function () {
-    window.event.preventDefault();
+    event.preventDefault();
     state.page = "contact";
     state.subpage = "none";
     render(state);
@@ -1716,7 +1815,7 @@ function render(state) {
 
 ;
 render(state);
-},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/projects/alu.js":"content/projects/alu.js","./content/projects/tetris.js":"content/projects/tetris.js","./content/projects/conway.js":"content/projects/conway.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/projects/alu.js":"content/projects/alu.js","./content/projects/tetris.js":"content/projects/tetris.js","./content/projects/conway.js":"content/projects/conway.js","./content/blog/gratuity.js":"content/blog/gratuity.js","./content/projects/tablemaker.js":"content/projects/tablemaker.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1744,7 +1843,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43225" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46771" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
