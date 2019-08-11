@@ -19,7 +19,7 @@ function projects() {
 
     <span class="center-content"><form action="//gratuityacuity.com" target="_blank"><button class="link" id="gratuity">4. Gratuity Acuity</button></form></span>
     <p class="link-info">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.
-    View the write-up <a id ="gratuity-writeup">here</a>.</p><br>
+    View the write-up <u><a id ="gratuity-writeup">here</a></u>.</p><br>
 
     <span class="center-content"><button class="link" id="tablemaker">5. Table Maker</button></span>
     <p class="link-info">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting 

@@ -15,7 +15,7 @@ function addTemplate() {
         </div>
 
         <div class="grid-side">
-            <!-- <img src="../assets/headshot.JPG"/> -->
+            <!--! <img src="https://github.com/ericloux/portfolio_site/blob/master/assets/headshot.JPG?raw=true" alt="The man himself"/> -->
         </div>
     </div>
     <footer>

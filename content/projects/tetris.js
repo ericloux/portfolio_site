@@ -540,6 +540,7 @@ function tetris() {
 
         // sets input variable to true on press
     function keyDownHandler(e) {
+        event.preventDefault();
         switch (e.key) {
         case "d":
             rightPressed = true;

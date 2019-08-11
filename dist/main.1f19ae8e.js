@@ -129,7 +129,7 @@ exports.putFooter = putFooter;
 // draws the page template in div with ID template
 function addTemplate() {
   var templateDiv = document.getElementById("template");
-  templateDiv.innerHTML = "\n    <header>\n        <b>Eric Loux's Portfolio Site</b>\n    </header>\n    <div class=\"grid-master\">\n        <nav class=\"grid-side\">\n            Here is the nav.\n        </nav>\n\n        <div class=\"content\">\n            Here is the content.\n        </div>\n\n        <div class=\"grid-side\">\n            <!-- <img src=\"../assets/headshot.JPG\"/> -->\n        </div>\n    </div>\n    <footer>\n        Copyright 2019 Eric Loux\n    </footer>";
+  templateDiv.innerHTML = "\n    <header>\n        <b>Eric Loux's Portfolio Site</b>\n    </header>\n    <div class=\"grid-master\">\n        <nav class=\"grid-side\">\n            Here is the nav.\n        </nav>\n\n        <div class=\"content\">\n            Here is the content.\n        </div>\n\n        <div class=\"grid-side\">\n            <!--! <img src=\"https://github.com/ericloux/portfolio_site/blob/master/assets/headshot.JPG?raw=true\" alt=\"The man himself\"/> -->\n        </div>\n    </div>\n    <footer>\n        Copyright 2019 Eric Loux\n    </footer>";
 } // Puts footer at the bottom of the page or below content (whichever is lower)
 
 
@@ -152,6 +152,7 @@ exports.addNavigation = addNavigation;
 function addNavigation(state) {
   var nav = document.getElementsByTagName("nav")[0];
   nav.innerHTML = "<br>";
+  nav.innerHTML += "<b>NAVIGATION</b><br><br>";
   nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-home\" value=\"HOME\"><br>";
   nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-bio\" value=\"BIO\"><br>";
   nav.innerHTML += "<input type=\"button\" class=\"nav-button\" id=\"link-projects\" value=\"PROJECTS\"><br>";
@@ -168,7 +169,7 @@ exports.home = home;
 
 function home() {
   var content = "";
-  content += "\n    <h3>\n        Welcome to my portfolio site!\n    </h3>\n    \n    <p>\n        There are plenty of reasons you might find this page. Whatever the reason, welcome to my site and I hope you \n        find yourself interested in the content.\n    </p>\n    \n    <p>\n        Nearly every line of code here was written by myself. I had no experience writing HTML, CSS, or JavaScript prior \n        to June of 2019, but have honestly grown to enjoy those languages and their possibilities. Of course, that doesn't \n        mean that I started programming then. I've had a long history with computers which is described in my Bio page.\n    </p>\n    \n    <p>\n        Enjoy looking around, and please feel free to contact me! My details are in the Contact page.\n    </p>\n    ";
+  content += "\n    <h3>\n        Welcome to my portfolio site!\n    </h3>\n    \n    <p>\n        There are plenty of reasons you might find this page. Whatever the reason, welcome to my site and I hope you \n        find yourself interested in the content.\n    </p>\n    \n    <p>\n        Every line of code here was written by myself. I had no experience writing HTML, CSS, or JavaScript prior \n        to June of 2019, but have honestly grown to enjoy those languages and their possibilities. Of course, that doesn't \n        mean that I started programming then. I've had a long history with computers which is described in my Bio page.\n    </p>\n    \n    <p>\n        Enjoy looking around, and please feel free to contact me! My details are in the Contact page.\n    </p>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/bio.js":[function(require,module,exports) {
@@ -194,7 +195,7 @@ exports.projects = projects;
 
 function projects() {
   var content = "";
-  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <a id =\"gratuity-writeup\">here</a>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Horray for practicality!</p><br>    \n    ";
+  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <u><a id =\"gratuity-writeup\">here</a></u>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Horray for practicality!</p><br>    \n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog.js":[function(require,module,exports) {
@@ -207,7 +208,7 @@ exports.blog = blog;
 
 function blog() {
   var content = "";
-  content += "\n    <h3>\n        Blog Articles\n    </h3>\n\n    <p>\n        I love to learn, and writing about what I learn lets me both lets me internally organize that knowledge and put it back \n        into the world. To that end, here are some of my assorted writings on various subjects.\n    </p>\n\n    <h3>\n        How Do Computers Work - A Series\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"abstraction\">1. Abstraction and Computer Science</button></span>\n    <p class=\"link-info\">An overview of what a computer is, from the bottom to the top.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"elementary\">2. Elementary Logic Gates</button></span>\n    <p class=\"link-info\">How can we get electricity to perform logical functions?</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"boolean\">3. Boolean Functions</button></span>\n    <p class=\"link-info\">Doing more advanced tasks once we've built a logic gate.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"representing\">4. Representing Binary Logic</button></span>\n    <p class=\"link-info\">Notes on notation.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"decisions\">5. Decisions and Addition</button></span>\n    <p class=\"link-info\">At this point, we can start to do some useful things with logic gates!</p><br>\n\n    ";
+  content += "\n    <h3>\n        Blog Articles\n    </h3>\n\n    <p>\n        I love to learn, and writing about what I learn lets me both lets me internally organize that knowledge and put it back \n        into the world. To that end, here are some of my assorted writings on various subjects.\n    </p>\n\n    <h3>\n        How Do Computers Work - A Series\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"abstraction\">1. Abstraction and Computer Science</button></span>\n    <p class=\"link-info\">An overview of what a computer is, from the bottom to the top.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"elementary\">2. Elementary Logic Gates</button></span>\n    <p class=\"link-info\">How can we get electricity to perform logical functions?</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"boolean\">3. Boolean Functions</button></span>\n    <p class=\"link-info\">Doing more advanced tasks once we've built a logic gate.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"representing\">4. Representing Binary Logic</button></span>\n    <p class=\"link-info\">Notes on notation.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"decisions\">5. Decisions and Addition</button></span>\n    <p class=\"link-info\">At this point, we can start to do some useful things with logic gates!</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"binary\">6. Representing Binary</button></span>\n    <p class=\"link-info\">How can we combine 0s and 1s into longer numbers?</p><br>\n\n    <h3>\n        Making a Genetic Algorithm\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"genetic\">1. Genetic Algorithms</button></span>\n    <p class=\"link-info\">What is a genetic algorithm, and what are they used for?</p><br>\n    \n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog/abstraction.js":[function(require,module,exports) {
@@ -287,7 +288,12 @@ exports.contact = contact;
 
 function contact() {
   var content = "";
-  content += "\n    <h3>\n        Reach out!\n    </h3>\n\n    Until I implement my contact form, the best way to contact me is by email. Here's instructions: <br><br>\n\n    [first] = eric<br>\n    [middle] = charles<br>\n    [last] = loux<br>\n    [dot] = . (a period)<br>\n    [domain] = gmail.com<br><br>\n\n    My email is [first][dot][middle][dot][loux]@[domain]\n    ";
+  content += "\n    <h3>\n        Reach out!\n    </h3>\n\n    Until I implement my contact form, are are the best ways to contact me. Here's instructions: <br><br>\n\n    ";
+  content += "Email: <span class=\"hide-me\">contact.</span>eric.<span class=\"dont-hide-me\">charles.</span>loux*gmail@com<br>";
+  content += "Phone: " + String(2 * 3 * 358073 * 365507).replace(2, "-").replace(2, "-");
+  content = content.replace('@', '.');
+  content = content.replace('*', '@');
+  content += "<br><br>I have my doubts about putting this info where spammers can find it, so I had some fun with it! \n        Although it shows as normal to you and me, I did some manipulation with CSS and JavaScript to make it fool any bots \n        trawling for email addresses or phone numbers. I put some random divs that hide information (and some that do nothing) \n        in my email addresses, and I provided a factorization of my phone number with some extra digits thrown in, then replaced \n        those extra digits with dashes after typecasting the number to a string. It probably would have been easier to just \n        implement the form!";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/projects/alu.js":[function(require,module,exports) {
@@ -1047,6 +1053,8 @@ function tetris() {
 
 
   function keyDownHandler(e) {
+    event.preventDefault();
+
     switch (e.key) {
       case "d":
         rightPressed = true;
@@ -1593,6 +1601,32 @@ function tablemaker() {
     document.getElementById("tableSpace").innerHTML = parsedText;
   });
 }
+},{}],"content/blog/binary.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.boolean = boolean;
+
+function boolean() {
+  var content = "";
+  content += "\n    <h3>Binary Numbers</h3>\n\n    As we've progressed upwards with our examination of what makes a computer, the scene has changed a bit. At first, we were examining circuits in \n    terms of on and off state. Once those were functioning correctly, then we could step back and think of them as operations rather than physical \n    constructs, doing logical operations with ones and zeroes. Then, we saw how to extend those operations and start to do addition and decision \n    making. However, that addition is limited to only add numbers up to three. Let's examine how we can extend that further!<br><br>\n\n    If you remember, our adder outputs two binary numbers. Based on the combination of these numbers, we can have 0 through 3 represented as 00, 01, \n    10, and 11 respectively. So, if we add another digit, then we would double the combinations, and therefore double the numbers we could represent. \n    Each new digit represents a number that's a multiple of two. The rightmost place represents 1. The next digit to the left represents 2, then 4, \n    then 8, and so on. This is the basis for binary numbers. <br><br>\n\n    It may not be intuitive, but we can add add and subtract these just like normal decimal numbers. The difference is that we carry or borrow with \n    twos instead of tens. For example, 111 + 1 would become 1000, or 1011 + 10 would be 1101. Converting these to decimal, we see that they're also \n    true: 7 + 8 = 8, and 11 + 2 = 13. <br><br>\n\n    Of course, these are just for positive numbers. If we can represent negative numbers in a sensible way, then by adding them together, we can \n    perform subtraction with the same process of just adding bit by bit.<br><br>\n\n    The first idea would be just to flip the bits. So, if 11 is 3, then 00 would be -3. You can tell the issue with that - 00 is already zero, and \n    that's kind of an important number. The solution would be to make each number a fixed number of digits long. For example, instead of representing \n    3 as 11, you might represent it as 0011. Then, if we reverse the bits, we get 1100 to represent -3. This means, though, that half of the numbers \n    would be negative, so any number that starts with 1 is negative, and any number starting with 0 is positive. But what happens if we add 1100 and \n    0011 together? We get 1111 when we should get zero. Of course, if we also flip 1111, then we get 0000, which is zero. So, somehow we ended up with \n    negative zero. This obviously makes no sense.<br><br>\n\n    So, how can we fix this? If we add some other numbers and negatives, then we can see a pattern. Let's add -3 to each number and look at the \n    results:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Decimal</th>\n                <th>Positive Binary</th>\n                <th>-3 in Binary</th>\n                <th>Binary Result</th>\n                <th>Decimal Result</th>\n                <th>Actual Value</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>7</td>\n            <td>0111</td>\n            <td>1100</td>\n            <td>0011</td>\n            <td>3</td>\n            <td>4</tr>\n        <tr>\n            <td>6</td>\n            <td>0110</td>\n            <td>1100</td>\n            <td>0010</td>\n            <td>2</td>\n            <td>3</tr>\n        <tr>\n            <td>5</td>\n            <td>0101</td>\n            <td>1100</td>\n            <td>0001</td>\n            <td>1</td>\n            <td>2</tr>\n        <tr>\n            <td>4</td>\n            <td>0100</td>\n            <td>1100</td>\n            <td>0000</td>\n            <td>0</td>\n            <td>1</tr>\n        <tr>\n            <td>3</td>\n            <td>0011</td>\n            <td>1100</td>\n            <td>1111</td>\n            <td>-0</td>\n            <td>0</tr>\n        <tr>\n            <td>2</td>\n            <td>0010</td>\n            <td>1100</td>\n            <td>1110</td>\n            <td>-1</td>\n            <td>-1</tr>\n        <tr>\n            <td>1</td>\n            <td>0001</td>\n            <td>1100</td>\n            <td>1101</td>\n            <td>-2</td>\n            <td>-2</tr>\n        <tr>\n            <td>0</td>\n            <td>0000</td>\n            <td>1100</td>\n            <td>1100</td>\n            <td>-3</td>\n            <td>-3</td>\n        </tr>\n    </table>\n\n    Each of the positive numbers is off by 1, and there's still that negative 0 in the mix. So, what if we add one to each negative number? That way \n    1111 would become -1 rather than -0, it would correct the error with the negative numbers. Recreating the chart above with this new method, we \n    get the following:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Decimal</th>\n                <th>Positive Binary</th>\n                <th>-3 in Binary</th>\n                <th>Binary Result</th>\n                <th>Decimal Result</th>\n                <th>Actual Value</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>7</td>\n            <td>0111</td>\n            <td>1101</td>\n            <td>0100</td>\n            <td>3</td>\n            <td>4</tr>\n        <tr>\n            <td>6</td>\n            <td>0110</td>\n            <td>1101</td>\n            <td>0011</td>\n            <td>2</td>\n            <td>3</tr>\n        <tr>\n            <td>5</td>\n            <td>0101</td>\n            <td>1101</td>\n            <td>0010</td>\n            <td>1</td>\n            <td>2</tr>\n        <tr>\n            <td>4</td>\n            <td>0100</td>\n            <td>1101</td>\n            <td>0001</td>\n            <td>0</td>\n            <td>1</tr>\n        <tr>\n            <td>3</td>\n            <td>0011</td>\n            <td>1101</td>\n            <td>0000</td>\n            <td>-0</td>\n            <td>0</tr>\n        <tr>\n            <td>2</td>\n            <td>0010</td>\n            <td>1101</td>\n            <td>1111</td>\n            <td>-1</td>\n            <td>-1</tr>\n        <tr>\n            <td>1</td>\n            <td>0001</td>\n            <td>1101</td>\n            <td>1110</td>\n            <td>-2</td>\n            <td>-2</tr>\n        <tr>\n            <td>0</td>\n            <td>0000</td>\n            <td>1101</td>\n            <td>1101</td>\n            <td>-3</td>\n            <td>-3</td>\n        </tr>\n    </table>\n\n    It now works perfectly! We've just made numbers much easier to add in binary. Now instead of having two separate circuits to add and subtract, \n    all we need to do is to negate each bit in the number being subtracted and add one to it, then we can add the numbers and we have subtraction!<br><br>\n\n    This method of representing binary numbers is also known as the \"2's Complement\" method. It's by far the most common way of representing negative \n    binary numbers due to the reasons presented here.<br><br><br>\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+}
+},{}],"content/blog/genetic.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.genetic = genetic;
+
+function genetic() {
+  var content = "";
+  content += "   \n    <h3>\n        Genetic Algorithms\n    </h3>\n\n    In my opinion, one of the most exciting and intriguing developments is that of genetic algorithms. A genetic algorithm creates a program, but \n    instead of having a human type out every line of code, the computer writes the program itself.You might be asking yourself how the heck that \n    works and wondering if it's going to end up with the Terminator coming back for you, but that's not the case at all! Instead, the programmer \n    takes inspiration from something that is all around us - genetics.<br><br>\n\n    Now, some people are immediately put off by the term genetics, even though evolution has been accepted by the Catholic Church since 1950. The \n    \"genes\" in genetic algorithms are not exactly the same concept as those found in DNA. However, the concept can be applied to computer code \n    through clever adaptation.<br><br>\n\n    Here's an incredibly simplified overview of how genes work organisms. A strand of DNA serves as a blueprint, attracting amino acids to its end. \n    From there, the amino acids move along the strand of DNA, combining with other amino acids and eventually creating a molecule. This molecule \n    then separates and interacts with the other molecules to form just about every possible type of organic matter. The DNA splits in half during \n    this process, and then each half can regenerate the other half and you're left with two identical strands of DNA. (Somewhere, a geneticist is \n    weeping after reading this.)<br><br>\n\n    When two organisims reproduce, the genetic material can combine as well. Portions of each of the parents' genes are mixed with portions of the \n    others. Likewise, sometimes a perfect copy isn't created when a strand splits. This is known as a mutation, and can happen from something as \n    common as solar radiation hitting the point the genes split. Of course, that can completely change what the genes create!<br><br>\n\n    Reproducing this in computers is easy. First, you need to come up with a way to represent the commands you want your computer to be able to use. \n    From there, you write a program that can create those genes (the genotype), as well as test them out (the phenotype). The quintessential example \n    is, of course, creating a simulated organism. Instead of having the genes create physical material, they might instead represent traits, such as \n    ability to sense other organisms. In this example, the genotype is the actual genes to create the creature, while the phenotype is how those \n    creatures interact with each other in whatever environment they're put into.<br><br>\n\n    From there, a way to determine which organism is best is determined. This quantity is known as its fitness. In our organism example, it may be \n    the organism that gets the most food, or lives the longest. Orgamisms with higher fitness are more likely to be selected to have their genes \n    passed on to the next generation. This is done by mixing and mutating genes as described above. From that, we end up with a completely new \n    generation, which is then put through the test again and the process repeats.<br><br>\n\n    Genetic algorithms can solve a variety of problems that humans just aren't good at. Instead of plodding through case after case of trial by \n    error, a programmer can have a program that tests a hundred cases at once, chooses the best solutions, and then continues refining bit by bit \n    until the problem is solved. <br><br>\n\n    I had previously created a genetic algorithm, but the implementation was lacking a bit. Since then, I've been wanting to give it another shot. \n    To that end, I'm writing this series of blog entries to document and share the process. Next time, I'll be outlining some of what I'm planning \n    to aim for.<br><br>\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+}
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -1629,6 +1663,10 @@ var _conway = require("./content/projects/conway.js");
 var _gratuity = require("./content/blog/gratuity.js");
 
 var _tablemaker = require("./content/projects/tablemaker.js");
+
+var _binary = require("./content/blog/binary.js");
+
+var _genetic = require("./content/blog/genetic.js");
 
 var state = {
   page: "home",
@@ -1697,6 +1735,14 @@ function render(state) {
 
         case "decisions":
           (0, _decisions.decisions)();
+          break;
+
+        case "binary":
+          (0, _binary.binary)();
+          break;
+
+        case "genetic":
+          (0, _genetic.genetic)();
           break;
 
         default:
@@ -1802,6 +1848,18 @@ function render(state) {
       state.subpage = "decisions";
       render(state);
     });
+    document.getElementById("binary").addEventListener("click", function () {
+      event.preventDefault();
+      state.page = "blog";
+      state.subpage = "binary";
+      render(state);
+    });
+    document.getElementById("genetic").addEventListener("click", function () {
+      event.preventDefault();
+      state.page = "blog";
+      state.subpage = "genetic";
+      render(state);
+    });
   }
 
   document.getElementById("link-contact").addEventListener("click", function () {
@@ -1815,7 +1873,7 @@ function render(state) {
 
 ;
 render(state);
-},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/projects/alu.js":"content/projects/alu.js","./content/projects/tetris.js":"content/projects/tetris.js","./content/projects/conway.js":"content/projects/conway.js","./content/blog/gratuity.js":"content/blog/gratuity.js","./content/projects/tablemaker.js":"content/projects/tablemaker.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/projects/alu.js":"content/projects/alu.js","./content/projects/tetris.js":"content/projects/tetris.js","./content/projects/conway.js":"content/projects/conway.js","./content/blog/gratuity.js":"content/blog/gratuity.js","./content/projects/tablemaker.js":"content/projects/tablemaker.js","./content/blog/binary.js":"content/blog/binary.js","./content/blog/genetic.js":"content/blog/genetic.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1843,7 +1901,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46771" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34857" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -30,6 +30,16 @@ function blog() {
     <span class="center-content"><button class="link" id="decisions">5. Decisions and Addition</button></span>
     <p class="link-info">At this point, we can start to do some useful things with logic gates!</p><br>
 
+    <span class="center-content"><button class="link" id="binary">6. Representing Binary</button></span>
+    <p class="link-info">How can we combine 0s and 1s into longer numbers?</p><br>
+
+    <h3>
+        Making a Genetic Algorithm
+    </h3>
+
+    <span class="center-content"><button class="link" id="genetic">1. Genetic Algorithms</button></span>
+    <p class="link-info">What is a genetic algorithm, and what are they used for?</p><br>
+    
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

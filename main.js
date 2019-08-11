@@ -13,8 +13,10 @@ import {contact} from "./content/contact.js";
 import {alu} from "./content/projects/alu.js";
 import {tetris} from "./content/projects/tetris.js";
 import {conway} from "./content/projects/conway.js";
-import { gratuity } from "./content/blog/gratuity.js";
+import {gratuity} from "./content/blog/gratuity.js";
 import {tablemaker} from "./content/projects/tablemaker.js";
+import {binary} from "./content/blog/binary.js";
+import {genetic} from "./content/blog/genetic.js";
 
 let state = {
     page: "home",
@@ -83,6 +85,14 @@ function render(state) {
 
         case "decisions":
             decisions();
+            break;
+
+        case "binary":
+            binary();
+            break;
+
+        case "genetic":
+            genetic();
             break;
 
         default:
@@ -195,6 +205,20 @@ function render(state) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "decisions";
+            render(state);
+        });
+
+        document.getElementById("binary").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "blog";
+            state.subpage = "binary";
+            render(state);
+        });
+
+        document.getElementById("genetic").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "blog";
+            state.subpage = "genetic";
             render(state);
         });
     }

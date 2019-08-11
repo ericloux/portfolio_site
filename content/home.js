@@ -12,7 +12,7 @@ function home() {
     </p>
     
     <p>
-        Nearly every line of code here was written by myself. I had no experience writing HTML, CSS, or JavaScript prior 
+        Every line of code here was written by myself. I had no experience writing HTML, CSS, or JavaScript prior 
         to June of 2019, but have honestly grown to enjoy those languages and their possibilities. Of course, that doesn't 
         mean that I started programming then. I've had a long history with computers which is described in my Bio page.
     </p>

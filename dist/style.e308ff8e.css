@@ -58,8 +58,8 @@ a {
 }
 
 .link {
-    background-color: white;
-    color: blue;
+    background-color: darkgoldenrod;
+    color: midnightblue;
     margin: 0 auto;
 }
 
@@ -80,20 +80,23 @@ td {
     text-align: center;
     border: 1px black solid;
     width: 80px;
-    background-color: rgb(145, 157, 226);
+    font-size: 100%;
+    background-color: steelblue;
 }
 
 th {
     text-align: center;
     border: 1px black solid;
     width: 80px;
-    background-color: rgb(145, 157, 226);
+    font-size: 100%;
+    background-color: darkgoldenrod;
 }
 
 header {
     width: 100%;
     height: 100px;
-    background-color: rgb(145, 157, 226);
+    background-color: steelblue;
+    color: midnightblue;
     border-bottom: 2px solid black;
     font-size: 25pt;
     display: flex;
@@ -112,7 +115,7 @@ footer {
     height: 40px;
     border-top: 2px solid black;
     margin: 0px;
-    background-color: rgb(145, 157, 226);
+    background-color: steelblue;
     width: 100%;
     text-align: center;
     padding: 10px 0px;
@@ -139,14 +142,16 @@ canvas {
 
 .grid-side {
     padding: 5px 10px;
-    background-color: rgb(145, 157, 226);
+    background-color: steelblue;
+    color:midnightblue;
     height:100%;
     min-width: 20%;
 }
 
 .content {
     padding: 5px 50px;
-    background-color: slategray;
+    background-color: midnightblue;
+    color: lightsteelblue;
     height:100%;
 }
 
@@ -211,7 +216,12 @@ canvas {
 .nav-button {
     width: 180px;
     height: 36px;
-    background-color: slategray;
+    background-color: darkgoldenrod;
+    color: midnightblue;
+}
+
+.hide-me {
+    display:none;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
