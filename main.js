@@ -17,6 +17,8 @@ import {gratuity} from "./content/blog/gratuity.js";
 import {tablemaker} from "./content/projects/tablemaker.js";
 import {binary} from "./content/blog/binary.js";
 import {genetic} from "./content/blog/genetic.js";
+import {fitness} from "./content/blog/fitness.js";
+import {geneticAlgorithm} from "./content/projects/genetic-algorithm.js";
 
 let state = {
     page: "home",
@@ -59,6 +61,10 @@ function render(state) {
             tablemaker();
             break;
 
+        case "genetic-algorithm":
+            geneticAlgorithm();
+            break;
+
         default:
             projects();
             break;
@@ -93,6 +99,10 @@ function render(state) {
 
         case "genetic":
             genetic();
+            break;
+
+        case "fitness":
+            fitness();
             break;
 
         default:
@@ -148,7 +158,14 @@ function render(state) {
             state.page = "projects";
             state.subpage = "conway";
             render(state);
-        });tablemaker
+        });
+
+        document.getElementById("gratuity-writeup").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "projects";
+            state.subpage = "gratuity";
+            render(state);
+        });
 
         document.getElementById("tablemaker").addEventListener("click", function() {
             event.preventDefault();
@@ -157,10 +174,10 @@ function render(state) {
             render(state);
         });
 
-        document.getElementById("gratuity-writeup").addEventListener("click", function() {
+        document.getElementById("genetic-algorithm").addEventListener("click", function() {
             event.preventDefault();
             state.page = "projects";
-            state.subpage = "gratuity";
+            state.subpage = "genetic-algorithm";
             render(state);
         });
     }
@@ -219,6 +236,13 @@ function render(state) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "genetic";
+            render(state);
+        });
+
+        document.getElementById("fitness").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "blog";
+            state.subpage = "fitness";
             render(state);
         });
     }

@@ -13,7 +13,7 @@ function conway() {
     </p>
 
     <p>
-        For the uninitiated, the Game of life is a simulation that's run on a grid. Each element in the grid can either be populated or 
+        For the uninitiated, the Game of Life is a simulation that's run on a grid. Each element in the grid can either be populated or 
         unpopulated. In the above, the populated squares are yellow, with the unpopulated being gray.
     </p>
 
@@ -29,7 +29,7 @@ function conway() {
     </p>
 
     <p>
-        The original plan was to take mouse input to turn cells either on or off, but that wasn't implemented. However, a random configuration 
+        The original plan was to take mouse input to turn cells either on or off, but that wasn't implemented. Instead, a random configuration 
         of cells is set as alive each time the function is loaded, which allows a variety of initial states.
     </p>
 

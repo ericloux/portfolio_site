@@ -38,7 +38,7 @@ nav {
 }
 
 a {
-    color: blue;
+    color: darkgoldenrod;
 }
 
 .table-maker {
@@ -158,43 +158,49 @@ canvas {
 .alu-grid-container {
     display:grid;
     grid-template-columns: repeat(22, 1fr);
+    color:midnightblue;
 }
 
 .alu-grid-item-title {
     grid-column: 1/23;
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
     width: 100%;
     text-align: center;
 }
 
 .alu-grid-item-x-register {
     grid-column: 1/9;
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
     width: 100%;
     text-align: center;
 }
 
 .alu-grid-item-y-register {
     grid-column: 9/17;
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
     width: 100%;
     text-align: center;
 }
 
 .alu-grid-item-label {
     grid-column: 17/23;
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
     width: 100%;
     text-align: center;
 }
 
 .alu-grid-item {
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
     width: 100%;
     text-align: center;
 }
@@ -202,14 +208,16 @@ canvas {
 #alu-x-register-decimal {
     width: 99%;
     height: auto;
-    background-color: white;
+    background-color: lightsteelblue;
+    color:midnightblue;
     text-align: center;
 }
 
 #alu-y-register-decimal {
     width: 99%;
     height: auto;
-    background-color: white;
+    background-color: lightsteelblue;
+    color:midnightblue;
     text-align: center;
 }
 

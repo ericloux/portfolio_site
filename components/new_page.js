@@ -1,5 +1,4 @@
-
- function page() {
+function page() {
     let content = "";
 
     content += `   

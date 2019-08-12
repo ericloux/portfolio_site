@@ -36,10 +36,10 @@ function alu() {
 
         <!-- Input - Row 2 -->
         <div class="alu-grid-item-x-register">
-            <input type="number" id="alu-x-register-decimal" placeholder="X Register" max="127" min="-128">
+            <input type="number" id="alu-x-register-decimal" placeholder="Input" max="127" min="-128">
         </div>
         <div class="alu-grid-item-y-register">
-            <input type="number" id="alu-y-register-decimal" placeholder="Y Register" max="127" min="-128">
+            <input type="number" id="alu-y-register-decimal" placeholder="Input" max="127" min="-128">
         </div>
         <div class="alu-grid-item">
             <input type="checkbox" id="alu-ZX-in">
@@ -292,19 +292,19 @@ function alu() {
     hardware engineer would go through when creating an ALU out of logic gates. To that end, I challenged myself to the following constraints:
     </p>
     <ol>
-        <li> 1. With the exception of the initial conversion from decimal to binary, all operations would be completed as purely Boolean functions.</li>
-        <li> 2. Although I would use operations such as AND, OR, XOR, and NOT, I needed to fine each of those using only NAND first. </li>
+        <li> With the exception of the initial conversion from decimal to binary, all operations would be completed as purely Boolean functions.</li>
+        <li> Although I would use operations such as AND, OR, XOR, and NOT, I needed to define each of those using only NAND first. </li>
     </ol>
     <p>
-        With these restraints, I created the ALU above. This ALU was described in the book "The Elements of Computer Science" by Nisan and Schocken. 
-        In addition to the two input registers that take binary numbers, I also implemented six control bits that performed a different function. 
+        Within these restraints, I created the ALU above. This ALU was described in the book "The Elements of Computing Science" by Nisan and Schocken. 
+        In addition to the two input registers that take binary numbers, they also implemented six control bits that performed a different function. 
         A description of each follows:
     </p>
     <ul>
         <li><b>ZX</b> zeroes the X input.</li>
-        <li><b>NX</b> negates the X input after applying ZX.</li>
+        <li><b>NX</b> negates the output of ZX.</li>
         <li><b>ZY</b> zeroes the Y input.</li>
-        <li><b>NY</b> negates the Y input after applying ZY.</li>
+        <li><b>NY</b> negates the output of ZY.</li>
         <li><b>F</b> determines the function to be used. 0 represents bitwise AND, and 1 represents addition. </li>
         <li><b>NO</b> negates the output.</li>
     </ul>

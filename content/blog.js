@@ -39,6 +39,9 @@ function blog() {
 
     <span class="center-content"><button class="link" id="genetic">1. Genetic Algorithms</button></span>
     <p class="link-info">What is a genetic algorithm, and what are they used for?</p><br>
+
+    <span class="center-content"><button class="link" id="fitness">2. Genotype, Phenotype and Fitness</button></span>
+    <p class="link-info">What are we going to do with our genetic algorithm, and how?</p><br>
     
     `;
 

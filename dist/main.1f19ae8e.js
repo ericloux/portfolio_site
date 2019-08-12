@@ -195,7 +195,7 @@ exports.projects = projects;
 
 function projects() {
   var content = "";
-  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <u><a id =\"gratuity-writeup\">here</a></u>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Horray for practicality!</p><br>    \n    ";
+  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <u><a id =\"gratuity-writeup\">here</a></u>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Horray for practicality!</p><br>    \n\n    <span class=\"center-content\"><button class=\"link\" id=\"genetic-algorithm\">6. Genetic Algorithm</button></span>\n    <p class=\"link-info\">My genetic algorithm. See my blog for more details.</p><br>    \n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog.js":[function(require,module,exports) {
@@ -208,7 +208,7 @@ exports.blog = blog;
 
 function blog() {
   var content = "";
-  content += "\n    <h3>\n        Blog Articles\n    </h3>\n\n    <p>\n        I love to learn, and writing about what I learn lets me both lets me internally organize that knowledge and put it back \n        into the world. To that end, here are some of my assorted writings on various subjects.\n    </p>\n\n    <h3>\n        How Do Computers Work - A Series\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"abstraction\">1. Abstraction and Computer Science</button></span>\n    <p class=\"link-info\">An overview of what a computer is, from the bottom to the top.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"elementary\">2. Elementary Logic Gates</button></span>\n    <p class=\"link-info\">How can we get electricity to perform logical functions?</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"boolean\">3. Boolean Functions</button></span>\n    <p class=\"link-info\">Doing more advanced tasks once we've built a logic gate.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"representing\">4. Representing Binary Logic</button></span>\n    <p class=\"link-info\">Notes on notation.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"decisions\">5. Decisions and Addition</button></span>\n    <p class=\"link-info\">At this point, we can start to do some useful things with logic gates!</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"binary\">6. Representing Binary</button></span>\n    <p class=\"link-info\">How can we combine 0s and 1s into longer numbers?</p><br>\n\n    <h3>\n        Making a Genetic Algorithm\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"genetic\">1. Genetic Algorithms</button></span>\n    <p class=\"link-info\">What is a genetic algorithm, and what are they used for?</p><br>\n    \n    ";
+  content += "\n    <h3>\n        Blog Articles\n    </h3>\n\n    <p>\n        I love to learn, and writing about what I learn lets me both lets me internally organize that knowledge and put it back \n        into the world. To that end, here are some of my assorted writings on various subjects.\n    </p>\n\n    <h3>\n        How Do Computers Work - A Series\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"abstraction\">1. Abstraction and Computer Science</button></span>\n    <p class=\"link-info\">An overview of what a computer is, from the bottom to the top.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"elementary\">2. Elementary Logic Gates</button></span>\n    <p class=\"link-info\">How can we get electricity to perform logical functions?</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"boolean\">3. Boolean Functions</button></span>\n    <p class=\"link-info\">Doing more advanced tasks once we've built a logic gate.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"representing\">4. Representing Binary Logic</button></span>\n    <p class=\"link-info\">Notes on notation.</p><br>\n    \n    <span class=\"center-content\"><button class=\"link\" id=\"decisions\">5. Decisions and Addition</button></span>\n    <p class=\"link-info\">At this point, we can start to do some useful things with logic gates!</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"binary\">6. Representing Binary</button></span>\n    <p class=\"link-info\">How can we combine 0s and 1s into longer numbers?</p><br>\n\n    <h3>\n        Making a Genetic Algorithm\n    </h3>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"genetic\">1. Genetic Algorithms</button></span>\n    <p class=\"link-info\">What is a genetic algorithm, and what are they used for?</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"fitness\">2. Genotype, Phenotype and Fitness</button></span>\n    <p class=\"link-info\">What are we going to do with our genetic algorithm, and how?</p><br>\n    \n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog/abstraction.js":[function(require,module,exports) {
@@ -306,7 +306,7 @@ exports.alu = alu;
 
 function alu() {
   var content = "";
-  content += "\n    <br><div class=\"alu-grid-container\">\n    <!-- Title - Row 1 -->\n        <div class=\"alu-grid-item-title\">\n            8-Bit Arithmatic + Logic Unit\n        </div>\n\n        <!-- Input - Row 2 -->\n        <div class=\"alu-grid-item-x-register\">\n            X Register\n        </div>\n        <div class=\"alu-grid-item-y-register\">\n            Y Register\n        </div>\n        <div class=\"alu-grid-item\">\n            ZX\n        </div>\n        <div class=\"alu-grid-item\">\n            NX\n        </div>\n        <div class=\"alu-grid-item\">\n            ZY\n        </div>\n        <div class=\"alu-grid-item\">\n            NY\n        </div>\n        <div class=\"alu-grid-item\">\n            F\n        </div>\n        <div class=\"alu-grid-item\">\n            NO\n        </div>\n\n        <!-- Input - Row 2 -->\n        <div class=\"alu-grid-item-x-register\">\n            <input type=\"number\" id=\"alu-x-register-decimal\" placeholder=\"X Register\" max=\"127\" min=\"-128\">\n        </div>\n        <div class=\"alu-grid-item-y-register\">\n            <input type=\"number\" id=\"alu-y-register-decimal\" placeholder=\"Y Register\" max=\"127\" min=\"-128\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-ZX-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-NX-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-ZY-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-NY-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-F-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-NO-in\">\n        </div>\n\n        <!-- Binary Input - Row 3 -->\n        <div id = \"X8-in\" class=\"alu-grid-item\">\n            X8\n        </div>\n        <div id = \"X7-in\" class=\"alu-grid-item\">\n            X7\n        </div>\n        <div id = \"X6-in\" class=\"alu-grid-item\">\n            X6\n        </div>\n        <div id = \"X5-in\" class=\"alu-grid-item\">\n            X5\n        </div>\n        <div id = \"X4-in\" class=\"alu-grid-item\">\n            X4\n        </div>\n        <div id = \"X3-in\" class=\"alu-grid-item\">\n            X3\n        </div>\n        <div id = \"X2-in\" class=\"alu-grid-item\">\n            X2\n        </div>\n        <div id = \"X1-in\" class=\"alu-grid-item\">\n            X1\n        </div>\n        <div id = \"Y8-in\" class=\"alu-grid-item\">\n            Y8\n        </div>\n        <div id = \"Y7-in\" class=\"alu-grid-item\">\n            Y7\n        </div>\n        <div id = \"Y6-in\" class=\"alu-grid-item\">\n            Y6\n        </div>\n        <div id = \"Y5-in\" class=\"alu-grid-item\">\n            Y5\n        </div>\n        <div id = \"Y4-in\" class=\"alu-grid-item\">\n            Y4\n        </div>\n        <div id = \"Y3-in\" class=\"alu-grid-item\">\n            Y3\n        </div>\n        <div id = \"Y2-in\" class=\"alu-grid-item\">\n            Y2\n        </div>\n        <div id = \"Y1-in\" class=\"alu-grid-item\">\n            Y1\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Inputs as binary\n        </div>\n\n        <!-- Zero Registers - Row 4 -->\n        <div id = \"X8-zero\" class=\"alu-grid-item\">\n            X8\n        </div>\n        <div id = \"X7-zero\" class=\"alu-grid-item\">\n            X7\n        </div>\n        <div id = \"X6-zero\" class=\"alu-grid-item\">\n            X6\n        </div>\n        <div id = \"X5-zero\" class=\"alu-grid-item\">\n            X5\n        </div>\n        <div id = \"X4-zero\" class=\"alu-grid-item\">\n            X4\n        </div>\n        <div id = \"X3-zero\" class=\"alu-grid-item\">\n            X3\n        </div>\n        <div id = \"X2-zero\" class=\"alu-grid-item\">\n            X2\n        </div>\n        <div id = \"X1-zero\" class=\"alu-grid-item\">\n            X1\n        </div>\n        <div id = \"Y8-zero\" class=\"alu-grid-item\">\n            Y8\n        </div>\n        <div id = \"Y7-zero\" class=\"alu-grid-item\">\n            Y7\n        </div>\n        <div id = \"Y6-zero\" class=\"alu-grid-item\">\n            Y6\n        </div>\n        <div id = \"Y5-zero\" class=\"alu-grid-item\">\n            Y5\n        </div>\n        <div id = \"Y4-zero\" class=\"alu-grid-item\">\n            Y4\n        </div>\n        <div id = \"Y3-zero\" class=\"alu-grid-item\">\n            Y3\n        </div>\n        <div id = \"Y2-zero\" class=\"alu-grid-item\">\n            Y2\n        </div>\n        <div id = \"Y1-zero\" class=\"alu-grid-item\">\n            Y1\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Zeroing of inputs\n        </div>\n\n        <!-- Negation Registers - Row 5 -->\n        <div id = \"X8-neg\" class=\"alu-grid-item\">\n            X8\n        </div>\n        <div id = \"X7-neg\" class=\"alu-grid-item\">\n            X7\n        </div>\n        <div id = \"X6-neg\" class=\"alu-grid-item\">\n            X6\n        </div>\n        <div id = \"X5-neg\" class=\"alu-grid-item\">\n            X5\n        </div>\n        <div id = \"X4-neg\" class=\"alu-grid-item\">\n            X4\n        </div>\n        <div id = \"X3-neg\" class=\"alu-grid-item\">\n            X3\n        </div>\n        <div id = \"X2-neg\" class=\"alu-grid-item\">\n            X2\n        </div>\n        <div id = \"X1-neg\" class=\"alu-grid-item\">\n            X1\n        </div>\n        <div id = \"Y8-neg\" class=\"alu-grid-item\">\n            Y8\n        </div>\n        <div id = \"Y7-neg\" class=\"alu-grid-item\">\n            Y7\n        </div>\n        <div id = \"Y6-neg\" class=\"alu-grid-item\">\n            Y6\n        </div>\n        <div id = \"Y5-neg\" class=\"alu-grid-item\">\n            Y5\n        </div>\n        <div id = \"Y4-neg\" class=\"alu-grid-item\">\n            Y4\n        </div>\n        <div id = \"Y3-neg\" class=\"alu-grid-item\">\n            Y3\n        </div>\n        <div id = \"Y2-neg\" class=\"alu-grid-item\">\n            Y2\n        </div>\n        <div id = \"Y1-neg\" class=\"alu-grid-item\">\n            Y1\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Negation of inputs\n        </div>\n        \n        <!-- Function - Row 6-->\n\n        <div id = \"F8\" class=\"alu-grid-item\">\n            F8\n        </div>\n        <div id = \"F7\" class=\"alu-grid-item\">\n            F7\n        </div>\n        <div id = \"F6\" class=\"alu-grid-item\">\n            F6\n        </div>\n        <div id = \"F5\" class=\"alu-grid-item\">\n            F5\n        </div>\n        <div id = \"F4\" class=\"alu-grid-item\">\n            F4\n        </div>\n        <div id = \"F3\" class=\"alu-grid-item\">\n            F3\n        </div>\n        <div id = \"F2\" class=\"alu-grid-item\">\n            F2\n        </div>\n        <div id = \"F1\" class=\"alu-grid-item\">\n            F1\n        </div>\n        <div id = \"function\" class=\"alu-grid-item-y-register\">\n            Add or and?\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Function\n        </div>\n        \n        <!-- Negate output - Row 6-->\n\n        <div id = \"N8\" class=\"alu-grid-item\">\n            N8\n        </div>\n        <div id = \"N7\" class=\"alu-grid-item\">\n            N7\n        </div>\n        <div id = \"N6\" class=\"alu-grid-item\">\n            N6\n        </div>\n        <div id = \"N5\" class=\"alu-grid-item\">\n            N5\n        </div>\n        <div id = \"N4\" class=\"alu-grid-item\">\n            N4\n        </div>\n        <div id = \"N3\" class=\"alu-grid-item\">\n            N3\n        </div>\n        <div id = \"N2\" class=\"alu-grid-item\">\n            N2\n        </div>\n        <div id = \"N1\" class=\"alu-grid-item\">\n            N1\n        </div>\n        <div class=\"alu-grid-item-y-register\">\n                Negate or not?\n        </div>\n        <div class=\"alu-grid-item-label\" id=\"alu-output\">\n                Negate output\n        </div>\n    </div>\n    <br><br>\n\n    <p>\n    I decided to challenge myself with a simulated aritmatic and logic unit with a few restrictions to make its construction similar to what a \n    hardware engineer would go through when creating an ALU out of logic gates. To that end, I challenged myself to the following constraints:\n    </p>\n    <ol>\n        <li> 1. With the exception of the initial conversion from decimal to binary, all operations would be completed as purely Boolean functions.</li>\n        <li> 2. Although I would use operations such as AND, OR, XOR, and NOT, I needed to fine each of those using only NAND first. </li>\n    </ol>\n    <p>\n        With these restraints, I created the ALU above. This ALU was described in the book \"The Elements of Computer Science\" by Nisan and Schocken. \n        In addition to the two input registers that take binary numbers, I also implemented six control bits that performed a different function. \n        A description of each follows:\n    </p>\n    <ul>\n        <li><b>ZX</b> zeroes the X input.</li>\n        <li><b>NX</b> negates the X input after applying ZX.</li>\n        <li><b>ZY</b> zeroes the Y input.</li>\n        <li><b>NY</b> negates the Y input after applying ZY.</li>\n        <li><b>F</b> determines the function to be used. 0 represents bitwise AND, and 1 represents addition. </li>\n        <li><b>NO</b> negates the output.</li>\n    </ul>\n    <p>\n        Using these six registers and two inputs, there are a number of functions that are possible. Here are some of the more useful examples:\n    <p>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Function</th>\n                <th>ZX</th>\n                <th>NX</th>\n                <th>ZY</th>\n                <th>NY</th>\n                <th>F</th>\n                <th>NO</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>-1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>y</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>!x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>!y</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>-x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>-y</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>x+1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>y+1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>x-1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>y-1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x+y</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x-y</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>y-x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>x&y</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x|y</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n        </tr>\n    </table>\n\n    <br><br>\n    ";
+  content += "\n    <br><div class=\"alu-grid-container\">\n    <!-- Title - Row 1 -->\n        <div class=\"alu-grid-item-title\">\n            8-Bit Arithmatic + Logic Unit\n        </div>\n\n        <!-- Input - Row 2 -->\n        <div class=\"alu-grid-item-x-register\">\n            X Register\n        </div>\n        <div class=\"alu-grid-item-y-register\">\n            Y Register\n        </div>\n        <div class=\"alu-grid-item\">\n            ZX\n        </div>\n        <div class=\"alu-grid-item\">\n            NX\n        </div>\n        <div class=\"alu-grid-item\">\n            ZY\n        </div>\n        <div class=\"alu-grid-item\">\n            NY\n        </div>\n        <div class=\"alu-grid-item\">\n            F\n        </div>\n        <div class=\"alu-grid-item\">\n            NO\n        </div>\n\n        <!-- Input - Row 2 -->\n        <div class=\"alu-grid-item-x-register\">\n            <input type=\"number\" id=\"alu-x-register-decimal\" placeholder=\"Input\" max=\"127\" min=\"-128\">\n        </div>\n        <div class=\"alu-grid-item-y-register\">\n            <input type=\"number\" id=\"alu-y-register-decimal\" placeholder=\"Input\" max=\"127\" min=\"-128\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-ZX-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-NX-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-ZY-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-NY-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-F-in\">\n        </div>\n        <div class=\"alu-grid-item\">\n            <input type=\"checkbox\" id=\"alu-NO-in\">\n        </div>\n\n        <!-- Binary Input - Row 3 -->\n        <div id = \"X8-in\" class=\"alu-grid-item\">\n            X8\n        </div>\n        <div id = \"X7-in\" class=\"alu-grid-item\">\n            X7\n        </div>\n        <div id = \"X6-in\" class=\"alu-grid-item\">\n            X6\n        </div>\n        <div id = \"X5-in\" class=\"alu-grid-item\">\n            X5\n        </div>\n        <div id = \"X4-in\" class=\"alu-grid-item\">\n            X4\n        </div>\n        <div id = \"X3-in\" class=\"alu-grid-item\">\n            X3\n        </div>\n        <div id = \"X2-in\" class=\"alu-grid-item\">\n            X2\n        </div>\n        <div id = \"X1-in\" class=\"alu-grid-item\">\n            X1\n        </div>\n        <div id = \"Y8-in\" class=\"alu-grid-item\">\n            Y8\n        </div>\n        <div id = \"Y7-in\" class=\"alu-grid-item\">\n            Y7\n        </div>\n        <div id = \"Y6-in\" class=\"alu-grid-item\">\n            Y6\n        </div>\n        <div id = \"Y5-in\" class=\"alu-grid-item\">\n            Y5\n        </div>\n        <div id = \"Y4-in\" class=\"alu-grid-item\">\n            Y4\n        </div>\n        <div id = \"Y3-in\" class=\"alu-grid-item\">\n            Y3\n        </div>\n        <div id = \"Y2-in\" class=\"alu-grid-item\">\n            Y2\n        </div>\n        <div id = \"Y1-in\" class=\"alu-grid-item\">\n            Y1\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Inputs as binary\n        </div>\n\n        <!-- Zero Registers - Row 4 -->\n        <div id = \"X8-zero\" class=\"alu-grid-item\">\n            X8\n        </div>\n        <div id = \"X7-zero\" class=\"alu-grid-item\">\n            X7\n        </div>\n        <div id = \"X6-zero\" class=\"alu-grid-item\">\n            X6\n        </div>\n        <div id = \"X5-zero\" class=\"alu-grid-item\">\n            X5\n        </div>\n        <div id = \"X4-zero\" class=\"alu-grid-item\">\n            X4\n        </div>\n        <div id = \"X3-zero\" class=\"alu-grid-item\">\n            X3\n        </div>\n        <div id = \"X2-zero\" class=\"alu-grid-item\">\n            X2\n        </div>\n        <div id = \"X1-zero\" class=\"alu-grid-item\">\n            X1\n        </div>\n        <div id = \"Y8-zero\" class=\"alu-grid-item\">\n            Y8\n        </div>\n        <div id = \"Y7-zero\" class=\"alu-grid-item\">\n            Y7\n        </div>\n        <div id = \"Y6-zero\" class=\"alu-grid-item\">\n            Y6\n        </div>\n        <div id = \"Y5-zero\" class=\"alu-grid-item\">\n            Y5\n        </div>\n        <div id = \"Y4-zero\" class=\"alu-grid-item\">\n            Y4\n        </div>\n        <div id = \"Y3-zero\" class=\"alu-grid-item\">\n            Y3\n        </div>\n        <div id = \"Y2-zero\" class=\"alu-grid-item\">\n            Y2\n        </div>\n        <div id = \"Y1-zero\" class=\"alu-grid-item\">\n            Y1\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Zeroing of inputs\n        </div>\n\n        <!-- Negation Registers - Row 5 -->\n        <div id = \"X8-neg\" class=\"alu-grid-item\">\n            X8\n        </div>\n        <div id = \"X7-neg\" class=\"alu-grid-item\">\n            X7\n        </div>\n        <div id = \"X6-neg\" class=\"alu-grid-item\">\n            X6\n        </div>\n        <div id = \"X5-neg\" class=\"alu-grid-item\">\n            X5\n        </div>\n        <div id = \"X4-neg\" class=\"alu-grid-item\">\n            X4\n        </div>\n        <div id = \"X3-neg\" class=\"alu-grid-item\">\n            X3\n        </div>\n        <div id = \"X2-neg\" class=\"alu-grid-item\">\n            X2\n        </div>\n        <div id = \"X1-neg\" class=\"alu-grid-item\">\n            X1\n        </div>\n        <div id = \"Y8-neg\" class=\"alu-grid-item\">\n            Y8\n        </div>\n        <div id = \"Y7-neg\" class=\"alu-grid-item\">\n            Y7\n        </div>\n        <div id = \"Y6-neg\" class=\"alu-grid-item\">\n            Y6\n        </div>\n        <div id = \"Y5-neg\" class=\"alu-grid-item\">\n            Y5\n        </div>\n        <div id = \"Y4-neg\" class=\"alu-grid-item\">\n            Y4\n        </div>\n        <div id = \"Y3-neg\" class=\"alu-grid-item\">\n            Y3\n        </div>\n        <div id = \"Y2-neg\" class=\"alu-grid-item\">\n            Y2\n        </div>\n        <div id = \"Y1-neg\" class=\"alu-grid-item\">\n            Y1\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Negation of inputs\n        </div>\n        \n        <!-- Function - Row 6-->\n\n        <div id = \"F8\" class=\"alu-grid-item\">\n            F8\n        </div>\n        <div id = \"F7\" class=\"alu-grid-item\">\n            F7\n        </div>\n        <div id = \"F6\" class=\"alu-grid-item\">\n            F6\n        </div>\n        <div id = \"F5\" class=\"alu-grid-item\">\n            F5\n        </div>\n        <div id = \"F4\" class=\"alu-grid-item\">\n            F4\n        </div>\n        <div id = \"F3\" class=\"alu-grid-item\">\n            F3\n        </div>\n        <div id = \"F2\" class=\"alu-grid-item\">\n            F2\n        </div>\n        <div id = \"F1\" class=\"alu-grid-item\">\n            F1\n        </div>\n        <div id = \"function\" class=\"alu-grid-item-y-register\">\n            Add or and?\n        </div>\n        <div class=\"alu-grid-item-label\">\n            Function\n        </div>\n        \n        <!-- Negate output - Row 6-->\n\n        <div id = \"N8\" class=\"alu-grid-item\">\n            N8\n        </div>\n        <div id = \"N7\" class=\"alu-grid-item\">\n            N7\n        </div>\n        <div id = \"N6\" class=\"alu-grid-item\">\n            N6\n        </div>\n        <div id = \"N5\" class=\"alu-grid-item\">\n            N5\n        </div>\n        <div id = \"N4\" class=\"alu-grid-item\">\n            N4\n        </div>\n        <div id = \"N3\" class=\"alu-grid-item\">\n            N3\n        </div>\n        <div id = \"N2\" class=\"alu-grid-item\">\n            N2\n        </div>\n        <div id = \"N1\" class=\"alu-grid-item\">\n            N1\n        </div>\n        <div class=\"alu-grid-item-y-register\">\n                Negate or not?\n        </div>\n        <div class=\"alu-grid-item-label\" id=\"alu-output\">\n                Negate output\n        </div>\n    </div>\n    <br><br>\n\n    <p>\n    I decided to challenge myself with a simulated aritmatic and logic unit with a few restrictions to make its construction similar to what a \n    hardware engineer would go through when creating an ALU out of logic gates. To that end, I challenged myself to the following constraints:\n    </p>\n    <ol>\n        <li> With the exception of the initial conversion from decimal to binary, all operations would be completed as purely Boolean functions.</li>\n        <li> Although I would use operations such as AND, OR, XOR, and NOT, I needed to define each of those using only NAND first. </li>\n    </ol>\n    <p>\n        Within these restraints, I created the ALU above. This ALU was described in the book \"The Elements of Computing Science\" by Nisan and Schocken. \n        In addition to the two input registers that take binary numbers, they also implemented six control bits that performed a different function. \n        A description of each follows:\n    </p>\n    <ul>\n        <li><b>ZX</b> zeroes the X input.</li>\n        <li><b>NX</b> negates the output of ZX.</li>\n        <li><b>ZY</b> zeroes the Y input.</li>\n        <li><b>NY</b> negates the output of ZY.</li>\n        <li><b>F</b> determines the function to be used. 0 represents bitwise AND, and 1 represents addition. </li>\n        <li><b>NO</b> negates the output.</li>\n    </ul>\n    <p>\n        Using these six registers and two inputs, there are a number of functions that are possible. Here are some of the more useful examples:\n    <p>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Function</th>\n                <th>ZX</th>\n                <th>NX</th>\n                <th>ZY</th>\n                <th>NY</th>\n                <th>F</th>\n                <th>NO</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>-1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>y</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>!x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>!y</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>-x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>-y</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>x+1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>y+1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>x-1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>y-1</td>\n            <td>1</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x+y</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x-y</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>y-x</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>1</td>\n            <td>1</td>\n            <td>1</td>\n        </tr>\n        <tr>\n            <td>x&y</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n            <td>0</td>\n        </tr>\n        <tr>\n            <td>x|y</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n            <td>0</td>\n            <td>1</td>\n        </tr>\n    </table>\n\n    <br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
   var bits = 7;
   var reg_x = new Array(bits);
@@ -1406,7 +1406,7 @@ exports.conway = conway;
 
 function conway() {
   var content = "";
-  content += "\n    <br>\n    <div id=\"board\">\n        <canvas width=\"500\" height=\"500\"></canvas>\n    </div>\n\n    <p>\n        Conway's Game of Life was a project that I wanted to create early for a few reasons. First, I had discovered the canvas element \n        and wanted to build something with it. Since the Game of Life has simple rules, it seemed like an ideal candidate.\n    </p>\n\n    <p>\n        For the uninitiated, the Game of life is a simulation that's run on a grid. Each element in the grid can either be populated or \n        unpopulated. In the above, the populated squares are yellow, with the unpopulated being gray.\n    </p>\n\n    <p>\n        Each iteration, every square in the grid is checked. Depending on how many orthogonically or diagonally adjacent squares are also populated, \n        the square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more \n        or less do not. Likewise, any non-living cell with exactly three living neighbors will be \"born\" and become populated.\n    </p>\n\n    <p>\n        Although these rules are simple, they can create a variety of shapes. Some end up static, some form repetitive patterns, and some \n        explode and retract as if they're organic.\n    </p>\n\n    <p>\n        The original plan was to take mouse input to turn cells either on or off, but that wasn't implemented. However, a random configuration \n        of cells is set as alive each time the function is loaded, which allows a variety of initial states.\n    </p>\n\n    <br><br>\n    ";
+  content += "\n    <br>\n    <div id=\"board\">\n        <canvas width=\"500\" height=\"500\"></canvas>\n    </div>\n\n    <p>\n        Conway's Game of Life was a project that I wanted to create early for a few reasons. First, I had discovered the canvas element \n        and wanted to build something with it. Since the Game of Life has simple rules, it seemed like an ideal candidate.\n    </p>\n\n    <p>\n        For the uninitiated, the Game of Life is a simulation that's run on a grid. Each element in the grid can either be populated or \n        unpopulated. In the above, the populated squares are yellow, with the unpopulated being gray.\n    </p>\n\n    <p>\n        Each iteration, every square in the grid is checked. Depending on how many orthogonically or diagonally adjacent squares are also populated, \n        the square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more \n        or less do not. Likewise, any non-living cell with exactly three living neighbors will be \"born\" and become populated.\n    </p>\n\n    <p>\n        Although these rules are simple, they can create a variety of shapes. Some end up static, some form repetitive patterns, and some \n        explode and retract as if they're organic.\n    </p>\n\n    <p>\n        The original plan was to take mouse input to turn cells either on or off, but that wasn't implemented. Instead, a random configuration \n        of cells is set as alive each time the function is loaded, which allows a variety of initial states.\n    </p>\n\n    <br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
   var canvas = document.querySelector("#board canvas");
   var ctx = canvas.getContext("2d");
@@ -1627,6 +1627,641 @@ function genetic() {
   content += "   \n    <h3>\n        Genetic Algorithms\n    </h3>\n\n    In my opinion, one of the most exciting and intriguing developments is that of genetic algorithms. A genetic algorithm creates a program, but \n    instead of having a human type out every line of code, the computer writes the program itself.You might be asking yourself how the heck that \n    works and wondering if it's going to end up with the Terminator coming back for you, but that's not the case at all! Instead, the programmer \n    takes inspiration from something that is all around us - genetics.<br><br>\n\n    Now, some people are immediately put off by the term genetics, even though evolution has been accepted by the Catholic Church since 1950. The \n    \"genes\" in genetic algorithms are not exactly the same concept as those found in DNA. However, the concept can be applied to computer code \n    through clever adaptation.<br><br>\n\n    Here's an incredibly simplified overview of how genes work organisms. A strand of DNA serves as a blueprint, attracting amino acids to its end. \n    From there, the amino acids move along the strand of DNA, combining with other amino acids and eventually creating a molecule. This molecule \n    then separates and interacts with the other molecules to form just about every possible type of organic matter. The DNA splits in half during \n    this process, and then each half can regenerate the other half and you're left with two identical strands of DNA. (Somewhere, a geneticist is \n    weeping after reading this.)<br><br>\n\n    When two organisims reproduce, the genetic material can combine as well. Portions of each of the parents' genes are mixed with portions of the \n    others. Likewise, sometimes a perfect copy isn't created when a strand splits. This is known as a mutation, and can happen from something as \n    common as solar radiation hitting the point the genes split. Of course, that can completely change what the genes create!<br><br>\n\n    Reproducing this in computers is easy. First, you need to come up with a way to represent the commands you want your computer to be able to use. \n    From there, you write a program that can create those genes (the genotype), as well as test them out (the phenotype). The quintessential example \n    is, of course, creating a simulated organism. Instead of having the genes create physical material, they might instead represent traits, such as \n    ability to sense other organisms. In this example, the genotype is the actual genes to create the creature, while the phenotype is how those \n    creatures interact with each other in whatever environment they're put into.<br><br>\n\n    From there, a way to determine which organism is best is determined. This quantity is known as its fitness. In our organism example, it may be \n    the organism that gets the most food, or lives the longest. Orgamisms with higher fitness are more likely to be selected to have their genes \n    passed on to the next generation. This is done by mixing and mutating genes as described above. From that, we end up with a completely new \n    generation, which is then put through the test again and the process repeats.<br><br>\n\n    Genetic algorithms can solve a variety of problems that humans just aren't good at. Instead of plodding through case after case of trial by \n    error, a programmer can have a program that tests a hundred cases at once, chooses the best solutions, and then continues refining bit by bit \n    until the problem is solved. <br><br>\n\n    I had previously created a genetic algorithm, but the implementation was lacking a bit. Since then, I've been wanting to give it another shot. \n    To that end, I'm writing this series of blog entries to document and share the process. Next time, I'll be outlining some of what I'm planning \n    to aim for.<br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
+},{}],"content/blog/fitness.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fitness = fitness;
+
+function fitness() {
+  var content = "";
+  content += "   \n    <h3>\n        The Problem to Solve\n    </h3>\n\n    Now that I've given an overview of what a genetic algorithm is, the next question is what problem should we solve?<br><br>\n\n    Finding an equation that describes a curve that passes through a set of points can be a problem that is either trivial to solve or nearly \n    impossible unless you're an experienced mathematician. Choosing those points based on a method that was not determined mathematically can \n    make it difficult if not impossible to find an equation that fits the points. However, with a genetic algorithm, finding such an equation \n    would be (arguably) much easier.<br><br>\n\n    So, what data am I choosing for this example? I'm picking the following sets of (x,y) points:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>x</th>\n                <th>y</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>1</td>\n            <td>8</tr>\n        <tr>\n            <td>2</td>\n            <td>5</tr>\n        <tr>\n            <td>3</td>\n            <td>12</tr>\n        <tr>\n            <td>4</td>\n            <td>12</tr>\n        <tr>\n            <td>5</td>\n            <td>15</tr>\n        <tr>\n            <td>6</td>\n            <td>23</tr>\n        <tr>\n            <td>7</td>\n            <td>15</tr>\n        <tr>\n            <td>8</td>\n            <td>18</tr>\n        <tr>\n            <td>9</td>\n            <td>12</tr>\n        <tr>\n            <td>10</td>\n            <td>4</td>\n        </tr>\n    </table>\n\n    This may seem like a random set of numbers, but if you substitute each number for its associated letter in the alphabet, then you get one \n    of the most famous phrases in computer science: \"HELLOWORLD.\"<br><br>\n\n    To start implementing the algorithm, we need to determine the genotype and phenotype. This will involve a mathematical function, so we'll need \n    a way to represent a function in a way that lends itself to mutation. From there, we'll apply the formula to the numbers 1 through 10 and see \n    how well they match the given set of points. We'll also need a way to quantify that fitness.<br><br>\n\n    First, I've chosen a list of 32 mathematical operations. I chose this number because it's divisible by 32, which means that they can be \n    represented in binary easily. Any mutation will affect just one of the bits, switching it to its opposite state. Each formula will be a chain \n    of fifty of these operations. There are three groups of operators: <br><br>\n    <ol>\n        <li><b>Numerals</b> form a <em>term<em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>\n        <li><b>Operators</b> connect two terms. These include addition, subtraction, multiplication, division, expoentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>\n        <li><b>Functions</b> operate on the previous term. These include increment, decrement, bitwise left, bitwise right, absolute value, negate, round, ceiling, floor, and zero.</li>\n        <li><b>Terms</b> are numbers that are terms in and of themselves. These include x and pi.</li>\n        \n    </ol>\n\n    Here is a list of all the operators and their associated numbers:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>-</th>\n                <th>0</th>\n                <th>1</th>\n                <th>2</th>\n                <th>3</th>\n                <th>4</th>\n                <th>5</th>\n                <th>6</th>\n                <th>7</th>\n            </tr>\n        </thead>\n        <tr>\n            <th>+0</th>\n            <td>0</td>\n            <td>1</td>\n            <td>2</td>\n            <td>3</td>\n            <td>4</td>\n            <td>increment</td>\n            <td>bitwise left</td>\n            <td>negate</tr>\n        <tr>\n            <th>+8</th>\n            <td>round</td>\n            <td>ceiling</td>\n            <td>input</td>\n            <td>absolute value</td>\n            <td>bitwise or</td>\n            <td>add</td>\n            <td>multiply</td>\n            <td>exponent</tr>\n        <tr>\n            <th>+16</th>\n            <td>5</td>\n            <td>6</td>\n            <td>7</td>\n            <td>8</td>\n            <td>9</td>\n            <td>decrement</td>\n            <td>bitwise right</td>\n            <td>zero</tr>\n        <tr>\n            <th>+24</th>\n            <td>decimal point</td>\n            <td>floor</td>\n            <td>pi</td>\n            <td>bitwise and</td>\n            <td>bitwise xor</td>\n            <td>subtract</td>\n            <td>divide</td>\n            <td>remainder</td>\n        </tr>\n    </table>\n\n    To implement these, we'll use the letters A-Z and the numbers 0-5 to represent each position in the chart. Now we can represent each formula \n    as a string of letters/numbers, and a string of binary numbers.<br><br>\n\n    Now, to turn each genotype into a phenotype, we need to determine which genomes create a valid phenotype. In the event that a genotype is \n    invalid, then we'll discard it and create a replacement in its place for the next generation. So, which genotypes are valid?<br><br>\n\n    There are several ways that the numerals, operators, functions, and terms can combine in a few ways. Here is an example grammar of how these \n    terms can combine:<br><br>\n\n    numeral string = [numeral] | [numeral][numeral string]<br>\n    decimal string = [numeral string][decimal] | [decimal][numeral string] | [numeral string][decimal][numeral string]<br>\n    term = [numeral string] | [term][function] |  [term][operator][term]<br><br>\n\n    Implementing this grammar, there are a few ways that a genome can create a malformed phenotype. The first character must be a numeral or a \n    term, and the last character cannot be an operator. If two terms are adjacent and cannot be combined into a numeral string, then that formula \n    cannot be evaluated (e.g. 123 is valid, but 1pi3 is not because multiplication isn't defined in this way). If there are more than two decimal \n    points in a number, then that number is invalid. Only a term can follow an operator.<br><br>\n\n    Lastly, in order to test the fitness, the formula will be applied to the numbers 1 through 10. Then, the differences between each term will be \n    taken. Each of these will be divided by 26 and only the remainder kept. From there, the absolute value of the difference between the formula's \n    result and the difference between the related terms in the target will be taken. That number will then be squared, resulting in a number \n    between 0 and 169. These differences are calculated for each of the 10 input terms, and then the totals are added together. Here's how the \n    formula looks:<br><br>\n\n    |(x[n] - x[n+1]) - (f(y[n]) - f(y[n+1])| + 52 % 26<br><br>\n\n    The lower this score, the better the formula describes the function. The reason that this is implemented based on the difference between terms \n    is because a formula that is perfectly parallel to the input would show as being less fit than a formula that matches all of the points exept \n    missing by one, even though the first formula would be an exact match if two was subtracted from it.<br><br>\n\n    Now that we have a genotype, phenotype, and fitness functions, we have all the groundwork for our genetic algorithm. From here, we just have to \n    program the components and then run the algorithm until we get a match!<br><br>\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+}
+},{}],"content/projects/genetic-algorithm.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.geneticAlgorithm = geneticAlgorithm;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function geneticAlgorithm() {
+  var content = "";
+  content += "   \n    <h3>\n        Genetic Algorithm\n    </h3>\n        Replace me with your content!\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
+
+  var NumeralString =
+  /*#__PURE__*/
+  function () {
+    function NumeralString(character) {
+      _classCallCheck(this, NumeralString);
+
+      this.myString = "";
+      this.myString += character;
+      this.geneClass = "numeral";
+    }
+
+    _createClass(NumeralString, [{
+      key: "addCharacter",
+      value: function addCharacter(character) {
+        this.myString += character;
+      }
+    }, {
+      key: "getValue",
+      value: function getValue() {
+        return this.myString;
+      }
+    }, {
+      key: "getGeneClass",
+      value: function getGeneClass() {
+        return this.geneClass;
+      }
+    }]);
+
+    return NumeralString;
+  }();
+
+  var DecimalString =
+  /*#__PURE__*/
+  function () {
+    function DecimalString(numeral) {
+      _classCallCheck(this, DecimalString);
+
+      this.myString = "";
+      this.myString += numeral;
+      this.geneClass = "decimal";
+    }
+
+    _createClass(DecimalString, [{
+      key: "addCharacter",
+      value: function addCharacter(character) {
+        this.myString += character;
+      }
+    }, {
+      key: "getValue",
+      value: function getValue() {
+        return this.myString;
+      }
+    }, {
+      key: "getGeneClass",
+      value: function getGeneClass() {
+        return this.geneClass;
+      }
+    }]);
+
+    return DecimalString;
+  }();
+
+  var Operator =
+  /*#__PURE__*/
+  function () {
+    function Operator(type) {
+      _classCallCheck(this, Operator);
+
+      this.myOperator = type;
+      this.geneClass = "operator";
+    }
+
+    _createClass(Operator, [{
+      key: "applyToTerm",
+      value: function applyToTerm(term) {
+        switch (this.myOperator) {
+          case "E":
+            return term + 1;
+
+          case "F":
+            return term * 2;
+
+          case "G":
+            return term * -1;
+
+          case "H":
+            return Math.round(term);
+
+          case "I":
+            return Math.ceiling(term);
+
+          case "K":
+            return Math.abs(term);
+
+          case "U":
+            return term - 1;
+
+          case "V":
+            return term % 2 / 2;
+
+          case "W":
+            return 0;
+
+          case "Y":
+            return Math.floor(term);
+
+          default:
+            console.log("Error with term key ".concat(term));
+            return;
+        }
+      }
+    }, {
+      key: "getGeneClass",
+      value: function getGeneClass() {
+        return this.geneClass;
+      }
+    }]);
+
+    return Operator;
+  }();
+
+  var Term =
+  /*#__PURE__*/
+  function () {
+    function Term(value) {
+      _classCallCheck(this, Term);
+
+      if (value == "Z") {
+        this.myValue = Math.PI;
+      } else {
+        this.myValue = value;
+      }
+
+      this.geneClass = "term";
+    }
+
+    _createClass(Term, [{
+      key: "getValue",
+      value: function getValue() {
+        return myValue;
+      }
+    }, {
+      key: "getGeneClass",
+      value: function getGeneClass() {
+        return this.geneClass;
+      }
+    }]);
+
+    return Term;
+  }();
+
+  var Function =
+  /*#__PURE__*/
+  function () {
+    function Function(type) {
+      _classCallCheck(this, Function);
+
+      this.myOperator = type;
+      this.geneClass = "function";
+    }
+
+    _createClass(Function, [{
+      key: "applyToTerms",
+      value: function applyToTerms(firstTerm, secondTerm) {
+        switch (this.myOperator) {
+          case "L":
+            return firstTerm | secondTerm;
+
+          case "M":
+            return firstTerm + secondTerm;
+
+          case "N":
+            return firstTerm * secondTerm;
+
+          case "O":
+            return Math.pow(firstTerm, secondTerm);
+
+          case "[":
+            return firstTerm & secondTerm;
+
+          case "\\":
+            return firstTerm ^ secondTerm;
+
+          case "]":
+            return firstTerm - secondTerm;
+
+          case "^":
+            return firstTerm / secondTerm;
+
+          case "_":
+            return firstTerm % secondTerm;
+        }
+      }
+    }, {
+      key: "getGeneClass",
+      value: function getGeneClass() {
+        return this.geneClass;
+      }
+    }]);
+
+    return Function;
+  }();
+
+  var Genome =
+  /*#__PURE__*/
+  function () {
+    function Genome(mother, father) {
+      _classCallCheck(this, Genome);
+
+      this.genes = "";
+
+      if (father == undefined) {
+        for (var i = 0; i < 50; i++) {
+          var newChar = Math.floor(Math.random() * 32);
+          this.genes += String.fromCharCode(64 + newChar);
+        }
+      } else {
+        // determine which parent the first genome will come from
+        if (Math.random() < .5) {
+          var temp = mother;
+          mother = father;
+          father = temp;
+        }
+
+        var switchPoint = Math.floor(Math.random() * 50);
+
+        for (var _i = 0; _i < switchPoint; _i++) {
+          this.genes += mother.getGeneAt(_i);
+        }
+
+        for (var _i2 = switchPoint; _i2 < 50; _i2++) {
+          this.genes += father.getGeneAt(_i2);
+        }
+      }
+    }
+
+    _createClass(Genome, [{
+      key: "evaluateGenome",
+      value: function evaluateGenome(inputValue) {
+        this.formula = new Array();
+
+        switch (this.getGeneClass(this.genes[0])) {
+          case "numeral":
+            this.formula.push(new NumeralString(this.genes[0]));
+            break;
+
+          case "operator":
+          case "function":
+            return false;
+
+          case "decimal":
+            this.formula.push(new DecimalString(this.genes[0]));
+            break;
+
+          case "term":
+            if (this.genes[0] == "Z") this.formula.push(new Term("Z"));else this.formula.push(new Term(inputValue));
+        }
+
+        for (var i = 1; i < 50; i) {
+          switch (this.getGeneClass(this.genes[i])) {
+            case "numeral":
+              switch (this.formula[this.formula.length - 1].getGeneClass) {
+                case "numeral":
+                case "decimal":
+                  this.formula[this.formula.length - 1].addCharacter(this.genes[i]);
+                  break;
+
+                case "function":
+                  this.formula.push(new NumeralString(this.genes[i]));
+                  break;
+
+                case "operator":
+                case "term":
+                  return false;
+              }
+
+              break;
+
+            case "operator":
+              switch (this.formula[this.formula.length - 1].getGeneClass) {
+                case "numeral":
+                case "term":
+                case "decimal":
+                  return false;
+
+                case "operator":
+                  this.formula.push(new Operator(this.genes[i]));
+                  break;
+
+                case "function":
+                  this.formula.push(new Function(this.genes[i]));
+              }
+
+            case "function":
+              switch (this.formula[this.formula.length - 1].getGeneClass) {
+                case "numeral":
+                case "term":
+                case "decimal":
+                  this.formula.push(new Function(this.genes[i]));
+                  break;
+
+                case "operator":
+                case "function":
+                  return false;
+              }
+
+            case "term":
+              switch (this.formula[this.formula.length - 1].getGeneClass) {
+                case "numeral":
+                case "term":
+                case "decimal":
+                  return false;
+
+                case "operator":
+                  this.formula.push(new Term(this.genes[i]));
+                  break;
+
+                case "function":
+                  this.formula.push(new Function(this.genes[i]));
+              }
+
+            case "decimal":
+              switch (this.formula[this.formula.length - 1].getGeneClass) {
+                case "operator":
+                case "function":
+                  this.formula.push(new DecimalString(this.genes[i]));
+                  break;
+
+                case "numeral":
+                case "term":
+                case "decimal":
+                  return false;
+              }
+
+          }
+        }
+
+        console.log(this.formula);
+      }
+    }, {
+      key: "getNickname",
+      value: function getNickname() {
+        return this.genes;
+      }
+    }, {
+      key: "getFullname",
+      value: function getFullname() {
+        var output = "";
+
+        for (var i = 0; i < 50; i++) {
+          output += this.geneToBinary(this.genes[i]);
+        }
+
+        return output;
+      }
+    }, {
+      key: "getFormula",
+      value: function getFormula() {
+        var output = "";
+
+        for (var i = 0; i < 50; i++) {
+          switch (this.genes[i]) {
+            case "@":
+              output += "0";
+              break;
+
+            case "A":
+              output += "1";
+              break;
+
+            case "B":
+              output += "2";
+              break;
+
+            case "C":
+              output += "3";
+              break;
+
+            case "D":
+              output += "4";
+              break;
+
+            case "E":
+              output += "++";
+              break;
+
+            case "F":
+              output += "<<";
+              break;
+
+            case "G":
+              output += " * -1 ";
+              break;
+
+            case "H":
+              output = "round(" + output + ")";
+              break;
+
+            case "I":
+              output = "ceiling(" + output + ")";
+              break;
+
+            case "J":
+              output += "x";
+              break;
+
+            case "K":
+              output = "abs(" + output + ")";
+              break;
+
+            case "L":
+              output += " OR ";
+              break;
+
+            case "M":
+              output += " + ";
+              break;
+
+            case "N":
+              output += " * ";
+              break;
+
+            case "O":
+              output += " ^ ";
+              break;
+
+            case "P":
+              output += "5";
+              break;
+
+            case "Q":
+              output += "6";
+              break;
+
+            case "R":
+              output += "7";
+              break;
+
+            case "S":
+              output += "8";
+              break;
+
+            case "T":
+              output += "9";
+              break;
+
+            case "U":
+              output += "--";
+              break;
+
+            case "V":
+              output += ">>";
+              break;
+
+            case "W":
+              output += " * 0";
+              break;
+
+            case "X":
+              output += ".";
+              break;
+
+            case "Y":
+              output = "floor(" + output + ")";
+              break;
+
+            case "Z":
+              output += " pi ";
+              break;
+
+            case "[":
+              output += " AND ";
+              break;
+
+            case "\\":
+              output += " XOR ";
+              break;
+
+            case "]":
+              output += " - ";
+              break;
+
+            case "^":
+              output += " / ";
+              break;
+
+            case "_":
+              output += " mod ";
+              break;
+          }
+        }
+
+        return output;
+      }
+    }, {
+      key: "getGeneAt",
+      value: function getGeneAt(position) {
+        return this.genes[position];
+      }
+    }, {
+      key: "getGeneClass",
+      value: function getGeneClass(character) {
+        switch (character) {
+          case "@":
+          case "A":
+          case "B":
+          case "C":
+          case "D":
+          case "P":
+          case "Q":
+          case "R":
+          case "S":
+          case "T":
+            return "numeral";
+
+          case "E":
+          case "F":
+          case "G":
+          case "H":
+          case "I":
+          case "K":
+          case "U":
+          case "V":
+          case "W":
+          case "Y":
+            return "operator";
+
+          case "J":
+          case "Z":
+            return "term";
+
+          case "L":
+          case "M":
+          case "N":
+          case "O":
+          case "[":
+          case "\\":
+          case "]":
+          case "^":
+          case "_":
+            return "function";
+
+          case "X":
+            return "decimal";
+        }
+      }
+    }, {
+      key: "geneToBinary",
+      value: function geneToBinary(character) {
+        var output = "";
+        var numeral = character.charCodeAt(0) - 64;
+
+        if (Math.floor(numeral / 16) == 0) {
+          output += "0";
+        } else {
+          output += "1";
+        }
+
+        numeral = numeral % 16;
+
+        if (Math.floor(numeral / 8) == 0) {
+          output += "0";
+        } else {
+          output += "1";
+        }
+
+        numeral = numeral % 8;
+
+        if (Math.floor(numeral / 4) == 0) {
+          output += "0";
+        } else {
+          output += "1";
+        }
+
+        numeral = numeral % 4;
+
+        if (Math.floor(numeral / 2) == 0) {
+          output += "0";
+        } else {
+          output += "1";
+        }
+
+        numeral = numeral % 2;
+
+        if (Math.floor(numeral) == 0) {
+          output += "0";
+        } else {
+          output += "1";
+        }
+
+        return output;
+      }
+    }]);
+
+    return Genome;
+  }();
+
+  var myGenome = new Genome();
+
+  for (var _myGenome = new Genome(); _myGenome.evaluateGenome() != false; _myGenome = new Genome()) {
+    ;
+  }
+}
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -1668,6 +2303,10 @@ var _binary = require("./content/blog/binary.js");
 
 var _genetic = require("./content/blog/genetic.js");
 
+var _fitness = require("./content/blog/fitness.js");
+
+var _geneticAlgorithm = require("./content/projects/genetic-algorithm.js");
+
 var state = {
   page: "home",
   subpage: "none"
@@ -1708,6 +2347,10 @@ function render(state) {
           (0, _tablemaker.tablemaker)();
           break;
 
+        case "genetic-algorithm":
+          (0, _geneticAlgorithm.geneticAlgorithm)();
+          break;
+
         default:
           (0, _projects.projects)();
           break;
@@ -1743,6 +2386,10 @@ function render(state) {
 
         case "genetic":
           (0, _genetic.genetic)();
+          break;
+
+        case "fitness":
+          (0, _fitness.fitness)();
           break;
 
         default:
@@ -1795,17 +2442,22 @@ function render(state) {
       state.subpage = "conway";
       render(state);
     });
-    _tablemaker.tablemaker;
+    document.getElementById("gratuity-writeup").addEventListener("click", function () {
+      event.preventDefault();
+      state.page = "projects";
+      state.subpage = "gratuity";
+      render(state);
+    });
     document.getElementById("tablemaker").addEventListener("click", function () {
       event.preventDefault();
       state.page = "projects";
       state.subpage = "tablemaker";
       render(state);
     });
-    document.getElementById("gratuity-writeup").addEventListener("click", function () {
+    document.getElementById("genetic-algorithm").addEventListener("click", function () {
       event.preventDefault();
       state.page = "projects";
-      state.subpage = "gratuity";
+      state.subpage = "genetic-algorithm";
       render(state);
     });
   }
@@ -1860,6 +2512,12 @@ function render(state) {
       state.subpage = "genetic";
       render(state);
     });
+    document.getElementById("fitness").addEventListener("click", function () {
+      event.preventDefault();
+      state.page = "blog";
+      state.subpage = "fitness";
+      render(state);
+    });
   }
 
   document.getElementById("link-contact").addEventListener("click", function () {
@@ -1873,7 +2531,7 @@ function render(state) {
 
 ;
 render(state);
-},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/projects/alu.js":"content/projects/alu.js","./content/projects/tetris.js":"content/projects/tetris.js","./content/projects/conway.js":"content/projects/conway.js","./content/blog/gratuity.js":"content/blog/gratuity.js","./content/projects/tablemaker.js":"content/projects/tablemaker.js","./content/blog/binary.js":"content/blog/binary.js","./content/blog/genetic.js":"content/blog/genetic.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/template.js":"components/template.js","./components/navigation.js":"components/navigation.js","./content/home.js":"content/home.js","./content/bio.js":"content/bio.js","./content/projects.js":"content/projects.js","./content/blog.js":"content/blog.js","./content/blog/abstraction.js":"content/blog/abstraction.js","./content/blog/elementary.js":"content/blog/elementary.js","./content/blog/boolean.js":"content/blog/boolean.js","./content/blog/representing.js":"content/blog/representing.js","./content/blog/decisions.js":"content/blog/decisions.js","./content/contact.js":"content/contact.js","./content/projects/alu.js":"content/projects/alu.js","./content/projects/tetris.js":"content/projects/tetris.js","./content/projects/conway.js":"content/projects/conway.js","./content/blog/gratuity.js":"content/blog/gratuity.js","./content/projects/tablemaker.js":"content/projects/tablemaker.js","./content/blog/binary.js":"content/blog/binary.js","./content/blog/genetic.js":"content/blog/genetic.js","./content/blog/fitness.js":"content/blog/fitness.js","./content/projects/genetic-algorithm.js":"content/projects/genetic-algorithm.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1901,7 +2559,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34857" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44911" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
