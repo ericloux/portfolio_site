@@ -26,11 +26,11 @@ function representing() {
     There are many other shortcuts as well. Instead of calling the inputs "Input 1" and "Input 2," we can call them a variety of other names. P and 
     Q are used in logic. In fact, there are many other symbols that are used in the field of logic to represent many of these ideas in a different way. 
     Generally, though, we will name the inputs based on what their actual function is. If we're simply looking at creating logic gates that describe 
-    simple functions, we'll simply call them "In1," "In2," and so forth as needed.<br><br>
+    simple functions, we'll simply call them "I1," "I2," and so forth as needed.<br><br>
 
     As we get further into examining the interactions of these chips and building more and more complex functionality out of them, having language to 
     describe these functions that is both simpler and clearer helps in ease of communicating the ideas that they are used to build. Moving forward, 
-    the terms here will be used interchangably.<br><br>
+    the terms here will be used interchangably.<br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

@@ -54,7 +54,7 @@ function tablemaker() {
 		}
 		parsedText += "</td>\r\n\t</tr>\r\n</table>";
 		document.getElementById("tableText").value = parsedText;
-		document.getElementById("tableSpace").innerHTML = parsedText;
+	//	document.getElementById("tableSpace").innerHTML = parsedText;
 	});
 }
 

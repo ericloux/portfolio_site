@@ -9,11 +9,11 @@ function elementary() {
 
 
     When a circuit is complete, electricity flows through it. When a circuit is broken, electricity does not. While this principle seems elementary, 
-    the capacity for complexity increases dramatically when the circuit is allowed to connect and beeak itself. The vacuum tube and transistor allowed 
-    such circuits to become commercially viable, leading to our current Age of Information. It's at the lowest level that electrity is manipulated into 
-    logical abstractions, and the scope of this article is to examine what happens at those lowest of levels.<br><br>
+    the capacity for complexity increases dramatically when the circuit is allowed to connect and break itself. The vacuum tube and transistor allowed 
+    such circuits to become commercially viable, leading to our current Age of Information. It's at this lowest level of computing that electrity is 
+    manipulated into logical abstractions, and the scope of this article is to examine what happens at those lowest of levels.<br><br>
 
-    A switch is the devide that can make or break the flow of a material. In computers, this usually refers to electrons moving through a conductor, 
+    A switch is the device that can make or break the flow of a material. In computers, this usually refers to electrons moving through a conductor, 
     but there are other examples, such as a valve closing and not allowing water to flow. The quintessential electrical example, though, is light 
     switches. When the switch is open, the circuit is broken, and electricity cannot flow. When the switch is closed, the electricity is allowed to 
     flow through the circuit. Part of that circuit is a light bulb, where the flowing electrons are converted into visible light.<br><br>
@@ -70,7 +70,8 @@ function elementary() {
 
     Let's add another switch to our circuit. This time, the switch will be after the first switch, Switch. Since there are multiple switches, 
     calling the input "Switch" is confusing, so we will refer to it as "Input 1" and the second switch we are adding this time will be "Input 2." 
-    For consistency, we'll also rename our outputs from "Easy" and "Hard" to "Output 1" and "Output 2." Our whole circuit consists of the following. 
+    For consistency, we'll also rename our outputs from "Easy" and "Hard" to "Output 1" and "Output 2." Likewise, since Power is always on, we'll 
+    remove it from the future tables. <br><br>Our whole circuit consists of the following. 
     At the fork, the electrons can either move down one path through Input 1's switch, through Input 2's switch, and out Output 1. Alternatively, 
     they can move through the resistor and out Output 2. Naturally, they want to move out Output 1 unless one of the switches is off (open) which 
     means that they can't make it and will take the harder road though Output 2. So, if both of the switches are on, the electrons will flow through 
@@ -118,7 +119,7 @@ function elementary() {
     is that you can create gates that have any relationship with the inputs. I've presented three here: not, and, and nand. With these three logic 
     gates, we can make a host of other logic gates. We can combine them so that there are more than two inputs and create chips that can make choices, 
     or start doing math. These operations found the basis for the whole field of computer science. Looking at the interactions between these more 
-    complex gates is beyond the scope of this article, but will be examined in subsequent entries.<br><br>
+    complex gates is beyond the scope of this article, but will be examined in subsequent entries.<br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

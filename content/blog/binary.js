@@ -1,4 +1,4 @@
-function boolean() {
+function binary() {
     let content = "";
 
     content += `
@@ -16,7 +16,7 @@ function boolean() {
 
     It may not be intuitive, but we can add add and subtract these just like normal decimal numbers. The difference is that we carry or borrow with 
     twos instead of tens. For example, 111 + 1 would become 1000, or 1011 + 10 would be 1101. Converting these to decimal, we see that they're also 
-    true: 7 + 8 = 8, and 11 + 2 = 13. <br><br>
+    true: 7 + 1 = 8, and 11 + 2 = 13. <br><br>
 
     Of course, these are just for positive numbers. If we can represent negative numbers in a sensible way, then by adding them together, we can 
     perform subtraction with the same process of just adding bit by bit.<br><br>
@@ -99,7 +99,7 @@ function boolean() {
             <td>-3</td>
             <td>-3</td>
         </tr>
-    </table>
+    </table><br>
 
     Each of the positive numbers is off by 1, and there's still that negative 0 in the mix. So, what if we add one to each negative number? That way 
     1111 would become -1 rather than -0, it would correct the error with the negative numbers. Recreating the chart above with this new method, we 
@@ -173,16 +173,16 @@ function boolean() {
             <td>-3</td>
             <td>-3</td>
         </tr>
-    </table>
+    </table><br>
 
     It now works perfectly! We've just made numbers much easier to add in binary. Now instead of having two separate circuits to add and subtract, 
     all we need to do is to negate each bit in the number being subtracted and add one to it, then we can add the numbers and we have subtraction!<br><br>
 
     This method of representing binary numbers is also known as the "2's Complement" method. It's by far the most common way of representing negative 
-    binary numbers due to the reasons presented here.<br><br><br>
+    binary numbers due to the reasons presented here.<br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;
 }
 
-export {boolean};
+export {binary};

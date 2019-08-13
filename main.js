@@ -19,6 +19,8 @@ import {binary} from "./content/blog/binary.js";
 import {genetic} from "./content/blog/genetic.js";
 import {fitness} from "./content/blog/fitness.js";
 import {geneticAlgorithm} from "./content/projects/genetic-algorithm.js";
+import {geneticRevision} from "./content/blog/genetic-revision.js";
+import {blogEnd} from "./components/blogend.js";
 
 let state = {
     page: "home",
@@ -51,10 +53,6 @@ function render(state) {
 
         case "conway":
             conway();
-            break;
-
-        case "gratuity":
-            gratuity();
             break;
 
         case "tablemaker":
@@ -105,10 +103,19 @@ function render(state) {
             fitness();
             break;
 
+        case "genetic-revision":
+            geneticRevision ();
+            break;
+
+        case "gratuity":
+            gratuity();
+            break;
+
         default:
             blog();
             break;
         }
+        if (state.subpage != "none") blogEnd();
         break;
 
     case "contact":
@@ -162,7 +169,7 @@ function render(state) {
 
         document.getElementById("gratuity-writeup").addEventListener("click", function() {
             event.preventDefault();
-            state.page = "projects";
+            state.page = "blog";
             state.subpage = "gratuity";
             render(state);
         });
@@ -174,12 +181,12 @@ function render(state) {
             render(state);
         });
 
-        document.getElementById("genetic-algorithm").addEventListener("click", function() {
-            event.preventDefault();
-            state.page = "projects";
-            state.subpage = "genetic-algorithm";
-            render(state);
-        });
+        // document.getElementById("genetic-algorithm").addEventListener("click", function() {
+        //     event.preventDefault();
+        //     state.page = "projects";
+        //     state.subpage = "genetic-algorithm";
+        //     render(state);
+        // });
     }
 
     document.getElementById("link-blog").addEventListener("click", function() {
@@ -188,6 +195,15 @@ function render(state) {
         state.subpage = "none";
         render(state);
     });
+
+    if (state.page == "blog" && state.subpage != "none") {
+        document.getElementById("link-blog-second").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "blog";
+            state.subpage = "none";
+            render(state);
+        });
+    }
 
     if (state.page == "blog" && state.subpage == "none") {
         document.getElementById("abstraction").addEventListener("click", function() {
@@ -243,6 +259,20 @@ function render(state) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "fitness";
+            render(state);
+        });
+
+        document.getElementById("genetic-revision").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "blog";
+            state.subpage = "genetic-revision";
+            render(state);
+        });
+
+        document.getElementById("gratuity-writeup").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "blog";
+            state.subpage = "gratuity";
             render(state);
         });
     }

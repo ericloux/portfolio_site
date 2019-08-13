@@ -488,7 +488,7 @@ function alu() {
         </tr>
     </table>
 
-    <br><br>
+    <br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

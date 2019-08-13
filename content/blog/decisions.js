@@ -616,7 +616,7 @@ function decisions() {
     Naturally, though, how often do you need to add a combination of three 1s and 0s? Not very often, admittedly. So, what can we do to start 
     making this more useful? Unfortunately, that answer will have to wait until the next article. First, though, we'll need to take another 
     interlude where we more deeply examine the binary number system. After doing so, the answer might become intuitive, but if not, it too will 
-    be explained in time.<br><br>
+    be explained in time.<br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

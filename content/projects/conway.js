@@ -33,7 +33,7 @@ function conway() {
         of cells is set as alive each time the function is loaded, which allows a variety of initial states.
     </p>
 
-    <br><br>
+    <br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

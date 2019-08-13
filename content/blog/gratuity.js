@@ -3,7 +3,7 @@ function gratuity() {
 
     content += `
     <h3>
-        About Eric Loux
+        About Gratuity Acuity
     </h3>
 
     <p>
@@ -38,10 +38,18 @@ function gratuity() {
     </p>
 
     <p>
-        You can visit Gratuity Acuity here: <form action="//gratuityacuity.com" target="_blank"><button class="link" id="gratuity">Gratuity Acuity</button></form>
+        You can visit Gratuity Acuity here: 
     </p>
+        
+    <span class="center-content">
+        <form action="//gratuityacuity.com" target="_blank">
+            <button class="link" id="gratuity">
+                GRATUITY ACUITY
+            </button>
+        </form>
+    </span>
     
-    <br><br>
+    <br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

@@ -16,13 +16,6 @@ function contact() {
     content = content.replace('@', '.');
     content = content.replace('*', '@');
 
-    content += `<br><br>I have my doubts about putting this info where spammers can find it, so I had some fun with it! 
-        Although it shows as normal to you and me, I did some manipulation with CSS and JavaScript to make it fool any bots 
-        trawling for email addresses or phone numbers. I put some random divs that hide information (and some that do nothing) 
-        in my email addresses, and I provided a factorization of my phone number with some extra digits thrown in, then replaced 
-        those extra digits with dashes after typecasting the number to a string. It probably would have been easier to just 
-        implement the form!`;
-
     document.getElementsByClassName("content")[0].innerHTML = content;
 }
 

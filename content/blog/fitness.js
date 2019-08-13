@@ -53,7 +53,7 @@ function fitness() {
             <td>10</td>
             <td>4</td>
         </tr>
-    </table>
+    </table><br>
 
     This may seem like a random set of numbers, but if you substitute each number for its associated letter in the alphabet, then you get one 
     of the most famous phrases in computer science: "HELLOWORLD."<br><br>
@@ -62,16 +62,16 @@ function fitness() {
     a way to represent a function in a way that lends itself to mutation. From there, we'll apply the formula to the numbers 1 through 10 and see 
     how well they match the given set of points. We'll also need a way to quantify that fitness.<br><br>
 
-    First, I've chosen a list of 32 mathematical operations. I chose this number because it's divisible by 32, which means that they can be 
+    First, I've chosen a list of 32 mathematical operations. I chose this number because it's a power of 2, which means that they can be 
     represented in binary easily. Any mutation will affect just one of the bits, switching it to its opposite state. Each formula will be a chain 
-    of fifty of these operations. There are three groups of operators: <br><br>
-    <ol>
-        <li><b>Numerals</b> form a <em>term<em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>
+    of fifty of these operations. There are three groups of operators: <br>
+
+    <br>
+        <li><b>Numerals</b> form a <em>term</em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>
         <li><b>Operators</b> connect two terms. These include addition, subtraction, multiplication, division, expoentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>
         <li><b>Functions</b> operate on the previous term. These include increment, decrement, bitwise left, bitwise right, absolute value, negate, round, ceiling, floor, and zero.</li>
         <li><b>Terms</b> are numbers that are terms in and of themselves. These include x and pi.</li>
-        
-    </ol>
+    <br><br>
 
     Here is a list of all the operators and their associated numbers:<br><br>
 
@@ -130,7 +130,7 @@ function fitness() {
             <td>divide</td>
             <td>remainder</td>
         </tr>
-    </table>
+    </table><br>
 
     To implement these, we'll use the letters A-Z and the numbers 0-5 to represent each position in the chart. Now we can represent each formula 
     as a string of letters/numbers, and a string of binary numbers.<br><br>
@@ -163,7 +163,7 @@ function fitness() {
     missing by one, even though the first formula would be an exact match if two was subtracted from it.<br><br>
 
     Now that we have a genotype, phenotype, and fitness functions, we have all the groundwork for our genetic algorithm. From here, we just have to 
-    program the components and then run the algorithm until we get a match!<br><br>
+    program the components and then run the algorithm until we get a match!<br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

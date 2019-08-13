@@ -21,6 +21,7 @@ function addTemplate() {
     <footer>
         Copyright 2019 Eric Loux
     </footer>`;
+    window.scrollTo(0, 0);
 }
 
     // Puts footer at the bottom of the page or below content (whichever is lower)

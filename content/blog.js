@@ -34,6 +34,13 @@ function blog() {
     <p class="link-info">How can we combine 0s and 1s into longer numbers?</p><br>
 
     <h3>
+        Gratuity Acuity
+    </h3>
+
+    <span class="center-content"><button class="link" id="gratuity-writeup">Write Up</button></span>
+    <p class="link-info">An explanation of my Gratuity Acuity project.</p><br>
+
+    <h3>
         Making a Genetic Algorithm
     </h3>
 
@@ -43,7 +50,10 @@ function blog() {
     <span class="center-content"><button class="link" id="fitness">2. Genotype, Phenotype and Fitness</button></span>
     <p class="link-info">What are we going to do with our genetic algorithm, and how?</p><br>
     
-    `;
+    <span class="center-content"><button class="link" id="genetic-revision">3. Attempting to Implement</button></span>
+    <p class="link-info">After coding the previous solution, a critical error is discovered.</p><br>
+    
+    <br><br>`;  //gratuity-writeup
 
     document.getElementsByClassName("content")[0].innerHTML = content;
 }

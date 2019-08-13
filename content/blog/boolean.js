@@ -48,7 +48,7 @@ function boolean() {
     If you compare the input to Output 3, then you see it's the same as the not gate we previously built. Looking at the other gates built here are 
     also not particularly exciting. Output 1 is always on, independent of the input. Similarly, Output 4 is always off. The implementation of them 
     is simple - the former simply represents any closed circuit, and the other, any open circuit. Lastly, Output 2 is exactly the same as the input. 
-    Most of the gates, excluding not, are not particularly userful.<br><br>
+    Most of the gates, excluding not, are not particularly useful.<br><br>
     
     Now, what happens if we have two inputs? This is where things get interesting, but also more complex. Instead of having the input only be on or 
     off as with a one-input gate, they can now be any of the sets (on, on), (on, off), (off, on), or (off, off). Each of these pairs of inputs can 
@@ -187,8 +187,8 @@ function boolean() {
             <td>on</td>	
             <td>on</td>	
             <td>on</td>
-        <tr>
-    </table>	
+        </tr>
+    </table><br>
     
     Now that we have the full set, we can begin examining how to build them. Since we have already shown how to use the gates in the first set, we 
     can chain those together to create even more gates. We will see examples as we construct this second set, but there are a couple of ideas that 
@@ -244,7 +244,7 @@ function boolean() {
     there are two inputs and one output, we have four columns in our truth table. This is so we can see the effect of our operations at an 
     intermediate point - in this case, after Not has been applied to Input 1. Truth tables are a great debugging tool. If you write out the inputs 
     and the expected outputs, then perform intermediate calculations, then you can start to narrow down the operations needed to end at a specific 
-    output. This works for numbers as well, although in that setting, it is called a function table rather than a truth table.<br><br>
+    output. This works for non-boolean numbers as well, although in that setting, it is called a function table rather than a truth table.<br><br>
     
     Of course, if we take our Only logic gate and flip the inputs, running Input 2 through the Not gate before combining it with Input 1 in an And 
     gate, then we get the other version of the Only gate, which is on only if Input 1 is on. On top of that, if we run the output of one of the Only 
@@ -364,7 +364,7 @@ function boolean() {
     
     Voila, the Xnor gate! As said before, putting this through a Not gate will give us the Xor gate, which means that now we can represent each of 
     these 16 two-input gates with real hardware. While not particularly useful on their own, if we continue to build on these gates, we'll be able 
-    to create some chips that we can put to work for us!<br><br>
+    to create some chips that we can put to work for us!<br><br><br><br>
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;
