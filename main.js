@@ -189,7 +189,7 @@ function render(state) {
         // });
     }
 
-    document.getElementById("link-blog").addEventListener("click", function() {
+    document.getElementById("link-blog").addEventListener("click", function(event) {
         event.preventDefault();
         state.page = "blog";
         state.subpage = "none";
@@ -197,7 +197,7 @@ function render(state) {
     });
 
     if (state.page == "blog" && state.subpage != "none") {
-        document.getElementById("link-blog-second").addEventListener("click", function() {
+        document.getElementById("link-blog-second").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "none";
@@ -206,70 +206,70 @@ function render(state) {
     }
 
     if (state.page == "blog" && state.subpage == "none") {
-        document.getElementById("abstraction").addEventListener("click", function() {
+        document.getElementById("abstraction").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "abstraction";
             render(state);
         });
 
-        document.getElementById("elementary").addEventListener("click", function() {
+        document.getElementById("elementary").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "elementary";
             render(state);
         });
 
-        document.getElementById("boolean").addEventListener("click", function() {
+        document.getElementById("boolean").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "boolean";
             render(state);
         });
 
-        document.getElementById("representing").addEventListener("click", function() {
+        document.getElementById("representing").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "representing";
             render(state);
         });
 
-        document.getElementById("decisions").addEventListener("click", function() {
+        document.getElementById("decisions").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "decisions";
             render(state);
         });
 
-        document.getElementById("binary").addEventListener("click", function() {
+        document.getElementById("binary").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "binary";
             render(state);
         });
 
-        document.getElementById("genetic").addEventListener("click", function() {
+        document.getElementById("genetic").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "genetic";
             render(state);
         });
 
-        document.getElementById("fitness").addEventListener("click", function() {
+        document.getElementById("fitness").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "fitness";
             render(state);
         });
 
-        document.getElementById("genetic-revision").addEventListener("click", function() {
+        document.getElementById("genetic-revision").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "genetic-revision";
             render(state);
         });
 
-        document.getElementById("gratuity-writeup").addEventListener("click", function() {
+        document.getElementById("gratuity-writeup").addEventListener("click", function(event) {
             event.preventDefault();
             state.page = "blog";
             state.subpage = "gratuity";
@@ -277,7 +277,7 @@ function render(state) {
         });
     }
     
-    document.getElementById("link-contact").addEventListener("click", function() {
+    document.getElementById("link-contact").addEventListener("click", function(event) {
         event.preventDefault();
         state.page = "contact";
         state.subpage = "none";

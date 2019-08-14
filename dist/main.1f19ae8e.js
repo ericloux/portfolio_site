@@ -196,7 +196,7 @@ exports.projects = projects;
 
 function projects() {
   var content = "";
-  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <u><a id =\"gratuity-writeup\">here</a></u>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Horray for practicality!</p><br><br>"; // <span class="center-content"><button class="link" id="genetic-algorithm">6. Genetic Algorithm</button></span>
+  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <u><a id =\"gratuity-writeup\">here</a></u>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Hooray for practicality!</p><br><br>"; // <span class="center-content"><button class="link" id="genetic-algorithm">6. Genetic Algorithm</button></span>
   // <p class="link-info">My genetic algorithm. See my blog for more details.</p><br>    
   // `;
 
@@ -293,11 +293,14 @@ exports.contact = contact;
 
 function contact() {
   var content = "";
-  content += "\n    <h3>\n        Reach out!\n    </h3>\n\n    Until I implement my contact form, are are the best ways to contact me. Here's instructions: <br><br>\n\n    ";
-  content += "Email: <span class=\"hide-me\">contact.</span>eric.<span class=\"dont-hide-me\">charles.</span>loux*gmail@com<br>";
-  content += "Phone: " + String(2 * 3 * 358073 * 365507).replace(2, "-").replace(2, "-");
-  content = content.replace('@', '.');
-  content = content.replace('*', '@');
+  content += "\n    <h3>\n        Reach out!\n    </h3>"; // `Until I implement my contact form, are are the best ways to contact me. Here's instructions: <br><br>
+  // `;
+  // content += `Email: <span class="hide-me">contact.</span>eric.<span class="dont-hide-me">charles.</span>loux*gmail@com<br>`;
+  // content += `Phone: ` + String(2*3*358073*365507).replace(2, "-").replace(2, "-");
+  // content = content.replace('@', '.');
+  // content = content.replace('*', '@');
+
+  content += "\n    <div class=\"center-content\">\n        <form action=\"//formspree.io/eric.charles.loux@gmail.com\" method=\"POST\">\n            Name: <br><input type=\"text\" name=\"name\" required><br><br>\n            Email: <br><input type=\"email\" name=\"_replyto\" required><br><br>\n            Message: <br><textarea id=\"contact-message\" required name=\"message\"></textarea><br><br>\n            <input type=\"submit\" value=\"SEND\" class=\"link\">\n        </form><br>\n    </div>";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/projects/alu.js":[function(require,module,exports) {
@@ -2504,7 +2507,7 @@ function render(state) {
     // });
   }
 
-  document.getElementById("link-blog").addEventListener("click", function () {
+  document.getElementById("link-blog").addEventListener("click", function (event) {
     event.preventDefault();
     state.page = "blog";
     state.subpage = "none";
@@ -2512,7 +2515,7 @@ function render(state) {
   });
 
   if (state.page == "blog" && state.subpage != "none") {
-    document.getElementById("link-blog-second").addEventListener("click", function () {
+    document.getElementById("link-blog-second").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "none";
@@ -2521,61 +2524,61 @@ function render(state) {
   }
 
   if (state.page == "blog" && state.subpage == "none") {
-    document.getElementById("abstraction").addEventListener("click", function () {
+    document.getElementById("abstraction").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "abstraction";
       render(state);
     });
-    document.getElementById("elementary").addEventListener("click", function () {
+    document.getElementById("elementary").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "elementary";
       render(state);
     });
-    document.getElementById("boolean").addEventListener("click", function () {
+    document.getElementById("boolean").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "boolean";
       render(state);
     });
-    document.getElementById("representing").addEventListener("click", function () {
+    document.getElementById("representing").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "representing";
       render(state);
     });
-    document.getElementById("decisions").addEventListener("click", function () {
+    document.getElementById("decisions").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "decisions";
       render(state);
     });
-    document.getElementById("binary").addEventListener("click", function () {
+    document.getElementById("binary").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "binary";
       render(state);
     });
-    document.getElementById("genetic").addEventListener("click", function () {
+    document.getElementById("genetic").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "genetic";
       render(state);
     });
-    document.getElementById("fitness").addEventListener("click", function () {
+    document.getElementById("fitness").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "fitness";
       render(state);
     });
-    document.getElementById("genetic-revision").addEventListener("click", function () {
+    document.getElementById("genetic-revision").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "genetic-revision";
       render(state);
     });
-    document.getElementById("gratuity-writeup").addEventListener("click", function () {
+    document.getElementById("gratuity-writeup").addEventListener("click", function (event) {
       event.preventDefault();
       state.page = "blog";
       state.subpage = "gratuity";
@@ -2583,7 +2586,7 @@ function render(state) {
     });
   }
 
-  document.getElementById("link-contact").addEventListener("click", function () {
+  document.getElementById("link-contact").addEventListener("click", function (event) {
     event.preventDefault();
     state.page = "contact";
     state.subpage = "none";
@@ -2622,7 +2625,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34291" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41305" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
