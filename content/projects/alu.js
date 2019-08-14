@@ -5,7 +5,7 @@ function alu() {
     <br><div class="alu-grid-container">
     <!-- Title - Row 1 -->
         <div class="alu-grid-item-title">
-            8-Bit Arithmatic + Logic Unit
+            8-Bit Arithmetic + Logic Unit
         </div>
 
         <!-- Input - Row 2 -->
@@ -288,15 +288,15 @@ function alu() {
     <br><br>
 
     <p>
-    I decided to challenge myself with a simulated aritmatic and logic unit with a few restrictions to make its construction similar to what a 
-    hardware engineer would go through when creating an ALU out of logic gates. To that end, I challenged myself to the following constraints:
+    I decided to challenge myself with a simulated arithmetic and logic unit (ALU) with a few restrictions to make its construction similar to what a 
+    hardware engineer would go through when creating an ALU out of logic gates. To that end, I challenged myself to stay within the following constraints:
     </p>
     <ol>
-        <li> With the exception of the initial conversion from decimal to binary, all operations would be completed as purely Boolean functions.</li>
-        <li> Although I would use operations such as AND, OR, XOR, and NOT, I needed to define each of those using only NAND first. </li>
+        <li> With the exception of the initial conversion from decimal to binary, all operations are completed as purely Boolean functions.</li>
+        <li> Although I can use operations such as AND, OR, XOR, and NOT, I need to define each of those using only NAND first. </li>
     </ol>
     <p>
-        Within these restraints, I created the ALU above. This ALU was described in the book "The Elements of Computing Science" by Nisan and Schocken. 
+        Within these restraints, I created the ALU above. This ALU was described in the book "The Elements of Computing Systems" by Nisan and Schocken. 
         In addition to the two input registers that take binary numbers, they also implemented six control bits that performed a different function. 
         A description of each follows:
     </p>

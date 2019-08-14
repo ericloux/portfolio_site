@@ -16,7 +16,7 @@ function boolean() {
     
     The number of unique gates that can be created is dependent on the number of inputs. For example, a one-input gate has two states that can feed 
     into it, on or off. For those two states, there are four sets out outputs that can result: (on, on), (on, off), (off, on), and (off, off). If we 
-    think of the possible input states as (on, off), then we can chart out each of the possible relationships that can result from this input 
+    think of the possible input states as (on, off), then we can chart each of the possible relationships that can result from this input 
     state:<br><br>
     
     <table>
@@ -46,7 +46,7 @@ function boolean() {
     </table><br>
     
     If you compare the input to Output 3, then you see it's the same as the not gate we previously built. Looking at the other gates built here are 
-    also not particularly exciting. Output 1 is always on, independent of the input. Similarly, Output 4 is always off. The implementation of them 
+    also not particularly exciting. Output 1 is always on, independent of the input. Similarly, Output 4 is always off. Their implementation
     is simple - the former simply represents any closed circuit, and the other, any open circuit. Lastly, Output 2 is exactly the same as the input. 
     Most of the gates, excluding not, are not particularly useful.<br><br>
     
@@ -196,7 +196,7 @@ function boolean() {
     
     First, the output of one gate can be fed into the input of another. For example, if you put two inputs through an And gate, and then put the 
     output of the And gate through a Not gate, then you end up with a Nand gate. Of course, the way we described to build a Nand gate previously 
-    is more straightforward, but it illustrates the concept. Second, the input for one gate can split and simultaneously fed into another gate. 
+    is more straightforward, but it illustrates the concept. Second, the input for one gate can split and simultaneously feed into another gate. 
     If we take one input and feed it into both inputs for a Nand gate, for example, then we end up with a Not gate. Again, the earlier method is 
     easier. Note also that both inputs don't necessarily need to feed into the same gate.<br><br>
     

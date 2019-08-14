@@ -7,7 +7,7 @@ function blog() {
     </h3>
 
     <p>
-        I love to learn, and writing about what I learn lets me both lets me internally organize that knowledge and put it back 
+        I love to learn, and writing about what I learn lets me both internally organize that knowledge and put it back 
         into the world. To that end, here are some of my assorted writings on various subjects.
     </p>
 
@@ -30,7 +30,7 @@ function blog() {
     <span class="center-content"><button class="link" id="decisions">5. Decisions and Addition</button></span>
     <p class="link-info">At this point, we can start to do some useful things with logic gates!</p><br>
 
-    <span class="center-content"><button class="link" id="binary">6. Representing Binary</button></span>
+    <span class="center-content"><button class="link" id="binary">6. Binary Numbers</button></span>
     <p class="link-info">How can we combine 0s and 1s into longer numbers?</p><br>
 
     <h3>

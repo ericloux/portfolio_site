@@ -10,7 +10,7 @@ function abstraction() {
      computer, it seems like a box that works on magic alone. Sure, most can tell you that it does something with electricity, but what is that 
      something, and how does it turn that electricity into every webpage and program that you've ever seen?<br><br>
     
-    The answer, of course, is complex. Rather than thinking of the process as one concrete whole, it's through abstraction of each level that was 
+    The answer, of course, is complex. Rather than thinking of the process as one concrete whole, it's through abstraction of each level that we 
     can examine how we go from "this electron jiggles" to sending a text message to your friends. There are plenty of levels, which is one of the 
     reasons that understanding of what happens in a computer is lost, even to many people who program them on a daily basis. Each layer is vast 
     enough to be an entire field of study. Although I hardly consider myself an expert, the scope of this article is to give a brief examination 
@@ -48,7 +48,7 @@ function abstraction() {
     write code that makes even more sense to a human. This program is known as a compiler.<br><br>
     
     From here, the path is wide open. You can write a language that makes it even easier for a human to interact with (such as JavaScript or 
-    Python). You can update your output decvice so that instead of each pixel only showing on or off, you can add colors as well. Your input 
+    Python). You can update your output device so that instead of each pixel only showing on or off, you can add colors as well. Your input 
     device can have keys added to write other characters, or to directly open programs. You can chain more blocks of memory together, allowing 
     your math unit to process larger numbers or fractions. <br><br>
     

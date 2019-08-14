@@ -7,7 +7,7 @@ function gratuity() {
     </h3>
 
     <p>
-        As a former pizza delivery driver, one of the things that I would often do is keep a list of all the tips I made in a single night. 
+        As a former pizza delivery driver, one of the things that I did was keep a list of all the tips I made in a single night. 
         This was ostenibly for tax records, but the truth is that I just liked to see the data and compare where I was getting the best tips 
         during the night. Naturally, most of those receipts just ended up discarded on my floorboard at the end of my shift, but after 
         thinking about what I wanted my capstone project for Savvy Coders to entail, I remembered my tip lists and thought that I could turn 

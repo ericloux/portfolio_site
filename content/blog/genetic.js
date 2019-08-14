@@ -24,8 +24,8 @@ function genetic() {
     this process, and then each half can regenerate the other half and you're left with two identical strands of DNA. (Somewhere, a geneticist is 
     weeping after reading this.)<br><br>
 
-    When two organisims reproduce, the genetic material can combine as well. Portions of each of the parents' genes are mixed with portions of the 
-    others. Likewise, sometimes a perfect copy isn't created when a strand splits. This is known as a mutation, and can happen from something as 
+    When two organisms reproduce, the genetic material can combine as well. Portions of each of the parent's genes are mixed with portions of the 
+    other's. Likewise, sometimes a perfect copy isn't created when a strand splits. This is known as a mutation, and can happen from something as 
     common as solar radiation hitting the point where the genes are splitting. Of course, that can completely change what the genes create!<br><br>
 
     Reproducing this in computers is easier than you might think. 

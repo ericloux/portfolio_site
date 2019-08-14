@@ -8,7 +8,7 @@ function decisions() {
 
     To this point, we have looked at many gates that have two inputs and one output. These form a basis from which we can create more complex 
     operators, but which ones are useful? As we said before, there are 256 different gates that we can create with three inputs. Surely we don't 
-    need all of these?<br><br>
+    need all of these.<br><br>
 
     Just as And, Or, and Not are the primary two-input operators, not all three-input operators need to be clearly defined. Most can be easily 
     specified by combining the inputs into various And, Or, and Not gates. The most important is called a multiplexor, which allows for branching. 
@@ -223,15 +223,16 @@ function decisions() {
     </table><br>
 
     We've done it! Although its application may not be apparent at first, this allows us to start making decisions with our circuits. This feature 
-    will become incredibly useful at higher levels of computing, as it allows code to branch, which is incredibly useful to create complex programs.
+    will become incredibly useful at higher levels of computing as it allows code to branch, which is incredibly useful to create complex programs.
     <br><br>
 
-    In addition to the multiplexor, we can also use our gates to create chips that can begin to perform mathematical operations. The simplest is 
-    called a half adder, and it takes two inputs and provides the input. Although I haven't introduced binary completely yet, consider that there 
+    In addition to the multiplexer, we can also use our gates to create chips that can begin to perform mathematical operations. The simplest is 
+    called a half adder, and it takes two inputs and provides the result of adding then. Although I haven't 
+    introduced binary completely yet, consider that there 
     are only three results when adding a combination of 1s and 0s: 0, 1, or 2. Since a single output can only represent a 1 or 0, how do we represent 
     a 2? The answer: add more outputs! If we have another output that's true when the sum is 2, then we can track that information as well. What's 
     more, if both outputs are on, then we have an output that represents 2 plus an output that represents 1, which means we can also indicate an 
-    output of 3 of both are on. Here is a table showing this information:<br><br>
+    output of 3 if both are on. Here is a table showing this information:<br><br>
 
     <table>
         <thead>

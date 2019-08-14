@@ -6,7 +6,7 @@ function geneticRevision() {
 
     Now that we have described the scope of the genetic algorithm that we're planning on implementing, we can go ahead and start creating it.<br><br>
 
-    It makes sense to create a Genome class in Javascript. That way we can ensure our code is encapsulated in a sensible way. The only data we will need 
+    It makes sense to create a "Genome" class in Javascript. That way we can ensure our code is encapsulated in a sensible way. The only data we will need 
     to store is a string of our 50 genes. We'll provide a number of constructors for this data. The default constructor will create a random number of 
     genes and store them in the class information. The constructor can replicate reproduction by taking two other Genomes, picking a spot within them, 
     and copying a portion from one Genome's genes and a portion from the other if two other objects of class Genome are passed to it.<br><br>

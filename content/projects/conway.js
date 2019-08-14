@@ -18,7 +18,7 @@ function conway() {
     </p>
 
     <p>
-        Each iteration, every square in the grid is checked. Depending on how many orthogonically or diagonally adjacent squares are also populated, 
+        Each iteration, every square in the grid is checked. Depending on how many orthogonally or diagonally adjacent squares are also populated, 
         the square can change state. Any live cell with exactly two or three living neighbors will live to the next generation. Those with more 
         or less do not. Likewise, any non-living cell with exactly three living neighbors will be "born" and become populated.
     </p>
@@ -61,7 +61,7 @@ function conway() {
         for (let y = 0; y < tileSpan; y++) {
             gameBoard[x][y] = false;
             computeBoard[x][y] = false;
-            if (Math.random() < .05) gameBoard[x][y] = true;
+            if (Math.random() < .15) gameBoard[x][y] = true;
         }
     }
     

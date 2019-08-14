@@ -3,7 +3,7 @@ function fitness() {
 
     content += `   
     <h3>
-        The Problem to Solve
+        Genotype, Phenotype, and Fitness
     </h3>
 
     Now that I've given an overview of what a genetic algorithm is, the next question is what problem should we solve?<br><br>
@@ -68,7 +68,7 @@ function fitness() {
 
     <br>
         <li><b>Numerals</b> form a <em>term</em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>
-        <li><b>Operators</b> connect two terms. These include addition, subtraction, multiplication, division, expoentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>
+        <li><b>Operators</b> connect two terms. These include addition, subtraction, multiplication, division, exponentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>
         <li><b>Functions</b> operate on the previous term. These include increment, decrement, bitwise left, bitwise right, absolute value, negate, round, ceiling, floor, and zero.</li>
         <li><b>Terms</b> are numbers that are terms in and of themselves. These include x and pi.</li>
     <br><br>
@@ -138,7 +138,7 @@ function fitness() {
     Now, to turn each genotype into a phenotype, we need to determine which genomes create a valid phenotype. In the event that a genotype is 
     invalid, then we'll discard it and create a replacement in its place for the next generation. So, which genotypes are valid?<br><br>
 
-    There are several ways that the numerals, operators, functions, and terms can combine in a few ways. Here is an example grammar of how these 
+    There are several ways that the numerals, operators, functions, and terms can combine. Here is an example grammar of how these 
     terms can combine:<br><br>
 
     numeral string = [numeral] | [numeral][numeral string]<br>
