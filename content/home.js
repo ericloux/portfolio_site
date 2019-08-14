@@ -18,7 +18,7 @@ function home() {
     </p>
     
     <p>
-        Enjoy looking around, and please feel free to contact me! My details are in the Contact page.
+        Enjoy looking around, and please feel free to contact me via the form on my Contact page!
     </p>
     `;
 
