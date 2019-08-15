@@ -17,7 +17,7 @@ function projects() {
     <span class="center-content"><button class="link" id="tetris">3. Alexey's Game</button></span>
     <p class="link-info">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    
 
-    <span class="center-content"><form action="http//gratuityacuity.com" target="_blank"><button class="link" id="gratuity">4. Gratuity Acuity</button></form></span>
+    <span class="center-content"><form action="//gratuityacuity.com" target="_blank"><button class="link" id="gratuity">4. Gratuity Acuity</button></form></span>
     <p class="link-info">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.
     View the write-up <u><a id ="gratuity-writeup">here</a></u>.</p><br>
 
