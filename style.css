@@ -1,5 +1,5 @@
 * {
-    font-size:108%;
+    font-size:25px;
 }
 
 html, body {
@@ -118,7 +118,6 @@ header {
     background-color: steelblue;
     color: lightsteelblue;
     border-bottom: 2px solid black;
-    font-size: 25pt;
     display: flex;
     flex-direction: column;
     justify-content: center;

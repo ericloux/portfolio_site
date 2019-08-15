@@ -21,7 +21,8 @@ function bio() {
 
     <p>
         As a person, I love creating, which is hopefully evident from the programming projects I have here. In addition to that, I've also had an original 
-        string quartet premiere in Ireland, won a film festival in the "Best Video with Original Music" category, skydived 20 times, and built a raft 
+        piece for string quartet premiere in Ireland, won a film festival in the "Best Video with Original Music" category, skydived 20 times,
+         and built a raft 
         from soda bottles (and floated across a pond on it!), among other adventures.
     </p>
 

@@ -8,7 +8,7 @@ function genetic() {
 
     In my opinion, one of the most exciting and intriguing developments in computer science is that of genetic algorithms. A genetic algorithm 
     creates a program, but 
-    instead of having a human type out every line of code, the computer writes the program itself.You might be asking yourself how the heck that 
+    instead of having a human type out every line of code, the computer writes the program itself. You might be asking yourself how the heck that 
     works and wondering if it's going to end up with the Terminator coming back 
     in time for you, but that's not the case at all! Instead, the programmer 
     takes inspiration from something that is all around us - genetics.<br><br>
@@ -32,7 +32,8 @@ function genetic() {
     First, you need to come up with a way to represent the commands you want your program to be able to use. 
     From there, you write a program that can create those genes (the genotype), as well as test them out (the phenotype). The quintessential example 
     is, of course, creating a simulated organism. Instead of having the genes create physical material, they might instead represent traits, such as 
-    ability to sense other organisms. In this example, the genotype is the actual genes to create the creature, while the phenotype is how those 
+    ability to sense other organisms. In this example, the genotype is the actual strand of 
+    genes to create the creature, while the phenotype is how those 
     creatures interact with each other in whatever environment they're put into.<br><br>
 
     These two terms - genotype and phenotype - are incredibly important to understanding of how genetic algorithms work. The genotype is the string 

@@ -183,7 +183,7 @@ exports.bio = bio;
 
 function bio() {
   var content = "";
-  content += "\n    <h3>\n        About Eric Loux\n    </h3>\n\n    <p>\n        When I was young, I was introduced to computers through my brother's Nintendo and the computer in my dad's basement. I remember being \n        five or so and having to ask my family to help navigate MS-DOS to get me to the games. As I got older I got more and more involved with \n        computers, finally taking my first programming class when I was 15. I had no idea what I was doing that first semester but decided to come \n        back for the next, when it finally clicked for me, and from that point on I was hooked. After high school I went to Baker University, a small \n        private college twenty minutes from my parents' Kansas home. Unfortunately, due to my scholarships running out after four years, I took a \n        few years to step back and figure out my life. Eventually finding myself operating a state-of-the-art inkjet glass decorating machine, I \n        started to get involved with learning Excel and VBA, creating tools to track maintenance and consumption metrics. Eventually getting a chance \n        to move to Nashville to work at a construction and mining equipment company, I jumped on the opportunity and have been living in Tennessee \n        since December of 2017. In 2019, I joined the Savvy Coders boot camp, where I added JavaScript, HTML, and CSS to my skillset. From here I'm \n        currently working on returning to school and finishing my degree at Middle Tennessee State University.\n    </p>\n\n    <p>\n        As a person, I love creating, which is hopefully evident from the programming projects I have here. In addition to that, I've also had an original \n        string quartet premiere in Ireland, won a film festival in the \"Best Video with Original Music\" category, skydived 20 times, and built a raft \n        from soda bottles (and floated across a pond on it!), among other adventures.\n    </p>\n\n    <br><br>\n    ";
+  content += "\n    <h3>\n        About Eric Loux\n    </h3>\n\n    <p>\n        When I was young, I was introduced to computers through my brother's Nintendo and the computer in my dad's basement. I remember being \n        five or so and having to ask my family to help navigate MS-DOS to get me to the games. As I got older I got more and more involved with \n        computers, finally taking my first programming class when I was 15. I had no idea what I was doing that first semester but decided to come \n        back for the next, when it finally clicked for me, and from that point on I was hooked. After high school I went to Baker University, a small \n        private college twenty minutes from my parents' Kansas home. Unfortunately, due to my scholarships running out after four years, I took a \n        few years to step back and figure out my life. Eventually finding myself operating a state-of-the-art inkjet glass decorating machine, I \n        started to get involved with learning Excel and VBA, creating tools to track maintenance and consumption metrics. Eventually getting a chance \n        to move to Nashville to work at a construction and mining equipment company, I jumped on the opportunity and have been living in Tennessee \n        since December of 2017. In 2019, I joined the Savvy Coders boot camp, where I added JavaScript, HTML, and CSS to my skillset. From here I'm \n        currently working on returning to school and finishing my degree at Middle Tennessee State University.\n    </p>\n\n    <p>\n        As a person, I love creating, which is hopefully evident from the programming projects I have here. In addition to that, I've also had an original \n        piece for string quartet premiere in Ireland, won a film festival in the \"Best Video with Original Music\" category, skydived 20 times,\n         and built a raft \n        from soda bottles (and floated across a pond on it!), among other adventures.\n    </p>\n\n    <br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/projects.js":[function(require,module,exports) {
@@ -196,10 +196,7 @@ exports.projects = projects;
 
 function projects() {
   var content = "";
-  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"http//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <u><a id =\"gratuity-writeup\">here</a></u>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Hooray for practicality!</p><br><br>"; // <span class="center-content"><button class="link" id="genetic-algorithm">6. Genetic Algorithm</button></span>
-  // <p class="link-info">My genetic algorithm. See my blog for more details.</p><br>    
-  // `;
-
+  content += "\n    <h3>\n        Eric's Projects\n    </h3>\n\n    <span class=\"center-content\">Click on the project headers to view my projects!</span><br><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"alu\">1. Simulated ALU</button></span>\n    <p class=\"link-info\">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"conway\">2. Conway's Game</button></span>\n    <p class=\"link-info\">Conway's Game of Life, simulating his rules of underpopulation, overpopulation, and reproduction.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tetris\">3. Alexey's Game</button></span>\n    <p class=\"link-info\">Everyone needs to code this once, but its real name is trademarked by The Tetris Company.</p><br>    \n\n    <span class=\"center-content\"><form action=\"http//gratuityacuity.com\" target=\"_blank\"><button class=\"link\" id=\"gratuity\">4. Gratuity Acuity</button></form></span>\n    <p class=\"link-info\">My capstone project for Savvy Coders, which allows delivery drivers to track their tips by amount, date, and location.\n    View the write-up <u><a id =\"gratuity-writeup\">here</a></u>.</p><br>\n\n    <span class=\"center-content\"><button class=\"link\" id=\"tablemaker\">5. Table Maker</button></span>\n    <p class=\"link-info\">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting \n    was a chore, so I wrote a program to do it for me. Hooray for practicality!</p><br><br>  \n\n    <span class=\"center-content\"><button class=\"link\" id=\"genetic-algorithm\">6. Genetic Algorithm</button></span>\n    <p class=\"link-info\">My genetic algorithm. See my blog for more details.</p><br>    \n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog.js":[function(require,module,exports) {
@@ -226,7 +223,7 @@ exports.abstraction = abstraction;
 
 function abstraction() {
   var content = "";
-  content += "\n    <h3>\n        Abstraction and Computer Science\n    </h3>\n\n    If you ask, \"How does a computer work?\" then the majority of the population will likely tell you they don't know. And surely, just looking at \n     computer, it seems like a box that works on magic alone. Sure, most can tell you that it does something with electricity, but what is that \n     something, and how does it turn that electricity into every webpage and program that you've ever seen?<br><br>\n    \n    The answer, of course, is complex. Rather than thinking of the process as one concrete whole, it's through abstraction of each level that we \n    can examine how we go from \"this electron jiggles\" to sending a text message to your friends. There are plenty of levels, which is one of the \n    reasons that understanding of what happens in a computer is lost, even to many people who program them on a daily basis. Each layer is vast \n    enough to be an entire field of study. Although I hardly consider myself an expert, the scope of this article is to give a brief examination \n    into each of those levels, as well as how they work together to form the modern computer.<br><br>\n    \n    Given that there are each of these many levels, what exactly are they? I will give a brief overview before going into more detail, starting \n    from the bottom up. First, we have electricity, which can or cannot be flowing through a conductor at any moment. A switch allows this flow \n    to be interrupted or resumed. Using electricity to control switches, we can begin to create basic logical operations based on the flow of \n    electricity. By intelligently wiring these logical operations together, we can build more and more complex operations, eventually being able to \n    simulate math and decision making.<br><br>\n    \n    By adding a clock that controls one of the aforementioned switches, we can add a timing element to the system we are constructing. This \n    allows us to create a memory cell, which can remain on or off until told to change. Chaining these memory cells together, we get a construct \n    known as a register, which can likewise be combined into a block of memory. The clock also allows us to perform our math and logic operations \n    in steps. It's at this point that we are finally able to create a rudimentary computer program!<br><br>\n    \n    Input and output are also possible at this point. Think about a numeral like on a digital clock that has seven lines, each of which can be on or \n    off. When all seven are on, an 8 appears. When you remove the top line on the right, you have a six. So on and so forth, you end up being able to draw \n    any number. If instead of having seven lines you have a grid of six by eight boxes, then in addition to numbers, you can draw letters and even \n    rudimentary pictures as well. Behind these boxes are registers - those groups of memory cells - that will tell which of the boxes (known as pixels) \n    should be on, and which should be off. When new information is put into the registers then the pixels change state and a new image is drawn.<br><br>\n    \n    Managing input is similar to output. When you press a key, it closes a circuit, and a register with information about which keys are being \n    pressed updated to show that the key was pressed. The computer then takes this input and uses it as input into its calculations. For example, \n    if you have a block of registers, then the results of the input may be stored in a sequence of registers. A counter tells the computer which \n    register is the next to write to. When you type 8, then the first register gets set to the binary representation of eight, and the counter \n    increments so that the second register will store the next input value. In addition to numbers, the input register could have mathmatical \n    operands and other keys, such as keys to compute what was entered, clear all the data that was inputted, clear the last key or whole number \n    entered, add parenthesies, or a number of other functions. I've just described the modern calculator!<br><br>\n    \n    Now that we can program our computer, we can write a program that makes it easier for humans to interpret a program. The lowest level of \n    these programs is called assembly language, which simply takes commands and turns it into the on and off signals that can be put through \n    the binary logic gates. Now, we can write a program that tells which operations to perform on which blocks of memory without setting the \n    state of each individual memory cell. Using assembly language, we can likewise write another language on top that allows the programmer to \n    write code that makes even more sense to a human. This program is known as a compiler.<br><br>\n    \n    From here, the path is wide open. You can write a language that makes it even easier for a human to interact with (such as JavaScript or \n    Python). You can update your output device so that instead of each pixel only showing on or off, you can add colors as well. Your input \n    device can have keys added to write other characters, or to directly open programs. You can chain more blocks of memory together, allowing \n    your math unit to process larger numbers or fractions. <br><br>\n    \n    One major program that is a necessity is an operating system. Using this, a number of functions that multiple programs might use can be \n    bundled together. Instead of telling the computer to manipulate individual pixels, you could tell it to draw shapes. Instead of telling it \n    to store items in specific spots in memory, the operating system can find an open spot and remember which locations are associated with what \n    program was saved. <br><br>\n    \n    Although the process is simplified, this is an outline of how a computer \"does its magic\" with electricity. There is so much going on at \n    each different level that one could write a book describing what happens - and indeed books have been written on the subject. Although I \n    intend to continue writing more on many of these levels and implementing several of the items described here, I would be remiss if I didn't \n    recommend reading \"The Elements of Computing Systems\" by Noam Nisan and Shimon Schocken. Their book has done wonders for my understanding in \n    the internal workings of a computer, and I highly suggest that anyone who wants a more technical understanding of these workings read their \n    writings. Said book also invites readers to create their own computer system by modelling low-level hardware, then using those models to \n    create bigger and better tools, eventually ending with a functioning computer.<br><br><br><br>\n    ";
+  content += "\n    <h3>\n        Abstraction and Computer Science\n    </h3>\n\n    If you ask, \"How does a computer work?\" then the majority of the population will likely tell you they don't know. And surely, just looking at \n     computer, it seems like a box that works on magic alone. Sure, most can tell you that it does something with electricity, but what is that \n     something, and how does it turn that electricity into every webpage and program that you've ever seen?<br><br>\n    \n    The answer, of course, is complex. Rather than thinking of the process as one concrete whole, it's through abstraction of each level that we \n    can examine how we go from \"this electron jiggles\" to sending a text message to your friends. There are plenty of levels, which is one of the \n    reasons that an understanding of what happens in a computer is lost, even to many people who program them on a daily basis. Each layer is vast \n    enough to be an entire field of study. Although I hardly consider myself an expert, the scope of this article is to give a brief examination \n    into each of those levels, as well as how they work together to form the modern computer.<br><br>\n    \n    Given that there are each of these many levels, what exactly are they? I will give a brief overview before going into more detail, starting \n    from the bottom up. First, we have electricity, which can or cannot be flowing through a conductor at any moment. A switch allows this flow \n    to be interrupted or resumed. Using electricity to control switches, we can begin to create basic logical operations based on the flow of \n    electricity. By intelligently wiring these logical operations together, we can build more and more complex operations, eventually being able to \n    simulate math and decision making.<br><br>\n    \n    By adding a clock that controls one of the aforementioned switches, we can add a timing element to the system we are constructing. This \n    allows us to create a memory cell, which can remain on or off until told to change. Chaining these memory cells together, we get a construct \n    known as a register, which can likewise be combined into a block of memory. The clock also allows us to perform our math and logic operations \n    in steps. It's at this point that we are finally able to create a rudimentary computer program!<br><br>\n    \n    Input and output are also possible at this point. Think about a numeral like on a digital clock that has seven lines, each of which can be on or \n    off. When all seven are on, an 8 appears. When you remove the top line on the right, you have a six. So on and so forth, you end up being able to draw \n    any number. If instead of having seven lines you have a grid of six by eight boxes, then in addition to numbers, you can draw letters and even \n    rudimentary pictures as well. Behind these boxes are registers - those groups of memory cells - that will tell which of the boxes (known as pixels) \n    should be on, and which should be off. When new information is put into the registers then the pixels change state and a new image is drawn.<br><br>\n    \n    Managing input is similar to output. When you press a key, it closes a circuit, and a register with information about which keys are being \n    pressed updates to show that the key was pressed. The computer then takes this input and uses it as input into its calculations. For example, \n    if you have a block of registers, then the results of the input may be stored in a sequence of registers. A counter tells the computer which \n    register is the next to write to. When you type 8, then the first register gets set to the binary representation of eight, and the counter \n    increments so that the second register will store the next input value. In addition to numbers, the input register could have mathmatical \n    operands and other keys, such as keys to compute what was entered, clear all the data that was inputted, clear the last key or whole number \n    entered, add parenthesies, or a number of other functions. I've just described the modern calculator!<br><br>\n    \n    Now that we can program our computer, we can write a program that makes it easier for humans to interpret a program. The lowest level of \n    these programs is called assembly language, which simply takes commands and turns it into the on and off signals that can be put through \n    the binary logic gates. Now, we can write a program that tells which operations to perform on which blocks of memory without setting the \n    state of each individual memory cell. Using assembly language, we can likewise write another language on top that allows the programmer to \n    write code that makes even more sense to a human. This program is known as a compiler.<br><br>\n    \n    From here, the path is wide open. You can write a language that makes it even easier for a human to interact with (such as JavaScript or \n    Python). You can update your output device so that instead of each pixel only showing on or off, you can add colors as well. Your input \n    device can have keys added to write other characters, or to directly open programs. You can chain more blocks of memory together, allowing \n    your math unit to process larger numbers or fractions. <br><br>\n    \n    One major program that is a necessity is an operating system. Using this, a number of functions that multiple programs might use can be \n    bundled together. Instead of telling the computer to manipulate individual pixels, you could tell it to draw shapes. Instead of telling it \n    to store items in specific spots in memory, the operating system can find an open spot and remember which locations are associated with what \n    program was saved. <br><br>\n    \n    Although the process is simplified, this is an outline of how a computer \"does its magic\" with electricity. There is so much going on at \n    each different level that one could write a book describing what happens - and indeed books have been written on the subject. Although I \n    intend to continue writing more on many of these levels and implementing several of the items described here, I would be remiss if I didn't \n    recommend reading \"The Elements of Computing Systems\" by Noam Nisan and Shimon Schocken. Their book has done wonders for my understanding in \n    the internal workings of a computer, and I highly suggest that anyone who wants a more technical understanding of these workings read their \n    writings. Said book also invites readers to create their own computer system by modelling low-level hardware, then using those models to \n    create bigger and better tools, eventually ending with a functioning computer.<br><br><br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog/elementary.js":[function(require,module,exports) {
@@ -240,7 +237,7 @@ exports.elementary = elementary;
 function elementary() {
   console.log("test");
   var content = "";
-  content += "\n    <h3>\n    Elementary Logic Gates\n    </h3>\n\n\n    When a circuit is complete, electricity flows through it. When a circuit is broken, electricity does not. While this principle seems elementary, \n    the capacity for complexity increases dramatically when the circuit is allowed to connect and break itself. The vacuum tube and transistor allowed \n    such circuits to become commercially viable, leading to our current Age of Information. It's at this lowest level of computing that electrity is \n    manipulated into logical abstractions, and the scope of this article is to examine what happens at those lowest of levels.<br><br>\n\n    A switch is the device that can make or break the flow of a material. In computers, this usually refers to electrons moving through a conductor, \n    but there are other examples, such as a valve closing and not allowing water to flow. The quintessential electrical example, though, is light \n    switches. When the switch is open, the circuit is broken, and electricity cannot flow. When the switch is closed, the electricity is allowed to \n    flow through the circuit. Part of that circuit is a light bulb, where the flowing electrons are converted into visible light.<br><br>\n\n    Of course, there are more exciting ways to combine switches and lights than just one circuit. However, another electrical component must be \n    introduced - the resistor. A resistor makes it harder for electrons to travel on a circuit. It's a bit like a wall that the electrons have to \n    climb over to continue on the circuit. On our light switch circuit, adding a resistor would have a negligable effect. The light may be a bit \n    dimmer, but it wouldn't hamper the flow of electricity. The electrons would pile up at the wall and eventually flow over it, like the zombies \n    in World War Z.<br><br>\n\n    However, what if the path branches? Imagine the electrons have two choices. On one path, they have a clear shot forward with no obstructions.\n     On the other, they have to push through a resistor. In this case, the electrons will ignore the more difficult path and push on through the \n     other. If there are light bulbs on each side of the branch, only the bulb on the path with no resistor will light up, since all the electrons \n     are moving down that path.<br><br>\n\n    Continuing our thought experiment, what happens if suddenly the path without the resistor has a switch? When the switch is closed and \n    the circuit is complete, the easiest path is through the switch and away from the resistor. When the switch is opened, however, and the path \n    without a resistor is a complete dead-end, then the electrons instead go through the resistor and down the other path. If that switch is \n    controlled by electricity, then we have a logic gate.<br><br>\n\n    Consider that we have two paths leading into our logic gate, and two leading out. One of the paths in is the power supply. We'll call this \n    Power. In our circuit, electrons are always coming through Power. Thus, we say that it is always \"on\", as opposed to one with no flow that is \n    \"off\". The other path leading in leads to power our switch, so we will call it Switch. When it's on, the switch closes, and the electrons pass \n    through the easier open road. When Switch is off, then the switch opens, and the electrons move out the other, harder route with the resistor. \n    We will call these output paths Easy and Hard. Whether they are on or off depends on whether Switch is on or off. Here is a table showing the \n    various sates of Power, Switch, Easy and Hard:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Power</th>\t\n                <th>Switch</th>\t\n                <th>Easy</th>\t\n                <th>Hard</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>Off</td>\n        </tr>\n        <tr>\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\n        </tr>\n    </table><br>\n\n    As you can see, the value of Power is always on, and the value of Easy is always the same as Switch. However, Switch and Hard always have the \n    opposite state. We can say that Output \"Hard\" is not input \"Switch\". This is known as an inverter or \"not gate\", and is one of the simplest \n    logic gates.<br><br>\n\n    Let's add another switch to our circuit. This time, the switch will be after the first switch, Switch. Since there are multiple switches, \n    calling the input \"Switch\" is confusing, so we will refer to it as \"Input 1\" and the second switch we are adding this time will be \"Input 2\". \n    For consistency, we'll also rename our outputs from \"Easy\" and \"Hard\" to \"Output 1\" and \"Output 2\". Likewise, since Power is always on, we'll \n    remove it from the future tables. <br><br>\n    \n    Our whole circuit consists of the following. \n    At the fork, the electrons can either move down one path through Input 1's switch, through Input 2's switch, and out Output 1. Alternatively, \n    they can move through the resistor and out Output 2. Naturally, they want to move out Output 1 unless one of the switches is off (open) which \n    means that they can't make it and will take the harder road though Output 2. So, if both of the switches are on, the electrons will flow through \n    Output 1. If either is closed, they will go the other direction. Here is another table showing this relationship:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Input 1</th>\t\n                <th>Input 2</th>\t\n                <th>Output 1</th>\t\n                <th>Output 2</th>\t\n            </tr>\n        </thead>\n        <tr>\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n        </tr>\n        <tr>\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\t\t\t\n        </tr>\n        <tr>\n            <td>Off</td>\t\t\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\t\n        </tr>\n        <tr>\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\n        </tr>\n    <table><br>\n\n    To describe this relationship in English, Output 1 is on if Input 1 and Input 2 are on. This creates an \"and gate\". Likewise, Output 2 is on \n    if Input 1 and Input 2 are not on. Thus it is a \"not and\" gate, which is usually shortened to \"nand\".<br><br>\n\n    If you're the inquisitive sort, then you may wonder what happens if we connect the output from one gate to the input from another. The answer \n    is that you can create gates that have any relationship with the inputs. I've presented three here: not, and, and nand. With these three logic \n    gates, we can make a host of other logic gates. We can combine them so that there are more than two inputs and create chips that can make choices \n    or start doing math. These operations form the basis for the whole field of computer science. Looking at the interactions between these more \n    complex gates is beyond the scope of this article, but will be examined in subsequent entries.<br><br><br><br>\n    ";
+  content += "\n    <h3>\n    Elementary Logic Gates\n    </h3>\n\n\n    When a circuit is complete, electricity flows through it. When a circuit is broken, electricity does not. While this principle seems elementary, \n    the capacity for complexity increases dramatically when the circuit is allowed to connect and break itself. The vacuum tube and transistor allowed \n    such circuits to become commercially viable, leading to our current Age of Information. It's at this lowest level of computing that electrity is \n    manipulated into logical abstractions, and the scope of this article is to examine what happens at those lowest of levels.<br><br>\n\n    A switch is the device that can make or break the flow of a material. In computers, this usually refers to electrons moving through a conductor, \n    but there are other examples, such as a valve closing and not allowing water to flow. The quintessential electrical example, though, is light \n    switches. When the switch is open, the circuit is broken, and electricity cannot flow. When the switch is closed, the electricity is allowed to \n    flow through the circuit. Part of that circuit is a light bulb, where the flowing electrons are converted into visible light.<br><br>\n\n    Of course, there are more exciting ways to combine switches and lights than just one circuit. However, another electrical component must be \n    introduced - the resistor. A resistor makes it harder for electrons to travel on a circuit. It's a bit like a wall that the electrons have to \n    climb over to continue on the circuit. On our light switch circuit, adding a resistor would have a negligable effect. The light may be a bit \n    dimmer, but it wouldn't hamper the flow of electricity. The electrons would pile up at the wall and eventually flow over it, like the zombies \n    in World War Z.<br><br>\n\n    However, what if the path branches? Imagine the electrons have two choices. On one path, they have a clear shot forward with no obstructions.\n     On the other, they have to push through a resistor. In this case, the electrons will ignore the more difficult path and push on through the \n     other. If there are light bulbs on each side of the branch, only the bulb on the path with no resistor will light up, since all the electrons \n     are moving down that path.<br><br>\n\n    Continuing our thought experiment, what happens if suddenly the path without the resistor has a switch? When the switch is closed and \n    the circuit is complete, the easiest path is through the switch and away from the resistor. When the switch is opened, however, and the path \n    without a resistor is a complete dead-end, then the electrons instead go through the resistor and down the other path. If that switch is \n    controlled by electricity, then we have a logic gate.<br><br>\n\n    Consider that we have two paths leading into our logic gate, and two leading out. One of the paths in is the power supply. We'll call this \n    Power. In our circuit, electrons are always coming through Power. Thus, we say that it is always \"on\", as opposed to one with no flow that is \n    \"off\". The other path leading in provides power to our switch, so we will call it Switch. When it's on, the switch closes, and the electrons pass \n    through the easier open road. When Switch is off, then the switch opens, and the electrons move out the other, harder route with the resistor. \n    We will call these output paths Easy and Hard. Whether they are on or off depends on whether Switch is on or off. Here is a table showing the \n    various sates of Power, Switch, Easy and Hard:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Power</th>\t\n                <th>Switch</th>\t\n                <th>Easy</th>\t\n                <th>Hard</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>Off</td>\n        </tr>\n        <tr>\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\n        </tr>\n    </table><br>\n\n    As you can see, the value of Power is always on, and the value of Easy is always the same as Switch. However, Switch and Hard always have the \n    opposite state. We can say that Output \"Hard\" is not input \"Switch\". This is known as an inverter or \"not gate\", and is one of the simplest \n    logic gates.<br><br>\n\n    Let's add another switch to our circuit. This time, the switch will be after the first switch, Switch. Since there are multiple switches, \n    calling the input \"Switch\" is confusing, so we will refer to it as \"Input 1\" and the second switch we are adding this time will be \"Input 2\". \n    For consistency, we'll also rename our outputs from \"Easy\" and \"Hard\" to \"Output 1\" and \"Output 2\". Likewise, since Power is always on, we'll \n    remove it from the future tables. <br><br>\n    \n    Our whole circuit consists of the following. \n    At the fork, the electrons can either move down one path through Input 1's switch, through Input 2's switch, and out Output 1. Alternatively, \n    they can move through the resistor and out Output 2. Naturally, they want to move out Output 1 unless one of the switches is off (open) which \n    means that they can't make it and will take the harder road though Output 2. So, if both of the switches are on, the electrons will flow through \n    Output 1. If either is closed, they will go the other direction. Here is another table showing this relationship:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Input 1</th>\t\n                <th>Input 2</th>\t\n                <th>Output 1</th>\t\n                <th>Output 2</th>\t\n            </tr>\n        </thead>\n        <tr>\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n        </tr>\n        <tr>\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\t\t\t\n        </tr>\n        <tr>\n            <td>Off</td>\t\t\n            <td>On</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\t\n        </tr>\n        <tr>\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>Off</td>\t\t\n            <td>On</td>\n        </tr>\n    <table><br>\n\n    To describe this relationship in English, Output 1 is on if Input 1 and Input 2 are on. This creates an \"AND\" gate. Likewise, Output 2 is on \n    if Input 1 and Input 2 are not on. Thus it is a \"NOT AND\" gate, which is usually shortened to \"NAND\".<br><br>\n\n    If you're the inquisitive sort, then you may wonder what happens if we connect the output from one gate to the input from another. The answer \n    is that you can create gates that have any relationship with the inputs. I've presented three here: NOT, AND, and NAND. With these three logic \n    gates, we can make a host of other logic gates. We can combine them so that there are more than two inputs and create chips that can make choices \n    or start doing math. These operations form the basis for the whole field of computer science. Looking at the interactions between these more \n    complex gates is beyond the scope of this article, but will be examined in subsequent entries.<br><br><br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
   console.log(document.getElementsByClassName("content")[0]);
 }
@@ -267,7 +264,7 @@ exports.representing = representing;
 
 function representing() {
   var content = "";
-  content += "\n    <h3>\n    Representing Binary Logic\n    </h3>\n\n    As we have been looking directly at the electrical circuits that make up these logic gates. However, as we delve deeper into how these logic gates \n    combine, it's useful to refer to them from more of a logical standpoint rather than practical.<br><br>\n\n    Up to this point, we've been referring to the operations of these logic gates in specific ways that represent what is happening at the \n    electrical level. If a wire leading into or out of a gate, then we've said it's \"on\", or if not, then it's \"off.\" While \"on\" and \"off\" show \n    what is going on with the wires, typically other symbols are used in computer science. The main alternative used in higher level programming \n    is \"true/false\" rather than \"on/off\", although they mean the same thing. Another choice is to use numbers. A one represents on or true, and \n    a zero represents off or false. Using numbers also allows us to be able to perform math on the inputs. Similarly, an input is also called an \n    \"operand\".<br><br>\n\n    We also have different names for logic gates. Since we are representing these systems mathematically and logically, we can also call them an \n    operation or a function. This also means we can use function notation to describe their relationships as well in order to more accurately show \n    their relationship. For example, instead of saying \"Input 1 and Input 2\" we can instead say \"and(Input 1, Input 2)\". These are again how similar \n    functions are represented in high-level programming languages. However, since these basic operations are so prevalent, there are shorthands for \n    some of these simple, common functions. For example, \"and\" is represented by \"&&\", e.g. \"Input 1 && Input 2\". Likewise, \"or\" is represented by \"||\" \n    and \"!\" means \"not\" when preceding an operand. For example, \"!Input 1\" means \"not Input 1\".<br><br>\n\n    There are many other shortcuts as well. Instead of calling the inputs \"Input 1\" and \"Input 2\", we can call them a variety of other names. P and \n    Q are used in logic. In fact, there are many other symbols that are used in the field of logic to represent many of these ideas in a different way. \n    Generally, though, we will name the inputs based on what their actual functions are. If we're simply looking at creating logic gates that describe \n    simple functions, we'll simply call them \"I1\", \"I2\", and so forth as needed.<br><br>\n\n    As we get further into examining the interactions of these chips and building more and more complex functionality out of them, having language to \n    describe these functions that is both simpler and clearer helps in ease of communicating the ideas that they are used to build. Moving forward, \n    the terms here will be used interchangably.<br><br><br><br>\n    ";
+  content += "\n    <h3>\n    Representing Binary Logic\n    </h3>\n\n    So far, we have been looking directly at the electrical circuits that make up these logic gates. However, as we delve deeper into how these logic gates \n    combine, it's useful to refer to them from more of a logical standpoint rather than examining their practical implementation.<br><br>\n\n    Up to this point, we've been referring to the operations of these logic gates in specific ways that represent what is happening at the \n    electrical level. If a wire leading into a gate is carrying current, then we've said it's \"on\", or if not, then it's \"off.\" While \"on\" and \"off\" show \n    what is going on with the wires, typically other symbols are used in computer science. The main alternative used in higher level programming \n    is \"true/false\" rather than \"on/off\", although they mean the same thing. Another choice is to use numbers. A one represents on or true, and \n    a zero represents off or false. Using numbers also allows us to be able to perform math on the inputs. Similarly, an input is also called an \n    \"operand\".<br><br>\n\n    We also have different names for logic gates. Since we are representing these systems mathematically and logically, we can also call them an \n    operation or a function. This also means we can use function notation to describe their relationships as well in order to more accurately show \n    their relationship. For example, instead of saying \"Input 1 AND Input 2\" we can instead say \"AND(Input 1, Input 2)\". These are again how similar \n    functions are represented in high-level programming languages. However, since these basic operations are so prevalent, there are shorthands for \n    some of these simple, common functions. For example, \"AND\" is represented by \"&\", e.g. \"Input 1 & Input 2\". Likewise, \"OR\" is represented by \"|\" \n    and \"!\" means \"NOT\" when preceding an operand. For example, \"!Input 1\" means \"NOT Input 1\".<br><br>\n\n    There are many other shortcuts as well. Instead of calling the inputs \"Input 1\" and \"Input 2\", we can call them a variety of other names. P and \n    Q are used in logic. In fact, there are many other symbols that are used in the field of logic to represent many of these ideas in a different way. \n    Generally, though, we will name the inputs based on what their actual functions are. If we're simply looking at creating logic gates that describe \n    simple functions, we'll simply call them \"I1\", \"I2\", and so forth as needed.<br><br>\n\n    As we get further into examining the interactions of these chips and building more and more complex functionality out of them, having language to \n    describe these functions that is both simpler and clearer helps in ease of communicating the ideas that they are used to build. Moving forward, \n    the terms here will be used interchangably.<br><br><br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog/decisions.js":[function(require,module,exports) {
@@ -1544,7 +1541,7 @@ exports.gratuity = gratuity;
 
 function gratuity() {
   var content = "";
-  content += "\n    <h3>\n        About Gratuity Acuity\n    </h3>\n\n    <p>\n        As a former pizza delivery driver, one of the things that I did was keep a list of all the tips I made in a single night. \n        This was ostenibly for tax records, but the truth is that I just liked to see the data and compare where I was getting the best tips \n        during the night. Naturally, most of those receipts just ended up discarded on my floorboard at the end of my shift, but after \n        thinking about what I wanted my capstone project for Savvy Coders to entail, I remembered my tip lists and thought that I could turn \n        them into a nice project through the addition of some other features.\n    </p>\n\n    <p>\n        Although the list was the primary function, I got so carried away that it was actually the last thing that I implemented. I decided \n        that I was going to use a map API to be able to track the tip information geographically as well. After searching through a couple \n        of options, I settled on the Google Maps API. Knowing that learning the API was going to take some work, I focused primarily on \n        the map functionality. I'm glad that I did, too, because some of the quirks of using markers meant that it ended up being easier to \n        store the list of tips as an array of Google Maps markers, rather than an array of other objects that encapsulated those markers.\n    </p>\n\n    <p>\n        In addition to the map, the app also has full CRUD functionality on the list. The user can add a tip record by clicking on the \"Add \n        Tip\" button. Tips can be read, updated, and deleted in the tip list that is accessed at the bottom of the screen. Because I love \n        the canvas element so much, I also decided to draw a quartile graph, as well as the sum and average. The date range for calculation \n        can also be modified\n    </p>\n\n    <p>\n        Although the project as is meets the requirements that I wanted, there are a few improvements that I want to make. First, the quartile \n        graph doesn't work correctly when there are less than four tips entered. Second, it would make sense to duplicate the date selection \n        dialogue to be included on the list of tips, as well as potentially in its own popup window. Lastly, the entire site was designed \n        on a computer, rather than a mobile device. Because of that, the GUI isn't optimized to be displayed on a phone screen. But of course, \n        what programmer ever feels like there aren't improvements that can be made to their application?\n    </p>\n\n    <p>\n        You can visit Gratuity Acuity here: \n    </p>\n        \n    <span class=\"center-content\">\n        <form action=\"//gratuityacuity.com\" target=\"_blank\">\n            <button class=\"link\" id=\"gratuity\">\n                GRATUITY ACUITY\n            </button>\n        </form>\n    </span>\n    \n    <br><br><br><br>\n    ";
+  content += "\n    <h3>\n        About Gratuity Acuity\n    </h3>\n\n    <p>\n        As a former pizza delivery driver, one of the things that I did was keep a list of all the tips I made in a single night. \n        This was ostensibly for tax records, but the truth is that I just liked to see the data and compare where I was getting the best tips \n        during the night. Naturally, most of those receipts just ended up discarded on my floorboard at the end of my shift, but after \n        thinking about what I wanted my capstone project for Savvy Coders to entail, I remembered my tip lists and thought that I could turn \n        them into a nice project through the addition of some other features.\n    </p>\n\n    <p>\n        Although the list was the primary function, I got so carried away that it was actually the last thing that I implemented. I decided \n        that I was going to use a map API to be able to track the tip information geographically as well. After searching through a couple \n        of options, I settled on the Google Maps API. Knowing that learning the API was going to take some work, I focused primarily on \n        the map functionality. I'm glad that I did, too, because some of the quirks of using markers meant that it ended up being easier to \n        store the list of tips as an array of Google Maps markers, rather than an array of other objects that encapsulated those markers.\n    </p>\n\n    <p>\n        In addition to the map, the app also has full CRUD functionality on the list. The user can add a tip record by clicking on the \"Add \n        Tip\" button. Tips can be read, updated, and deleted in the tip list that is accessed at the bottom of the screen. Because I love \n        the canvas element so much, I also decided to draw a quartile graph, as well as the sum and average. The date range for calculation \n        can also be modified\n    </p>\n\n    <p>\n        Although the project as is meets the requirements that I wanted, there are a few improvements that I want to make. First, the quartile \n        graph doesn't work correctly when there are less than four tips entered. Second, it would make sense to duplicate the date selection \n        dialogue to be included on the list of tips, as well as potentially in its own pop-up window. Lastly, the entire site was designed \n        on a computer, rather than a mobile device. Because of that, the GUI isn't optimized to be displayed on a phone screen. But of course, \n        what programmer ever feels like there aren't improvements that can be made to their application?\n    </p>\n\n    <p>\n        You can visit Gratuity Acuity here: \n    </p>\n        \n    <span class=\"center-content\">\n        <form action=\"//gratuityacuity.com\" target=\"_blank\">\n            <button class=\"link\" id=\"gratuity\">\n                GRATUITY ACUITY\n            </button>\n        </form>\n    </span>\n    \n    <br><br><br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/projects/tablemaker.js":[function(require,module,exports) {
@@ -1630,7 +1627,7 @@ exports.genetic = genetic;
 
 function genetic() {
   var content = "";
-  content += "   \n    <h3>\n        Genetic Algorithms\n    </h3>\n\n    In my opinion, one of the most exciting and intriguing developments in computer science is that of genetic algorithms. A genetic algorithm \n    creates a program, but \n    instead of having a human type out every line of code, the computer writes the program itself.You might be asking yourself how the heck that \n    works and wondering if it's going to end up with the Terminator coming back \n    in time for you, but that's not the case at all! Instead, the programmer \n    takes inspiration from something that is all around us - genetics.<br><br>\n\n    Now, some people are immediately put off by the term genetics, even though evolution has been accepted by the Catholic Church since 1950. The \n    \"genes\" in genetic algorithms are not exactly the same concept as those found in DNA. However, the concept can be applied to computer code \n    through clever adaptation.<br><br>\n\n    Here's an incredibly simplified overview of how genes work organisms. A strand of DNA serves as a blueprint, attracting amino acids to its end. \n    From there, the amino acids move along the strand of DNA, combining with other amino acids and eventually creating a molecule. This molecule \n    then separates and interacts with the other molecules in the organism \n    to form just about every possible type of organic matter. The DNA splits in half during \n    this process, and then each half can regenerate the other half and you're left with two identical strands of DNA. (Somewhere, a geneticist is \n    weeping after reading this.)<br><br>\n\n    When two organisms reproduce, the genetic material can combine as well. Portions of each of the parent's genes are mixed with portions of the \n    other's. Likewise, sometimes a perfect copy isn't created when a strand splits. This is known as a mutation, and can happen from something as \n    common as solar radiation hitting the point where the genes are splitting. Of course, that can completely change what the genes create!<br><br>\n\n    Reproducing this in computers is easier than you might think. \n    First, you need to come up with a way to represent the commands you want your program to be able to use. \n    From there, you write a program that can create those genes (the genotype), as well as test them out (the phenotype). The quintessential example \n    is, of course, creating a simulated organism. Instead of having the genes create physical material, they might instead represent traits, such as \n    ability to sense other organisms. In this example, the genotype is the actual genes to create the creature, while the phenotype is how those \n    creatures interact with each other in whatever environment they're put into.<br><br>\n\n    These two terms - genotype and phenotype - are incredibly important to understanding of how genetic algorithms work. The genotype is the string \n    of instructions. The phenotype is what is created as a result of those instructions. For example, in nature, the DNA is the genotype, and the \n    molecule is the phenotype. I'll be using these terms a lot moving forward. <br><br>\n\n    Once the genotype and phenotype are specified, a way to determine which organism is best is determined. This quantity is known as its \n    fitness. In our organism example, it may be \n    the organism that gets the most food, or lives the longest. Orgamisms with higher fitness are more likely to be selected to have their genes \n    passed on to the next generation. This is done by mixing and mutating genes as described earlier. From that process, \n    we end up with a completely new \n    generation, which is then put through the test again and the entire process repeats.<br><br>\n\n    Genetic algorithms can solve a variety of problems that humans just aren't good at. Instead of plodding through case after case of trial by \n    error, a programmer can have a program that tests a hundred cases at once, chooses the best solutions, and then continues refining bit by bit \n    until the problem is solved. <br><br>\n\n    I had previously created a genetic algorithm, but the implementation was lacking a bit. Since then, I've been wanting to give it another shot. \n    To that end, I'm writing this series of blog entries to document and share the process. Next time, I'll be outlining some of what I'm planning \n    to aim for.<br><br><br><br>\n    ";
+  content += "   \n    <h3>\n        Genetic Algorithms\n    </h3>\n\n    In my opinion, one of the most exciting and intriguing developments in computer science is that of genetic algorithms. A genetic algorithm \n    creates a program, but \n    instead of having a human type out every line of code, the computer writes the program itself. You might be asking yourself how the heck that \n    works and wondering if it's going to end up with the Terminator coming back \n    in time for you, but that's not the case at all! Instead, the programmer \n    takes inspiration from something that is all around us - genetics.<br><br>\n\n    Now, some people are immediately put off by the term genetics, even though evolution has been accepted by the Catholic Church since 1950. The \n    \"genes\" in genetic algorithms are not exactly the same concept as those found in DNA. However, the concept can be applied to computer code \n    through clever adaptation.<br><br>\n\n    Here's an incredibly simplified overview of how genes work organisms. A strand of DNA serves as a blueprint, attracting amino acids to its end. \n    From there, the amino acids move along the strand of DNA, combining with other amino acids and eventually creating a molecule. This molecule \n    then separates and interacts with the other molecules in the organism \n    to form just about every possible type of organic matter. The DNA splits in half during \n    this process, and then each half can regenerate the other half and you're left with two identical strands of DNA. (Somewhere, a geneticist is \n    weeping after reading this.)<br><br>\n\n    When two organisms reproduce, the genetic material can combine as well. Portions of each of the parent's genes are mixed with portions of the \n    other's. Likewise, sometimes a perfect copy isn't created when a strand splits. This is known as a mutation, and can happen from something as \n    common as solar radiation hitting the point where the genes are splitting. Of course, that can completely change what the genes create!<br><br>\n\n    Reproducing this in computers is easier than you might think. \n    First, you need to come up with a way to represent the commands you want your program to be able to use. \n    From there, you write a program that can create those genes (the genotype), as well as test them out (the phenotype). The quintessential example \n    is, of course, creating a simulated organism. Instead of having the genes create physical material, they might instead represent traits, such as \n    ability to sense other organisms. In this example, the genotype is the actual strand of \n    genes to create the creature, while the phenotype is how those \n    creatures interact with each other in whatever environment they're put into.<br><br>\n\n    These two terms - genotype and phenotype - are incredibly important to understanding of how genetic algorithms work. The genotype is the string \n    of instructions. The phenotype is what is created as a result of those instructions. For example, in nature, the DNA is the genotype, and the \n    molecule is the phenotype. I'll be using these terms a lot moving forward. <br><br>\n\n    Once the genotype and phenotype are specified, a way to determine which organism is best is determined. This quantity is known as its \n    fitness. In our organism example, it may be \n    the organism that gets the most food, or lives the longest. Orgamisms with higher fitness are more likely to be selected to have their genes \n    passed on to the next generation. This is done by mixing and mutating genes as described earlier. From that process, \n    we end up with a completely new \n    generation, which is then put through the test again and the entire process repeats.<br><br>\n\n    Genetic algorithms can solve a variety of problems that humans just aren't good at. Instead of plodding through case after case of trial by \n    error, a programmer can have a program that tests a hundred cases at once, chooses the best solutions, and then continues refining bit by bit \n    until the problem is solved. <br><br>\n\n    I had previously created a genetic algorithm, but the implementation was lacking a bit. Since then, I've been wanting to give it another shot. \n    To that end, I'm writing this series of blog entries to document and share the process. Next time, I'll be outlining some of what I'm planning \n    to aim for.<br><br><br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog/fitness.js":[function(require,module,exports) {
@@ -1643,7 +1640,7 @@ exports.fitness = fitness;
 
 function fitness() {
   var content = "";
-  content += "   \n    <h3>\n        Genotype, Phenotype, and Fitness\n    </h3>\n\n    Now that I've given an overview of what a genetic algorithm is, the next question is what problem should we solve?<br><br>\n\n    Finding an equation that describes a curve that passes through a set of points can be a problem that is either trivial to solve or nearly \n    impossible unless you're an experienced mathematician. Choosing those points based on a method that was not determined mathematically can \n    make it difficult if not impossible to find an equation that fits the points. However, with a genetic algorithm, finding such an equation \n    would be (arguably) much easier.<br><br>\n\n    So, what data am I choosing for this example? I'm picking the following sets of (x,y) points:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>x</th>\n                <th>y</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>1</td>\n            <td>8</tr>\n        <tr>\n            <td>2</td>\n            <td>5</tr>\n        <tr>\n            <td>3</td>\n            <td>12</tr>\n        <tr>\n            <td>4</td>\n            <td>12</tr>\n        <tr>\n            <td>5</td>\n            <td>15</tr>\n        <tr>\n            <td>6</td>\n            <td>23</tr>\n        <tr>\n            <td>7</td>\n            <td>15</tr>\n        <tr>\n            <td>8</td>\n            <td>18</tr>\n        <tr>\n            <td>9</td>\n            <td>12</tr>\n        <tr>\n            <td>10</td>\n            <td>4</td>\n        </tr>\n    </table><br>\n\n    This may seem like a random set of numbers, but if you substitute each number for its associated letter in the alphabet, then you get one \n    of the most famous phrases in computer science: \"HELLOWORLD.\"<br><br>\n\n    To start implementing the algorithm, we need to determine the genotype and phenotype. This will involve a mathematical function, so we'll need \n    a way to represent a function in a way that lends itself to mutation. From there, we'll apply the formula to the numbers 1 through 10 and see \n    how well they match the given set of points. We'll also need a way to quantify that fitness.<br><br>\n\n    First, I've chosen a list of 32 mathematical operations. I chose this number because it's a power of 2, which means that they can be \n    represented in binary easily. Any mutation will affect just one of the bits, switching it to its opposite state. Each formula will be a chain \n    of fifty of these operations. There are three groups of operators: <br>\n\n    <br>\n        <li><b>Numerals</b> form a <em>term</em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>\n        <li><b>Operators</b> connect two terms. These include addition, subtraction, multiplication, division, exponentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>\n        <li><b>Functions</b> operate on the previous term. These include increment, decrement, bitwise left, bitwise right, absolute value, negate, round, ceiling, floor, and zero.</li>\n        <li><b>Terms</b> are numbers that are terms in and of themselves. These include x and pi.</li>\n    <br><br>\n\n    Here is a list of all the operators and their associated numbers:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>-</th>\n                <th>0</th>\n                <th>1</th>\n                <th>2</th>\n                <th>3</th>\n                <th>4</th>\n                <th>5</th>\n                <th>6</th>\n                <th>7</th>\n            </tr>\n        </thead>\n        <tr>\n            <th>+0</th>\n            <td>0</td>\n            <td>1</td>\n            <td>2</td>\n            <td>3</td>\n            <td>4</td>\n            <td>increment</td>\n            <td>bitwise left</td>\n            <td>negate</tr>\n        <tr>\n            <th>+8</th>\n            <td>round</td>\n            <td>ceiling</td>\n            <td>input</td>\n            <td>absolute value</td>\n            <td>bitwise or</td>\n            <td>add</td>\n            <td>multiply</td>\n            <td>exponent</tr>\n        <tr>\n            <th>+16</th>\n            <td>5</td>\n            <td>6</td>\n            <td>7</td>\n            <td>8</td>\n            <td>9</td>\n            <td>decrement</td>\n            <td>bitwise right</td>\n            <td>zero</tr>\n        <tr>\n            <th>+24</th>\n            <td>decimal point</td>\n            <td>floor</td>\n            <td>pi</td>\n            <td>bitwise and</td>\n            <td>bitwise xor</td>\n            <td>subtract</td>\n            <td>divide</td>\n            <td>remainder</td>\n        </tr>\n    </table><br>\n\n    To implement these, we'll use the letters A-Z and the numbers 0-5 to represent each position in the chart. Now we can represent each formula \n    as a string of letters/numbers, and a string of binary numbers.<br><br>\n\n    Now, to turn each genotype into a phenotype, we need to determine which genomes create a valid phenotype. In the event that a genotype is \n    invalid, then we'll discard it and create a replacement in its place for the next generation. So, which genotypes are valid?<br><br>\n\n    There are several ways that the numerals, operators, functions, and terms can combine. Here is an example grammar of how these \n    terms can combine:<br><br>\n\n    numeral string = [numeral] | [numeral][numeral string]<br>\n    decimal string = [numeral string][decimal] | [decimal][numeral string] | [numeral string][decimal][numeral string]<br>\n    term = [numeral string] | [term][function] |  [term][operator][term]<br><br>\n\n    Implementing this grammar, there are a few ways that a genome can create a malformed phenotype. The first character must be a numeral or a \n    term, and the last character cannot be an operator. If two terms are adjacent and cannot be combined into a numeral string, then that formula \n    cannot be evaluated (e.g. 123 is valid, but 1pi3 is not because multiplication isn't defined in this way). If there are more than two decimal \n    points in a number, then that number is invalid. Only a term can follow an operator.<br><br>\n\n    Lastly, in order to test the fitness, the formula will be applied to the numbers 1 through 10. Then, the differences between each term will be \n    taken. Each of these will be divided by 26 and only the remainder kept. From there, the absolute value of the difference between the formula's \n    result and the difference between the related terms in the target will be taken. That number will then be squared, resulting in a number \n    between 0 and 169. These differences are calculated for each of the 10 input terms, and then the totals are added together. Here's how the \n    formula looks:<br><br>\n\n    |(x[n] - x[n+1]) - (f(y[n]) - f(y[n+1])| + 52 % 26<br><br>\n\n    The lower this score, the better the formula describes the function. The reason that this is implemented based on the difference between terms \n    is because a formula that is perfectly parallel to the input would show as being less fit than a formula that matches all of the points exept \n    missing by one, even though the first formula would be an exact match if two was subtracted from it.<br><br>\n\n    Now that we have a genotype, phenotype, and fitness functions, we have all the groundwork for our genetic algorithm. From here, we just have to \n    program the components and then run the algorithm until we get a match!<br><br><br><br>\n    ";
+  content += "   \n    <h3>\n        Genotype, Phenotype, and Fitness\n    </h3>\n\n    Now that I've given an overview of what a genetic algorithm is, the next question is what problem should we solve?<br><br>\n\n    Finding an equation that describes a curve that passes through a set of points can be a problem that is either trivial to solve or nearly \n    impossible unless you're an experienced mathematician. Choosing those points based on a method that was not determined mathematically can \n    make it difficult if not impossible to find an equation that fits the points. However, with a genetic algorithm, finding such an equation \n    would be (arguably) much easier.<br><br>\n\n    So, what data am I choosing for this example? I'm picking the following sets of (x,y) points:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>x</th>\n                <th>y</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>1</td>\n            <td>8</tr>\n        <tr>\n            <td>2</td>\n            <td>5</tr>\n        <tr>\n            <td>3</td>\n            <td>12</tr>\n        <tr>\n            <td>4</td>\n            <td>12</tr>\n        <tr>\n            <td>5</td>\n            <td>15</tr>\n        <tr>\n            <td>6</td>\n            <td>23</tr>\n        <tr>\n            <td>7</td>\n            <td>15</tr>\n        <tr>\n            <td>8</td>\n            <td>18</tr>\n        <tr>\n            <td>9</td>\n            <td>12</tr>\n        <tr>\n            <td>10</td>\n            <td>4</td>\n        </tr>\n    </table><br>\n\n    This may seem like a random set of numbers, but if you substitute each number for its associated letter in the alphabet, then you get one \n    of the most famous phrases in computer science: \"HELLOWORLD.\"<br><br>\n\n    To start implementing the algorithm, we need to determine the genotype and phenotype. This will involve a mathematical function, so we'll need \n    a way to represent a function in a way that lends itself to mutation. From there, we'll apply the formula to the numbers 1 through 10 and see \n    how well they match the given set of points. We'll also need a way to quantify that fitness.<br><br>\n\n    First, I've chosen a list of 32 mathematical operations. I chose this number because it's a power of 2, which means that they can be \n    represented in binary easily. Any mutation will affect just one of the bits, switching it to its opposite state. Each formula will be a chain \n    of fifty of these operations. There are three groups of operators: <br>\n\n    <br>\n        <li><u>Numerals</u> form a <em>term</em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>\n        <li><u>Operators</u> connect two terms. These include addition, subtraction, multiplication, division, exponentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>\n        <li><u>Functions</u> operate on the previous term. These include increment, decrement, bitwise left, bitwise right, absolute value, negate, round, ceiling, floor, and zero.</li>\n        <li><u>Terms</u> are numbers that are terms in and of themselves. These include x and pi.</li>\n    <br><br>\n\n    Here is a list of all the operators and their associated numbers:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>-</th>\n                <th>0</th>\n                <th>1</th>\n                <th>2</th>\n                <th>3</th>\n                <th>4</th>\n                <th>5</th>\n                <th>6</th>\n                <th>7</th>\n            </tr>\n        </thead>\n        <tr>\n            <th>+0</th>\n            <td>0</td>\n            <td>1</td>\n            <td>2</td>\n            <td>3</td>\n            <td>4</td>\n            <td>increment</td>\n            <td>bitwise left</td>\n            <td>negate</tr>\n        <tr>\n            <th>+8</th>\n            <td>round</td>\n            <td>ceiling</td>\n            <td>input</td>\n            <td>absolute value</td>\n            <td>bitwise or</td>\n            <td>add</td>\n            <td>multiply</td>\n            <td>exponent</tr>\n        <tr>\n            <th>+16</th>\n            <td>5</td>\n            <td>6</td>\n            <td>7</td>\n            <td>8</td>\n            <td>9</td>\n            <td>decrement</td>\n            <td>bitwise right</td>\n            <td>zero</tr>\n        <tr>\n            <th>+24</th>\n            <td>decimal point</td>\n            <td>floor</td>\n            <td>pi</td>\n            <td>bitwise and</td>\n            <td>bitwise xor</td>\n            <td>subtract</td>\n            <td>divide</td>\n            <td>remainder</td>\n        </tr>\n    </table><br>\n\n    To implement these, we'll use the letters A-Z and the numbers 0-5 to represent each position in the chart. Now we can represent each formula \n    as a string of letters/numbers, and a string of binary numbers.<br><br>\n\n    Now, to turn each genotype into a phenotype, we need to determine which genomes create a valid phenotype. In the event that a genotype is \n    invalid, then we'll discard it and create a replacement in its place for the next generation. So, which genotypes are valid?<br><br>\n\n    There are several ways that the numerals, operators, functions, and terms can combine. Here is an example grammar of how these \n    terms can combine:<br><br>\n\n    numeral string = [numeral] | [numeral][numeral string]<br>\n    decimal string = [numeral string][decimal] | [decimal][numeral string] | [numeral string][decimal][numeral string]<br>\n    term = [numeral string] | [term][function] |  [term][operator][term]<br><br>\n\n    Implementing this grammar, there are a few ways that a genome can create a malformed phenotype. The first character must be a numeral or a \n    term, and the last character cannot be an operator. If two terms are adjacent and cannot be combined into a numeral string, then that formula \n    cannot be evaluated (e.g. 123 is valid, but 1pi3 is not because multiplication isn't defined in this way). If there are more than two decimal \n    points in a number, then that number is invalid. Only a term can follow an operator.<br><br>\n\n    Lastly, in order to test the fitness, the formula will be applied to the numbers 1 through 10. Then, the differences between each term will be \n    taken. Each of these will be divided by 26 and only the remainder kept. From there, the absolute value of the difference between the formula's \n    result and the difference between the related terms in the target will be taken. That number will then be squared, resulting in a number \n    between 0 and 169. These differences are calculated for each of the 10 input terms, and then the totals are added together. Here's how the \n    formula looks:<br><br>\n\n    |(x[n] - x[n+1]) - (f(y[n]) - f(y[n+1])| + 52 % 26<br><br>\n\n    The lower this score, the better the formula describes the function. The reason that this is implemented based on the difference between terms \n    is because a formula that is perfectly parallel to the input would show as being less fit than a formula that matches all of the points exept \n    missing by one, even though the first formula would be an exact match if two was subtracted from it.<br><br>\n\n    Now that we have a genotype, phenotype, and fitness functions, we have all the groundwork for our genetic algorithm. From here, we just have to \n    program the components and then run the algorithm until we get a match!<br><br><br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/projects/genetic-algorithm.js":[function(require,module,exports) {
@@ -1661,601 +1658,379 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 function geneticAlgorithm() {
-  var content = "";
-  content += "   \n    <h3>\n        Genetic Algorithm\n    </h3>\n        Replace me with your content!\n    ";
-  document.getElementsByClassName("content")[0].innerHTML = content;
-
-  var NumeralString =
-  /*#__PURE__*/
-  function () {
-    function NumeralString(character) {
-      _classCallCheck(this, NumeralString);
-
-      this.myString = "";
-      this.myString += character;
-      this.geneClass = "numeral";
-    }
-
-    _createClass(NumeralString, [{
-      key: "addCharacter",
-      value: function addCharacter(character) {
-        this.myString += character;
-      }
-    }, {
-      key: "getValue",
-      value: function getValue() {
-        return this.myString;
-      }
-    }, {
-      key: "getGeneClass",
-      value: function getGeneClass() {
-        return this.geneClass;
-      }
-    }]);
-
-    return NumeralString;
-  }();
-
-  var DecimalString =
-  /*#__PURE__*/
-  function () {
-    function DecimalString(numeral) {
-      _classCallCheck(this, DecimalString);
-
-      this.myString = "";
-      this.myString += numeral;
-      this.geneClass = "decimal";
-    }
-
-    _createClass(DecimalString, [{
-      key: "addCharacter",
-      value: function addCharacter(character) {
-        this.myString += character;
-      }
-    }, {
-      key: "getValue",
-      value: function getValue() {
-        return this.myString;
-      }
-    }, {
-      key: "getGeneClass",
-      value: function getGeneClass() {
-        return this.geneClass;
-      }
-    }]);
-
-    return DecimalString;
-  }();
-
-  var Operator =
-  /*#__PURE__*/
-  function () {
-    function Operator(type) {
-      _classCallCheck(this, Operator);
-
-      this.myOperator = type;
-      this.geneClass = "operator";
-    }
-
-    _createClass(Operator, [{
-      key: "applyToTerm",
-      value: function applyToTerm(term) {
-        switch (this.myOperator) {
-          case "E":
-            return term + 1;
-
-          case "F":
-            return term * 2;
-
-          case "G":
-            return term * -1;
-
-          case "H":
-            return Math.round(term);
-
-          case "I":
-            return Math.ceiling(term);
-
-          case "K":
-            return Math.abs(term);
-
-          case "U":
-            return term - 1;
-
-          case "V":
-            return term % 2 / 2;
-
-          case "W":
-            return 0;
-
-          case "Y":
-            return Math.floor(term);
-
-          default:
-            console.log("Error with term key ".concat(term));
-            return;
-        }
-      }
-    }, {
-      key: "getGeneClass",
-      value: function getGeneClass() {
-        return this.geneClass;
-      }
-    }]);
-
-    return Operator;
-  }();
-
-  var Term =
-  /*#__PURE__*/
-  function () {
-    function Term(value) {
-      _classCallCheck(this, Term);
-
-      if (value == "Z") {
-        this.myValue = Math.PI;
-      } else {
-        this.myValue = value;
-      }
-
-      this.geneClass = "term";
-    }
-
-    _createClass(Term, [{
-      key: "getValue",
-      value: function getValue() {
-        return myValue;
-      }
-    }, {
-      key: "getGeneClass",
-      value: function getGeneClass() {
-        return this.geneClass;
-      }
-    }]);
-
-    return Term;
-  }();
-
-  var Function =
-  /*#__PURE__*/
-  function () {
-    function Function(type) {
-      _classCallCheck(this, Function);
-
-      this.myOperator = type;
-      this.geneClass = "function";
-    }
-
-    _createClass(Function, [{
-      key: "applyToTerms",
-      value: function applyToTerms(firstTerm, secondTerm) {
-        switch (this.myOperator) {
-          case "L":
-            return firstTerm | secondTerm;
-
-          case "M":
-            return firstTerm + secondTerm;
-
-          case "N":
-            return firstTerm * secondTerm;
-
-          case "O":
-            return Math.pow(firstTerm, secondTerm);
-
-          case "[":
-            return firstTerm & secondTerm;
-
-          case "\\":
-            return firstTerm ^ secondTerm;
-
-          case "]":
-            return firstTerm - secondTerm;
-
-          case "^":
-            return firstTerm / secondTerm;
-
-          case "_":
-            return firstTerm % secondTerm;
-        }
-      }
-    }, {
-      key: "getGeneClass",
-      value: function getGeneClass() {
-        return this.geneClass;
-      }
-    }]);
-
-    return Function;
-  }();
-
   var Genome =
   /*#__PURE__*/
   function () {
-    function Genome(mother, father) {
+    function Genome(motherGenes, fatherGenes) {
       _classCallCheck(this, Genome);
 
-      this.genes = "";
+      this.genome = "";
 
-      if (father == undefined) {
+      if (fatherGenes == undefined) {
         for (var i = 0; i < 50; i++) {
-          var newChar = Math.floor(Math.random() * 32);
-          this.genes += String.fromCharCode(64 + newChar);
+          this.genome += String.fromCharCode(Math.floor(Math.random() * 16) + 64);
         }
-      } else {
-        // determine which parent the first genome will come from
-        if (Math.random() < .5) {
-          var temp = mother;
-          mother = father;
-          father = temp;
-        }
-
-        var switchPoint = Math.floor(Math.random() * 50);
-
-        for (var _i = 0; _i < switchPoint; _i++) {
-          this.genes += mother.getGeneAt(_i);
-        }
-
-        for (var _i2 = switchPoint; _i2 < 50; _i2++) {
-          this.genes += father.getGeneAt(_i2);
-        }
-      }
+      } else {}
     }
 
     _createClass(Genome, [{
-      key: "evaluateGenome",
-      value: function evaluateGenome(inputValue) {
-        this.formula = new Array();
-
-        switch (this.getGeneClass(this.genes[0])) {
-          case "numeral":
-            this.formula.push(new NumeralString(this.genes[0]));
-            break;
-
-          case "operator":
-          case "function":
-            return false;
-
-          case "decimal":
-            this.formula.push(new DecimalString(this.genes[0]));
-            break;
-
-          case "term":
-            if (this.genes[0] == "Z") this.formula.push(new Term("Z"));else this.formula.push(new Term(inputValue));
-        }
-
-        for (var i = 1; i < 50; i) {
-          switch (this.getGeneClass(this.genes[i])) {
-            case "numeral":
-              switch (this.formula[this.formula.length - 1].getGeneClass) {
-                case "numeral":
-                case "decimal":
-                  this.formula[this.formula.length - 1].addCharacter(this.genes[i]);
-                  break;
-
-                case "function":
-                  this.formula.push(new NumeralString(this.genes[i]));
-                  break;
-
-                case "operator":
-                case "term":
-                  return false;
-              }
-
-              break;
-
-            case "operator":
-              switch (this.formula[this.formula.length - 1].getGeneClass) {
-                case "numeral":
-                case "term":
-                case "decimal":
-                  return false;
-
-                case "operator":
-                  this.formula.push(new Operator(this.genes[i]));
-                  break;
-
-                case "function":
-                  this.formula.push(new Function(this.genes[i]));
-              }
-
-            case "function":
-              switch (this.formula[this.formula.length - 1].getGeneClass) {
-                case "numeral":
-                case "term":
-                case "decimal":
-                  this.formula.push(new Function(this.genes[i]));
-                  break;
-
-                case "operator":
-                case "function":
-                  return false;
-              }
-
-            case "term":
-              switch (this.formula[this.formula.length - 1].getGeneClass) {
-                case "numeral":
-                case "term":
-                case "decimal":
-                  return false;
-
-                case "operator":
-                  this.formula.push(new Term(this.genes[i]));
-                  break;
-
-                case "function":
-                  this.formula.push(new Function(this.genes[i]));
-              }
-
-            case "decimal":
-              switch (this.formula[this.formula.length - 1].getGeneClass) {
-                case "operator":
-                case "function":
-                  this.formula.push(new DecimalString(this.genes[i]));
-                  break;
-
-                case "numeral":
-                case "term":
-                case "decimal":
-                  return false;
-              }
-
-          }
-        }
-
-        console.log(this.formula);
-      }
-    }, {
-      key: "getNickname",
-      value: function getNickname() {
-        return this.genes;
-      }
-    }, {
-      key: "getFullname",
-      value: function getFullname() {
-        var output = "";
-
-        for (var i = 0; i < 50; i++) {
-          output += this.geneToBinary(this.genes[i]);
-        }
-
-        return output;
+      key: "getGenome",
+      value: function getGenome() {
+        return this.genome;
       }
     }, {
       key: "getFormula",
       value: function getFormula() {
-        var output = "";
+        var formula = "0";
+        var numMode = true;
+        var operatorReady = true;
 
         for (var i = 0; i < 50; i++) {
-          switch (this.genes[i]) {
-            case "@":
-              output += "0";
-              break;
+          if (numMode) {
+            switch (this.genome[i]) {
+              case "@":
+                operatorReady = true;
+                formula += "0";
+                break;
 
-            case "A":
-              output += "1";
-              break;
+              case "A":
+                operatorReady = true;
+                formula += "1";
+                break;
 
-            case "B":
-              output += "2";
-              break;
+              case "B":
+                operatorReady = true;
+                formula += "2";
+                break;
 
-            case "C":
-              output += "3";
-              break;
+              case "C":
+                operatorReady = true;
+                formula += "3";
+                break;
 
-            case "D":
-              output += "4";
-              break;
+              case "D":
+                operatorReady = true;
+                formula += "4";
+                break;
 
-            case "E":
-              output += "++";
-              break;
+              case "E":
+                operatorReady = true;
+                formula += "5";
+                break;
 
-            case "F":
-              output += "<<";
-              break;
+              case "F":
+                operatorReady = true;
+                formula += "6";
+                break;
 
-            case "G":
-              output += " * -1 ";
-              break;
+              case "G":
+                operatorReady = true;
+                formula += "7";
+                break;
 
-            case "H":
-              output = "round(" + output + ")";
-              break;
+              case "H":
+                operatorReady = true;
+                formula += "8";
+                break;
 
-            case "I":
-              output = "ceiling(" + output + ")";
-              break;
+              case "I":
+                operatorReady = true;
+                formula += "9";
+                break;
 
-            case "J":
-              output += "x";
-              break;
+              case "J":
+                operatorReady = true;
+                formula += ".";
+                break;
 
-            case "K":
-              output = "abs(" + output + ")";
-              break;
+              case "K":
+                operatorReady = true;
+                formula += ".";
+                break;
 
-            case "L":
-              output += " OR ";
-              break;
+              case "L":
+                operatorReady = true;
+                formula += "X";
+                break;
 
-            case "M":
-              output += " + ";
-              break;
+              case "M":
+                operatorReady = true;
+                formula += "X";
+                break;
 
-            case "N":
-              output += " * ";
-              break;
+              case "N":
+                if (operatorReady == true) numMode = false;
+                break;
 
-            case "O":
-              output += " ^ ";
-              break;
+              case "O":
+                if (operatorReady == true) numMode = false;
+                break;
+            }
+          } else {
+            switch (this.genome[i]) {
+              case "@":
+                formula += "*-1";
+                break;
 
-            case "P":
-              output += "5";
-              break;
+              case "A":
+                formula += ".ceil()";
+                break;
 
-            case "Q":
-              output += "6";
-              break;
+              case "B":
+                formula += "*-1";
+                break;
 
-            case "R":
-              output += "7";
-              break;
+              case "C":
+                formula += "++";
+                break;
 
-            case "S":
-              output += "8";
-              break;
+              case "D":
+                formula += "*0";
+                break;
 
-            case "T":
-              output += "9";
-              break;
+              case "E":
+                formula += ".floor()";
+                break;
 
-            case "U":
-              output += "--";
-              break;
+              case "F":
+                formula += "*X";
+                break;
 
-            case "V":
-              output += ">>";
-              break;
+              case "G":
+                formula += "--";
+                break;
 
-            case "W":
-              output += " * 0";
-              break;
+              case "H":
+                operatorReady = false;
+                formula += " / ";
+                numMode = true;
+                break;
 
-            case "X":
-              output += ".";
-              break;
+              case "I":
+                operatorReady = false;
+                formula += " - ";
+                numMode = true;
+                break;
 
-            case "Y":
-              output = "floor(" + output + ")";
-              break;
+              case "J":
+                operatorReady = false;
+                formula += " / ";
+                numMode = true;
+                break;
 
-            case "Z":
-              output += " pi ";
-              break;
+              case "K":
+                operatorReady = false;
+                formula += " - ";
+                numMode = true;
+                break;
 
-            case "[":
-              output += " AND ";
-              break;
+              case "L":
+                operatorReady = false;
+                formula += " * ";
+                numMode = true;
+                break;
 
-            case "\\":
-              output += " XOR ";
-              break;
+              case "M":
+                operatorReady = false;
+                formula += " + ";
+                numMode = true;
+                break;
 
-            case "]":
-              output += " - ";
-              break;
+              case "N":
+                operatorReady = false;
+                formula += " * ";
+                numMode = true;
+                break;
 
-            case "^":
-              output += " / ";
-              break;
-
-            case "_":
-              output += " mod ";
-              break;
+              case "O":
+                operatorReady = false;
+                formula += " + ";
+                numMode = true;
+                break;
+            }
           }
         }
 
-        return output;
+        return formula;
       }
     }, {
-      key: "getGeneAt",
-      value: function getGeneAt(position) {
-        return this.genes[position];
-      }
-    }, {
-      key: "getGeneClass",
-      value: function getGeneClass(character) {
-        switch (character) {
-          case "@":
-          case "A":
-          case "B":
-          case "C":
-          case "D":
-          case "P":
-          case "Q":
-          case "R":
-          case "S":
-          case "T":
-            return "numeral";
+      key: "result",
+      value: function result(input) {
+        var runningTotal = 0;
+        var thisTerm = "0";
+        var decimalPlaced = false;
+        var inputExponent = 0;
+        var lastOpCode = null;
+        var numMode = true;
+        var operatorReady = true;
 
-          case "E":
-          case "F":
-          case "G":
+        for (var i = 0; i < 50; i++) {
+          if (numMode) {
+            switch (this.genome[i]) {
+              case "@":
+                operatorReady = true;
+                thisTerm += "0";
+                break;
+
+              case "A":
+                operatorReady = true;
+                thisTerm += "1";
+                break;
+
+              case "B":
+                operatorReady = true;
+                thisTerm += "2";
+                break;
+
+              case "C":
+                operatorReady = true;
+                thisTerm += "3";
+                break;
+
+              case "D":
+                operatorReady = true;
+                thisTerm += "4";
+                break;
+
+              case "E":
+                operatorReady = true;
+                thisTerm += "5";
+                break;
+
+              case "F":
+                operatorReady = true;
+                thisTerm += "6";
+                break;
+
+              case "G":
+                operatorReady = true;
+                thisTerm += "7";
+                break;
+
+              case "H":
+                operatorReady = true;
+                thisTerm += "8";
+                break;
+
+              case "I":
+                operatorReady = true;
+                thisTerm += "9";
+                break;
+
+              case "J":
+              case "K":
+                if (operatorReady == false) {
+                  operatorReady = true;
+                  thisTerm += "0";
+                }
+
+                if (decimalPlaced == false) {
+                  thisTerm += ".";
+                  decimalPlaced = true;
+                }
+
+                break;
+
+              case "L":
+              case "M":
+                operatorReady = true;
+                inputExponent++;
+                break;
+
+              case "N":
+              case "O":
+                if (operatorReady == true) {
+                  thisTerm = thisTerm * 1;
+                  thisTerm = thisTerm * Math.pow(input, inputExponent);
+                  numMode = false;
+                }
+
+                break;
+            }
+          } else {
+            switch (this.genome[i]) {
+              case "@":
+                thisTerm *= -1;
+                break;
+
+              case "A":
+                thisTerm = Math.ceil(thisTerm);
+                break;
+
+              case "B":
+                thisTerm *= -1;
+                break;
+
+              case "C":
+                thisTerm++;
+                break;
+
+              case "D":
+                thisTerm *= 0;
+                break;
+
+              case "E":
+                thisTerm = Math.floor(thisTerm);
+                break;
+
+              case "F":
+                thisTerm *= input;
+                break;
+
+              case "G":
+                thisTerm--;
+                break;
+
+              case "H":
+              case "I":
+              case "J":
+              case "K":
+              case "L":
+              case "M":
+              case "N":
+              case "O":
+                runningTotal = this.applyOpCode(runningTotal * 1, thisTerm * 1, lastOpCode);
+                lastOpCode = this.genome[i];
+                operatorReady = false;
+                numMode = true;
+                thisTerm = "0";
+                decimalPlaced = false;
+                inputExponent = 0;
+                break;
+            }
+          }
+
+          console.log("".concat(i, ": Gene: ").concat(this.genome[i], " thisTerm: ").concat(thisTerm, " runningTotal: ").concat(runningTotal, " exponent: ").concat(inputExponent));
+          console.log("Term w/ input: ".concat(thisTerm * Math.pow(input, inputExponent), " lastOpCode: ").concat(lastOpCode));
+        }
+
+        if (operatorReady) runningTotal = this.applyOpCode(runningTotal, thisTerm, lastOpCode);
+        return runningTotal * 1;
+      }
+    }, {
+      key: "applyOpCode",
+      value: function applyOpCode(firstTerm, secondTerm, opCode) {
+        switch (opCode) {
           case "H":
+          case "J":
+            if (secondTerm == 0) return 0;
+            return firstTerm / secondTerm;
+
           case "I":
           case "K":
-          case "U":
-          case "V":
-          case "W":
-          case "Y":
-            return "operator";
-
-          case "J":
-          case "Z":
-            return "term";
+            return firstTerm - secondTerm;
 
           case "L":
-          case "M":
           case "N":
+            return firstTerm * secondTerm;
+
+          case "M":
           case "O":
-          case "[":
-          case "\\":
-          case "]":
-          case "^":
-          case "_":
-            return "function";
+            return firstTerm + secondTerm;
 
-          case "X":
-            return "decimal";
+          default:
+            return secondTerm;
         }
-      }
-    }, {
-      key: "geneToBinary",
-      value: function geneToBinary(character) {
-        var output = "";
-        var numeral = character.charCodeAt(0) - 64;
-
-        if (Math.floor(numeral / 16) == 0) {
-          output += "0";
-        } else {
-          output += "1";
-        }
-
-        numeral = numeral % 16;
-
-        if (Math.floor(numeral / 8) == 0) {
-          output += "0";
-        } else {
-          output += "1";
-        }
-
-        numeral = numeral % 8;
-
-        if (Math.floor(numeral / 4) == 0) {
-          output += "0";
-        } else {
-          output += "1";
-        }
-
-        numeral = numeral % 4;
-
-        if (Math.floor(numeral / 2) == 0) {
-          output += "0";
-        } else {
-          output += "1";
-        }
-
-        numeral = numeral % 2;
-
-        if (Math.floor(numeral) == 0) {
-          output += "0";
-        } else {
-          output += "1";
-        }
-
-        return output;
       }
     }]);
 
@@ -2263,10 +2038,16 @@ function geneticAlgorithm() {
   }();
 
   var myGenome = new Genome();
+  console.log(myGenome.getGenome());
+  console.log(myGenome.getFormula());
 
-  for (var _myGenome = new Genome(); _myGenome.evaluateGenome() != false; _myGenome = new Genome()) {
-    ;
+  for (var i = 1; i < 11; i++) {
+    console.log("".concat(i, ": ").concat(myGenome.result(i)));
   }
+
+  var content = "";
+  content += "\n    <p>    \n        This page is under construction as I build my genetic algorithm. In the meantime, check the console!\n        A random Genome is created and evaluated for the numbers 1 through 10. Each step of the calculation is \n        then logged.\n    </p>\n    ";
+  document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"content/blog/genetic-revision.js":[function(require,module,exports) {
 "use strict";
@@ -2278,7 +2059,7 @@ exports.geneticRevision = geneticRevision;
 
 function geneticRevision() {
   var content = "";
-  content += "      \n    <h3>Implementing Genomes</h3>\n\n    Now that we have described the scope of the genetic algorithm that we're planning on implementing, we can go ahead and start creating it.<br><br>\n\n    It makes sense to create a \"Genome\" class in Javascript. That way we can ensure our code is encapsulated in a sensible way. The only data we will need \n    to store is a string of our 50 genes. We'll provide a number of constructors for this data. The default constructor will create a random number of \n    genes and store them in the class information. The constructor can replicate reproduction by taking two other Genomes, picking a spot within them, \n    and copying a portion from one Genome's genes and a portion from the other if two other objects of class Genome are passed to it.<br><br>\n\n    Next, we need to write some accessor functions. getNickname() returns the genes as a string of characters. getFullname() returns the genes as a \n    binary string. Likewise, the gene at a specific position is accessible through the getGeneAt() function. A similar function getFormula() draws the \n    genes as a series of mathematical symbols. A geneToBinary() and binaryToGene() convert between characters and binary numbers.<br><br>\n\n    Lastly, we need to write a way to actually apply the formulas. I've done this by creating a class for most of the larger syntactical elements \n    described in the previous entry. The NumeralString, DecimalString, Operator, Function, and Term classes each have a constructor and a getGeneClass() \n    function. The NumeralString and DecimalString classes have functions to easily add more digits to them, and the Operator and Function classes can \n    each take values and apply return the results of the functions. The Term class can also take a NumeralString and DecimalString and keep their \n    values.<br><br>\n\n    Now, all we have to do is add a method to the Genome class that parses the input and evaluates the formula. It does this by creating a list of the \n    classes mentioned in the last paragraph. It evaluates the next gene, then determines whether the combination is valid. If it runs into an invalid \n    combination, then it returns false. Otherwise, it will return the value.<br><br>\n\n    After implementing all of this and running it, I realize my first problem. For every gene, there's just under a 50% chance that the combination \n    will invalidate itself. This means, after 50 genes, there's about a one in 2^50 chance that the gene creates a valid combination. Expressed as a \n    percentage, that means there is a less than \n    10^-13 percent that the gene will be valid. Needless to say, in order for this to work, I need to determine a new \n    method of either encoding genes, or a new way of turning them into a valid phenotype.<br><br>\n\n    So, in order to minimize the number of invalid phenotypes, what alternatives do we have? We need a way to make the genes dynamic. Certain genes \n    be more likely to follow other genes in valid combinations, rather than just hoping that the chain works out. So, instead of 32 gene \n    characters, we'll reduce the set to 16. I've chosen the letters A through P to represent those genes. We'll also create two modes - a numeral string \n    mode and an operator mode. <br><br>\n\n    In the numeral mode, the first ten characters (A-J) will add the numerals 0 through 9 to the numeral string. The remaining characters are split \n    into three groups: a decimal group (K and L), a input group (M and N), and a mode group (O and P). The decimal group will add a decimal to the \n    equation the first time it is found in a portion of a gene that describes a numeral. Each time the input group is called, the number of times \n    that the numeral will be multiplied by the input term increases. (This will happen once the entire numeral string is described.) Finally, the mode \n    group will terminate the numeral and switch to the operator mode.<br><br>\n\n    In the operator mode, the first eight genes (A-H) will code for operations that operate on the previous term, while the second eight (I-P) will \n    code for operations that operate on two terms while also switching back to the numeral mode. These codes are described in the following \n    table:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Gene</th>\n                <th>Operator</th>\n                <th>Gene</th>\n                <th>Operator</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>A</td>\n            <td>Negate</td>\n            <td>I</td>\n            <td>Exponent</tr>\n        <tr>\n            <td>B</td>\n            <td>Ceiling</td>\n            <td>J</td>\n            <td>Subtraction</tr>\n        <tr>\n            <td>C</td>\n            <td>Negate</td>\n            <td>K</td>\n            <td>Remainder</tr>\n        <tr>\n            <td>D</td>\n            <td>Increment</td>\n            <td>L</td>\n            <td>Subtraction</tr>\n        <tr>\n            <td>E</td>\n            <td>Zero</td>\n            <td>M</td>\n            <td>Multiplication</tr>\n        <tr>\n            <td>F</td>\n            <td>Floor</td>\n            <td>N</td>\n            <td>Addition</tr>\n        <tr>\n            <td>G</td>\n            <td>Zero</td>\n            <td>O</td>\n            <td>Division</tr>\n        <tr>\n            <td>H</td>\n            <td>Decrement</td>\n            <td>P</td>\n            <td>Addition</td>\n        </tr>\n    </table>\n\n    Note that there are a couple of operations that are duplicated. These are common operations, so it makes sense to make them more \n    likely to happen.<br><br>\n\n    With these revised phenotype decoding rules, we've drastically decreased the number of invalid codes. Now, the only way that a genome can be \n    malformed is if it ends in a two-term operator.<br><br>\n\n    With these modifications, we've gone from nearly no chance of a valid phenotype to a fifteen out of sixteen chance that the genotype will create \n    a mathematical function. From here, all that needs to happen is to reevaluate how to implement this new version of the genome, and then run the \n    simulation.<br><br><br><br>\n    ";
+  content += "      \n    <h3>Attempting to Implement</h3>\n\n    Now that we have described the scope of the genetic algorithm we're planning on implementing, we can go ahead and start creating it.<br><br>\n\n    It makes sense to create a \"Genome\" class in Javascript. That way we can ensure our code is encapsulated in a sensible way. The only data we will need \n    to store is a string of our 50 genes. We'll provide a number of constructors for this data. The default constructor will create a random number of \n    genes and store them in the class information. The constructor can replicate reproduction by taking two other Genomes, picking a spot within them, \n    and copying a portion from one Genome's genes and a portion from the other if two other objects of class Genome are passed to it.<br><br>\n\n    Next, we need to write some accessor functions. getNickname() returns the genes as a string of characters. getFullname() returns the genes as a \n    binary string. Likewise, the gene at a specific position is accessible through the getGeneAt() function. A similar function getFormula() draws the \n    genes as a series of mathematical symbols. A geneToBinary() and binaryToGene() convert between characters and binary numbers.<br><br>\n\n    Lastly, we need to write a way to actually apply the formulas. I've done this by creating a class for most of the larger syntactical elements \n    described in the previous entry. The NumeralString, DecimalString, Operator, Function, and Term classes each have a constructor and a getGeneClass() \n    function. The NumeralString and DecimalString classes have functions to easily add more digits to them, and the Operator and Function classes can \n    each take values and return the results of the functions. The Term class can also take a NumeralString and DecimalString and keep their \n    values.<br><br>\n\n    Now, all we have to do is add a method to the Genome class that parses the input and evaluates the formula. It does this by creating a list of the \n    classes mentioned in the last paragraph. It evaluates the next gene, then determines whether the combination is valid. If it runs into an invalid \n    combination, then it returns false. Otherwise, it will return the value.<br><br>\n\n    After implementing all of this and running it, I realize my first problem. For every gene, there's just under a 50% chance that the combination \n    will invalidate itself. This means, after 50 genes, there's about a one in 2^50 chance that the gene creates a valid combination. Expressed as a \n    percentage, that means there is a less than \n    10^-13 percent that the gene will be valid. Needless to say, in order for this to work, I need to determine a new \n    method of either encoding genes, or a new way of turning them into a valid phenotype.<br><br>\n\n    So, in order to minimize the number of invalid phenotypes, what alternatives do we have? We need a way to make the genes dynamic. Certain genes \n    should be more likely to follow other genes in valid combinations, rather than just hoping that the chain works out. So, instead of 32 gene \n    characters, we'll reduce the set to 16. I've chosen the letters A through P to represent those genes. We'll also create two modes - a numeral string \n    mode and an operator mode. <br><br>\n\n    In the numeral mode, the first ten characters (A-J) will add the numerals 0 through 9 to the numeral string. The remaining characters are split \n    into three groups: a decimal group (K and L), a input group (M and N), and a mode group (O and P). The decimal group will add a decimal to the \n    equation the first time it is found in a portion of a gene that describes a numeral. Each time the input group is called, the number of times \n    that the numeral will be multiplied by the input term increases. (This will happen once the entire numeral string is described.) Finally, the mode \n    group will terminate the numeral and switch to the operator mode.<br><br>\n\n    In the operator mode, the first eight genes (A-H) will code for operations that operate on the previous term, while the second eight (I-P) will \n    code for operations that operate on two terms while also switching back to the numeral mode. These codes are described in the following \n    table:<br><br>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Gene</th>\n                <th>Operator</th>\n                <th>Gene</th>\n                <th>Operator</th>\n            </tr>\n        </thead>\n        <tr>\n            <td>A</td>\n            <td>Negate</td>\n            <td>I</td>\n            <td>Exponent</tr>\n        <tr>\n            <td>B</td>\n            <td>Ceiling</td>\n            <td>J</td>\n            <td>Subtraction</tr>\n        <tr>\n            <td>C</td>\n            <td>Negate</td>\n            <td>K</td>\n            <td>Remainder</tr>\n        <tr>\n            <td>D</td>\n            <td>Increment</td>\n            <td>L</td>\n            <td>Subtraction</tr>\n        <tr>\n            <td>E</td>\n            <td>Zero</td>\n            <td>M</td>\n            <td>Multiplication</tr>\n        <tr>\n            <td>F</td>\n            <td>Floor</td>\n            <td>N</td>\n            <td>Addition</tr>\n        <tr>\n            <td>G</td>\n            <td>Zero</td>\n            <td>O</td>\n            <td>Division</tr>\n        <tr>\n            <td>H</td>\n            <td>Decrement</td>\n            <td>P</td>\n            <td>Addition</td>\n        </tr>\n    </table>\n\n    Note that there are a couple of operations that are duplicated. These are common operations, so it makes sense to make them more \n    likely to happen.<br><br>\n\n    With these revised phenotype decoding rules, we've drastically decreased the number of invalid codes. Now, the only way that a genome can be \n    malformed is if it ends in a two-term operator.<br><br>\n\n    With these modifications, we've gone from nearly no chance of a valid phenotype to a fifteen out of sixteen chance that the genotype will create \n    a mathematical function. From here, all that needs to happen is to reevaluate how to implement this new version of the genome, and then run the \n    simulation.<br><br><br><br>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
 }
 },{}],"components/blogend.js":[function(require,module,exports) {
@@ -2499,12 +2280,13 @@ function render(state) {
       state.page = "projects";
       state.subpage = "tablemaker";
       render(state);
-    }); // document.getElementById("genetic-algorithm").addEventListener("click", function() {
-    //     event.preventDefault();
-    //     state.page = "projects";
-    //     state.subpage = "genetic-algorithm";
-    //     render(state);
-    // });
+    });
+    document.getElementById("genetic-algorithm").addEventListener("click", function () {
+      event.preventDefault();
+      state.page = "projects";
+      state.subpage = "genetic-algorithm";
+      render(state);
+    });
   }
 
   document.getElementById("link-blog").addEventListener("click", function (event) {
@@ -2625,7 +2407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39763" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38403" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

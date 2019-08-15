@@ -2,9 +2,9 @@ function geneticRevision() {
     let content = "";
 
     content += `      
-    <h3>Implementing Genomes</h3>
+    <h3>Attempting to Implement</h3>
 
-    Now that we have described the scope of the genetic algorithm that we're planning on implementing, we can go ahead and start creating it.<br><br>
+    Now that we have described the scope of the genetic algorithm we're planning on implementing, we can go ahead and start creating it.<br><br>
 
     It makes sense to create a "Genome" class in Javascript. That way we can ensure our code is encapsulated in a sensible way. The only data we will need 
     to store is a string of our 50 genes. We'll provide a number of constructors for this data. The default constructor will create a random number of 
@@ -18,7 +18,7 @@ function geneticRevision() {
     Lastly, we need to write a way to actually apply the formulas. I've done this by creating a class for most of the larger syntactical elements 
     described in the previous entry. The NumeralString, DecimalString, Operator, Function, and Term classes each have a constructor and a getGeneClass() 
     function. The NumeralString and DecimalString classes have functions to easily add more digits to them, and the Operator and Function classes can 
-    each take values and apply return the results of the functions. The Term class can also take a NumeralString and DecimalString and keep their 
+    each take values and return the results of the functions. The Term class can also take a NumeralString and DecimalString and keep their 
     values.<br><br>
 
     Now, all we have to do is add a method to the Genome class that parses the input and evaluates the formula. It does this by creating a list of the 
@@ -32,7 +32,7 @@ function geneticRevision() {
     method of either encoding genes, or a new way of turning them into a valid phenotype.<br><br>
 
     So, in order to minimize the number of invalid phenotypes, what alternatives do we have? We need a way to make the genes dynamic. Certain genes 
-    be more likely to follow other genes in valid combinations, rather than just hoping that the chain works out. So, instead of 32 gene 
+    should be more likely to follow other genes in valid combinations, rather than just hoping that the chain works out. So, instead of 32 gene 
     characters, we'll reduce the set to 16. I've chosen the letters A through P to represent those genes. We'll also create two modes - a numeral string 
     mode and an operator mode. <br><br>
 

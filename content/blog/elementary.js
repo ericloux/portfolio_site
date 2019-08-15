@@ -36,7 +36,7 @@ function elementary() {
 
     Consider that we have two paths leading into our logic gate, and two leading out. One of the paths in is the power supply. We'll call this 
     Power. In our circuit, electrons are always coming through Power. Thus, we say that it is always "on", as opposed to one with no flow that is 
-    "off". The other path leading in leads to power our switch, so we will call it Switch. When it's on, the switch closes, and the electrons pass 
+    "off". The other path leading in provides power to our switch, so we will call it Switch. When it's on, the switch closes, and the electrons pass 
     through the easier open road. When Switch is off, then the switch opens, and the electrons move out the other, harder route with the resistor. 
     We will call these output paths Easy and Hard. Whether they are on or off depends on whether Switch is on or off. Here is a table showing the 
     various sates of Power, Switch, Easy and Hard:<br><br>
@@ -114,11 +114,11 @@ function elementary() {
         </tr>
     <table><br>
 
-    To describe this relationship in English, Output 1 is on if Input 1 and Input 2 are on. This creates an "and gate". Likewise, Output 2 is on 
-    if Input 1 and Input 2 are not on. Thus it is a "not and" gate, which is usually shortened to "nand".<br><br>
+    To describe this relationship in English, Output 1 is on if Input 1 and Input 2 are on. This creates an "AND" gate. Likewise, Output 2 is on 
+    if Input 1 and Input 2 are not on. Thus it is a "NOT AND" gate, which is usually shortened to "NAND".<br><br>
 
     If you're the inquisitive sort, then you may wonder what happens if we connect the output from one gate to the input from another. The answer 
-    is that you can create gates that have any relationship with the inputs. I've presented three here: not, and, and nand. With these three logic 
+    is that you can create gates that have any relationship with the inputs. I've presented three here: NOT, AND, and NAND. With these three logic 
     gates, we can make a host of other logic gates. We can combine them so that there are more than two inputs and create chips that can make choices 
     or start doing math. These operations form the basis for the whole field of computer science. Looking at the interactions between these more 
     complex gates is beyond the scope of this article, but will be examined in subsequent entries.<br><br><br><br>

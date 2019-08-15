@@ -8,7 +8,7 @@ function gratuity() {
 
     <p>
         As a former pizza delivery driver, one of the things that I did was keep a list of all the tips I made in a single night. 
-        This was ostenibly for tax records, but the truth is that I just liked to see the data and compare where I was getting the best tips 
+        This was ostensibly for tax records, but the truth is that I just liked to see the data and compare where I was getting the best tips 
         during the night. Naturally, most of those receipts just ended up discarded on my floorboard at the end of my shift, but after 
         thinking about what I wanted my capstone project for Savvy Coders to entail, I remembered my tip lists and thought that I could turn 
         them into a nice project through the addition of some other features.
@@ -32,7 +32,7 @@ function gratuity() {
     <p>
         Although the project as is meets the requirements that I wanted, there are a few improvements that I want to make. First, the quartile 
         graph doesn't work correctly when there are less than four tips entered. Second, it would make sense to duplicate the date selection 
-        dialogue to be included on the list of tips, as well as potentially in its own popup window. Lastly, the entire site was designed 
+        dialogue to be included on the list of tips, as well as potentially in its own pop-up window. Lastly, the entire site was designed 
         on a computer, rather than a mobile device. Because of that, the GUI isn't optimized to be displayed on a phone screen. But of course, 
         what programmer ever feels like there aren't improvements that can be made to their application?
     </p>

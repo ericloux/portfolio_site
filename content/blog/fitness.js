@@ -67,10 +67,10 @@ function fitness() {
     of fifty of these operations. There are three groups of operators: <br>
 
     <br>
-        <li><b>Numerals</b> form a <em>term</em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>
-        <li><b>Operators</b> connect two terms. These include addition, subtraction, multiplication, division, exponentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>
-        <li><b>Functions</b> operate on the previous term. These include increment, decrement, bitwise left, bitwise right, absolute value, negate, round, ceiling, floor, and zero.</li>
-        <li><b>Terms</b> are numbers that are terms in and of themselves. These include x and pi.</li>
+        <li><u>Numerals</u> form a <em>term</em> when chained together. When they are followed by another numeral, they concatenate to form a larger term. These include the digits 0 through 9 as well as the decimal. </li>
+        <li><u>Operators</u> connect two terms. These include addition, subtraction, multiplication, division, exponentiation, modulo, bitwise or, bitwise and, and bitwise xor.</li>
+        <li><u>Functions</u> operate on the previous term. These include increment, decrement, bitwise left, bitwise right, absolute value, negate, round, ceiling, floor, and zero.</li>
+        <li><u>Terms</u> are numbers that are terms in and of themselves. These include x and pi.</li>
     <br><br>
 
     Here is a list of all the operators and their associated numbers:<br><br>

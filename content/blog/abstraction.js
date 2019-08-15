@@ -12,7 +12,7 @@ function abstraction() {
     
     The answer, of course, is complex. Rather than thinking of the process as one concrete whole, it's through abstraction of each level that we 
     can examine how we go from "this electron jiggles" to sending a text message to your friends. There are plenty of levels, which is one of the 
-    reasons that understanding of what happens in a computer is lost, even to many people who program them on a daily basis. Each layer is vast 
+    reasons that an understanding of what happens in a computer is lost, even to many people who program them on a daily basis. Each layer is vast 
     enough to be an entire field of study. Although I hardly consider myself an expert, the scope of this article is to give a brief examination 
     into each of those levels, as well as how they work together to form the modern computer.<br><br>
     
@@ -34,7 +34,7 @@ function abstraction() {
     should be on, and which should be off. When new information is put into the registers then the pixels change state and a new image is drawn.<br><br>
     
     Managing input is similar to output. When you press a key, it closes a circuit, and a register with information about which keys are being 
-    pressed updated to show that the key was pressed. The computer then takes this input and uses it as input into its calculations. For example, 
+    pressed updates to show that the key was pressed. The computer then takes this input and uses it as input into its calculations. For example, 
     if you have a block of registers, then the results of the input may be stored in a sequence of registers. A counter tells the computer which 
     register is the next to write to. When you type 8, then the first register gets set to the binary representation of eight, and the counter 
     increments so that the second register will store the next input value. In addition to numbers, the input register could have mathmatical 

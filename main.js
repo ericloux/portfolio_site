@@ -181,12 +181,12 @@ function render(state) {
             render(state);
         });
 
-        // document.getElementById("genetic-algorithm").addEventListener("click", function() {
-        //     event.preventDefault();
-        //     state.page = "projects";
-        //     state.subpage = "genetic-algorithm";
-        //     render(state);
-        // });
+        document.getElementById("genetic-algorithm").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "projects";
+            state.subpage = "genetic-algorithm";
+            render(state);
+        });
     }
 
     document.getElementById("link-blog").addEventListener("click", function(event) {
