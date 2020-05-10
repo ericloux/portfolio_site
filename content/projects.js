@@ -23,10 +23,15 @@ function projects() {
 
     <span class="center-content"><button class="link" id="tablemaker">5. Table Maker</button></span>
     <p class="link-info">A lot of the truth tables for my blog were created using just tabs and enters. Replacing all the formatting 
-    was a chore, so I wrote a program to do it for me. Hooray for practicality!</p><br><br>  
+    was a chore, so I wrote a program to do it for me. Hooray for practicality!</p><br>
 
     <span class="center-content"><button class="link" id="genetic-algorithm">6. Genetic Algorithm</button></span>
     <p class="link-info">My genetic algorithm. See my blog for more details.</p><br>    
+
+    <span class="center-content"><button class="link" id="sql">7. Databases Project</button></span>
+    <p class="link-info">The final project for my relational databases class.</p><br>
+    
+    <br><br><br>  
     `;
 
     document.getElementsByClassName("content")[0].innerHTML = content;

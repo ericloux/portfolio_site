@@ -328,9 +328,12 @@ function geneticAlgorithm() {
                         break;
                     }
                 }
-                console.log(`${i}: Gene: ${this.genome[i]} thisTerm: ${thisTerm} runningTotal: ${runningTotal} exponent: ${inputExponent}`);
-                console.log(`Term w/ input: ${thisTerm * Math.pow(input, inputExponent)} lastOpCode: ${lastOpCode}`);
+                // console.log(`${i}: Gene: ${this.genome[i]} thisTerm: ${thisTerm} runningTotal: ${runningTotal} exponent: ${inputExponent}`);
+                // console.log(`Term w/ input: ${thisTerm * Math.pow(input, inputExponent)} lastOpCode: ${lastOpCode}`);
             }
+
+            thisTerm = thisTerm * 1;
+            thisTerm = thisTerm * Math.pow(input, inputExponent);
             if (operatorReady) runningTotal = this.applyOpCode(runningTotal, thisTerm, lastOpCode);
 
             return runningTotal*1;
@@ -361,14 +364,33 @@ function geneticAlgorithm() {
         }
     }
 
+    const goalArray = [8, 5, 12, 12, 15, 23, 15, 18, 12, 4];
+
+    function getFitness (argArray) {
+        let fitness = 0
+        for (let i = 0; i < 9; i++) {
+            fitness += Math.pow(((goalArray[i] - goalArray[i+1] - argArray[i] + argArray[i+1] + 52) %26 + 26) % 26, 2);
+        }
+        return fitness;
+    }
+
     let myGenome = new Genome;
     console.log(myGenome.getGenome());
     console.log(myGenome.getFormula());
 
-    for (let i = 1; i < 11; i++)
+    let resultsArray = new Array(10);
+
+    for (let i = 0; i < 10; i++)
     {
-        console.log(`${i}: ${myGenome.result(i)}`);
+        resultsArray[i] = myGenome.result(i+1);
     }
+
+    for (let i =0; i < 9; i++) {
+        console.log(`${i}\t${goalArray[i]-goalArray[i+1]}\t${resultsArray[i]-resultsArray[i+1]}\t
+            ${Math.pow(((goalArray[i] - goalArray[i+1] - resultsArray[i] + resultsArray[i+1] + 52) %26 + 26) % 26, 2)}`);
+    }
+
+    console.log(getFitness(resultsArray));
 
     let content = "";
 

@@ -1998,12 +1998,13 @@ function geneticAlgorithm() {
                 inputExponent = 0;
                 break;
             }
-          }
+          } // console.log(`${i}: Gene: ${this.genome[i]} thisTerm: ${thisTerm} runningTotal: ${runningTotal} exponent: ${inputExponent}`);
+          // console.log(`Term w/ input: ${thisTerm * Math.pow(input, inputExponent)} lastOpCode: ${lastOpCode}`);
 
-          console.log("".concat(i, ": Gene: ").concat(this.genome[i], " thisTerm: ").concat(thisTerm, " runningTotal: ").concat(runningTotal, " exponent: ").concat(inputExponent));
-          console.log("Term w/ input: ".concat(thisTerm * Math.pow(input, inputExponent), " lastOpCode: ").concat(lastOpCode));
         }
 
+        thisTerm = thisTerm * 1;
+        thisTerm = thisTerm * Math.pow(input, inputExponent);
         if (operatorReady) runningTotal = this.applyOpCode(runningTotal, thisTerm, lastOpCode);
         return runningTotal * 1;
       }
@@ -2037,14 +2038,32 @@ function geneticAlgorithm() {
     return Genome;
   }();
 
+  var goalArray = [8, 5, 12, 12, 15, 23, 15, 18, 12, 4];
+
+  function getFitness(argArray) {
+    var fitness = 0;
+
+    for (var i = 0; i < 9; i++) {
+      fitness += Math.pow(((goalArray[i] - goalArray[i + 1] - argArray[i] + argArray[i + 1] + 52) % 26 + 26) % 26, 2);
+    }
+
+    return fitness;
+  }
+
   var myGenome = new Genome();
   console.log(myGenome.getGenome());
   console.log(myGenome.getFormula());
+  var resultsArray = new Array(10);
 
-  for (var i = 1; i < 11; i++) {
-    console.log("".concat(i, ": ").concat(myGenome.result(i)));
+  for (var i = 0; i < 10; i++) {
+    resultsArray[i] = myGenome.result(i + 1);
   }
 
+  for (var _i = 0; _i < 9; _i++) {
+    console.log("".concat(_i, "\t").concat(goalArray[_i] - goalArray[_i + 1], "\t").concat(resultsArray[_i] - resultsArray[_i + 1], "\t\n            ").concat(Math.pow(((goalArray[_i] - goalArray[_i + 1] - resultsArray[_i] + resultsArray[_i + 1] + 52) % 26 + 26) % 26, 2)));
+  }
+
+  console.log(getFitness(resultsArray));
   var content = "";
   content += "\n    <p>    \n        This page is under construction as I build my genetic algorithm. In the meantime, check the console!\n        A random Genome is created and evaluated for the numbers 1 through 10. Each step of the calculation is \n        then logged.\n    </p>\n    ";
   document.getElementsByClassName("content")[0].innerHTML = content;
@@ -2407,7 +2426,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35637" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38549" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

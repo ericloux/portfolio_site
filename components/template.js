@@ -19,7 +19,7 @@ function addTemplate() {
         </div>
     </div>
     <footer>
-        Copyright 2019 Eric Loux
+        Copyright 2019-2020 Eric Loux
     </footer>`;
     window.scrollTo(0, 0);
 }

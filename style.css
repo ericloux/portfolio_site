@@ -251,3 +251,8 @@ canvas {
 .hide-me {
     display:none;
 }
+
+.code-snippet {
+    font-family: monospace;
+    font-size: 16px;
+}

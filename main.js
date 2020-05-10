@@ -18,6 +18,7 @@ import {tablemaker} from "./content/projects/tablemaker.js";
 import {binary} from "./content/blog/binary.js";
 import {genetic} from "./content/blog/genetic.js";
 import {fitness} from "./content/blog/fitness.js";
+import {sql} from "./content/projects/sql.js";
 import {geneticAlgorithm} from "./content/projects/genetic-algorithm.js";
 import {geneticRevision} from "./content/blog/genetic-revision.js";
 import {blogEnd} from "./components/blogend.js";
@@ -61,6 +62,10 @@ function render(state) {
 
         case "genetic-algorithm":
             geneticAlgorithm();
+            break;
+
+        case "sql":
+            sql();
             break;
 
         default:
@@ -185,6 +190,13 @@ function render(state) {
             event.preventDefault();
             state.page = "projects";
             state.subpage = "genetic-algorithm";
+            render(state);
+        });
+
+        document.getElementById("sql").addEventListener("click", function() {
+            event.preventDefault();
+            state.page = "projects";
+            state.subpage = "sql";
             render(state);
         });
     }
