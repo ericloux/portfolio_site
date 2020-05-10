@@ -1,4 +1,4 @@
-function projects() {
+function projects() { 
     let content = "";
 
     content += `

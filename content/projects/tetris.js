@@ -1,4 +1,4 @@
-function tetris() {
+function tetris() { 
     let content = "";
 
     content += `

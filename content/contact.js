@@ -1,4 +1,4 @@
-function contact() {
+function contact() { 
     let content = "";
 
     content += `

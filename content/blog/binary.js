@@ -1,4 +1,4 @@
-function binary() {
+function binary() { 
     let content = "";
 
     content += `

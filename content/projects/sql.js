@@ -1,4 +1,4 @@
-function sql() {
+function sql() { 
     let content = "";
 
     content += `

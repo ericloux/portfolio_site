@@ -1,4 +1,4 @@
-function gratuity() {
+function gratuity() { 
     let content = "";
 
     content += `

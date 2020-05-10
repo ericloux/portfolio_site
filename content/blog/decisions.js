@@ -1,4 +1,4 @@
-function decisions() {
+function decisions() { 
     let content = "";
 
     content += `

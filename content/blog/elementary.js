@@ -1,4 +1,4 @@
-function elementary() {
+function elementary() { 
     console.log("test");
     let content = "";
 

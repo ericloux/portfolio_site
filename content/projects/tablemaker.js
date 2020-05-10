@@ -1,4 +1,4 @@
-function tablemaker() {
+function tablemaker() { 
     let content = "";
 
 	content += `

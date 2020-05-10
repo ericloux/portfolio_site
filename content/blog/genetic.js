@@ -1,4 +1,4 @@
-function genetic() {
+function genetic() { 
     let content = "";
 
     content += `   

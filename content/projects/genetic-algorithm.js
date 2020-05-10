@@ -1,4 +1,4 @@
-function geneticAlgorithm() {
+function geneticAlgorithm() { 
     class Genome {
         constructor(motherGenes, fatherGenes) {
             this.genome = "";

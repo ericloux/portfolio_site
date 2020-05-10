@@ -1,4 +1,4 @@
-function home() {
+function home() { 
     let content = "";
 
     content += `

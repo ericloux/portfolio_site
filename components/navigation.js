@@ -8,5 +8,5 @@ function addNavigation(state) {
     nav.innerHTML += `<input type="button" class="nav-button" id="link-blog" value="BLOG"><br>`;
     nav.innerHTML += `<input type="button" class="nav-button" id="link-contact" value="CONTACT"><br>`;
 }
-
+ 
 export {addNavigation};

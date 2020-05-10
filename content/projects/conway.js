@@ -1,4 +1,4 @@
-function conway() {
+function conway() { 
     let content = "";
 
     content += `

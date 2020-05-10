@@ -68,5 +68,5 @@ function abstraction() {
 
     document.getElementsByClassName("content")[0].innerHTML = content;
 }
-
+ 
 export {abstraction};

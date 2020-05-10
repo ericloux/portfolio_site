@@ -1,4 +1,4 @@
-function geneticRevision() {
+function geneticRevision() { 
     let content = "";
 
     content += `      

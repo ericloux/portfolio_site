@@ -1,4 +1,4 @@
-function bio() {
+function bio() { 
     let content = "";
 
     content += `

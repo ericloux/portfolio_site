@@ -1,4 +1,4 @@
-import {addTemplate, putFooter} from "./components/template.js";
+import {addTemplate, putFooter} from "./components/template.js"; 
 import {addNavigation} from "./components/navigation.js";
 import {home} from "./content/home.js";
 import {bio} from "./content/bio.js";

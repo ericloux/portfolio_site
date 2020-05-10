@@ -33,5 +33,5 @@ function putFooter() {
         document.getElementsByClassName("grid-master")[0].style.height = (window.innerHeight - footAndHeadHeight + 40) + "px";
     }
 }
-
+ 
 export {addTemplate, putFooter};

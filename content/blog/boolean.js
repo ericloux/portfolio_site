@@ -1,4 +1,4 @@
-function boolean() {
+function boolean() { 
     let content = "";
 
     content += `

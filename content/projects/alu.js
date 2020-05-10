@@ -1,4 +1,4 @@
-function alu() {
+function alu() { 
     let content = "";
 
     content += `
