@@ -1,0 +1,258 @@
+* {
+    font-size:25px;
+}
+
+html, body {
+    background-color: black;
+    margin: 0px;
+    height: 100%;
+    bottom: 0%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#convertButton {
+    width: 120px;
+}
+
+#tabText {
+    height: 100px;
+}
+
+#tableText {
+    height: 300px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form {
+    display: inline-block;
+    margin: auto;
+}
+
+a {
+    color: darkgoldenrod;
+}
+
+.table-maker {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.link-info {
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+
+input {
+    background-color: steelblue;
+}
+
+textarea {
+    background-color: steelblue;
+}
+
+.link {
+    background-color: darkgoldenrod;
+    color: midnightblue;
+    margin: 0 auto;
+    border-radius: 8px;
+    font-size: 28px;
+}
+
+#contact-message {
+    width: 600px;
+    height: 120px;
+}
+
+#template {
+    min-height: 100%;
+    position: relative;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+    text-align: center;
+    border: 1px black solid;
+    background-color: black;
+}
+
+td {
+    text-align: center;
+    border: 1px black solid;
+    width: 80px;
+    font-size: 100%;
+    background-color: steelblue;
+}
+
+th {
+    text-align: center;
+    border: 1px black solid;
+    width: 80px;
+    font-size: 100%;
+    background-color: darkgoldenrod;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: steelblue;
+    color: lightsteelblue;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+b {
+    vertical-align: middle;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    border-top: 2px solid black;
+    margin: 0px;
+    background-color: steelblue;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+}
+
+#outside-footer {
+    width: 100%;
+}
+
+.grid-master {
+    display: grid;
+    grid-template-columns: 19.8% 60% 19.8%;
+    grid-gap: .2%;
+    padding-bottom: 40px;
+    max-width: 100%;
+    height: 100%;
+}
+
+.grid-side {
+    padding: 5px 10px;
+    background-color: steelblue;
+    color:lightsteelblue;
+    height:100%;
+    min-width: 20%;
+}
+
+.content {
+    padding: 5px 50px;
+    background-color: midnightblue;
+    color: lightsteelblue;
+    height:100%;
+}
+
+.alu-grid-container {
+    display:grid;
+    grid-template-columns: repeat(22, 1fr);
+    color:midnightblue;
+}
+
+.alu-grid-item-title {
+    grid-column: 1/23;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
+    width: 100%;
+    text-align: center;
+}
+
+.alu-grid-item-x-register {
+    grid-column: 1/9;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
+    width: 100%;
+    text-align: center;
+}
+
+.alu-grid-item-y-register {
+    grid-column: 9/17;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
+    width: 100%;
+    text-align: center;
+}
+
+.alu-grid-item-label {
+    grid-column: 17/23;
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
+    width: 100%;
+    text-align: center;
+}
+
+.alu-grid-item {
+    border: 1px solid lightsteelblue;
+    background-color: darkgoldenrod;
+    color:midnightblue;
+    width: 100%;
+    text-align: center;
+}
+
+#alu-x-register-decimal {
+    width: 99%;
+    height: auto;
+    background-color: lightsteelblue;
+    color:midnightblue;
+    text-align: center;
+}
+
+#alu-y-register-decimal {
+    width: 99%;
+    height: auto;
+    background-color: lightsteelblue;
+    color:midnightblue;
+    text-align: center;
+}
+
+.nav-button {
+    width: 180px;
+    height: 36px;
+    background-color: darkgoldenrod;
+    color: midnightblue;
+    border-radius: 6px;
+}
+
+.hide-me {
+    display:none;
+}
+
+.code-snippet {
+    font-family: monospace;
+    font-size: 16px;
+}

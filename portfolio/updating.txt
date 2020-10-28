@@ -1,0 +1,91 @@
+$ mkdir [directory name]
+$ cd [directory name]
+$ touch index.html
+$ touch styles.css
+$ touch readme.md
+$ git init
+
+(copy the commands from github here)
+
+$ git add .
+$ git commit -m "[Commit Name]"
+$ git push origin master
+
+launch site:
+live-server
+npx parcel index.html
+
+Checking out the code
+
+$ git branch
+ - ensure you are on master. if not, then 
+$ git checkout master
+ - changes branch to master
+$ git pull upstream master
+ - ensures you have the most up to date copy
+$ git checkout -b [branch name]
+ - creates a branch and switches to that branch
+
+Returning the code
+
+$ git add .
+ - adds all new files
+$ git add -u
+ - removes all deleted files
+$ git add --all
+ - adds all new and removes all deleted
+$ git commit -m "[commit message]"
+ - stages changes for deployment
+$ git push origin [branch name]
+ - pushes the changes to GitHub
+
+Here's how to update the site.
+
+Creating a new page:
+
+1. Create a new .js file for the page.
+2. Add the following to the .js file.
+
+function functionName() {
+    let content = "";
+
+    content += `
+    <h3> Title </h3>
+    `;
+
+    document.getElementsByClassName("content")[0].innerHTML = content;
+}
+
+export {functionName};
+
+3. Replace "functionName" with an appropriate name for the content.
+4. Put content between the tick marks
+5. If you have any JS functions, put them after the document.getElementsByClassName... line, before the closing brace.
+6. Add the following to main.js (may have to add /blog or /projects as appropriate):
+
+import {functionName} from "./content/function_name.js";
+
+7. Add a case in the appropriate location in the state switch statement. 
+8. Add an event listener, e.g.
+
+document.getElementById("link-functionName").addEventListener("click", function() {
+    event.preventDefault();
+    state.page = "content";
+    state.subpage = "functionName";
+    render(state);
+});
+
+9. Add an entry in either blog.js or content.js (class is what the event listener is attached to):
+
+<span class="center-content"><button class="link" id="functionName">TITLE GOES HERE</button></span>
+<p class="link-info">Converts a decimal to boolean, then uses only NAND to perform a variety of functions.</p><br>
+
+10. Save and finish.
+
+Running the website on localhost:
+
+http-server
+
+Pushing changes:
+
+1. Add the content you wish
